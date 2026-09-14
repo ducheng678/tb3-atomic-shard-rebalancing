@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "description": "Starter-specific reachable PREPARED cut. Source, target and metadata remain healthy while coord is crashed. C must work and migration demonstrates the defect.",
+  "initial": {"a": 100, "b": 100, "c": 0},
+  "steps": [
+    {"op":"hold","match":{"kind":"message","source":"a_old","target":"coord"}},
+    {"op":"invoke","as":"pending","request":{"op":"txn","txn_id":"pending-transfer","delta_map":{"a":-11,"b":11}}},
+    {"op":"wait_state","node":"a_old","path":["data","baseline/v1","intents"],"contains":{"txn_id":"pending-transfer","state":"PREPARED"},"max_rounds":1000},
+    {"op":"crash","node":"coord"},
+    {"op":"release_all"},
+    {"op":"invoke","as":"migration","request":{"op":"migrate","shard":"A","target":"a_target"}},
+    {"op":"invoke","as":"c-write","request":{"op":"txn","txn_id":"independent-c","delta_map":{"c":17}}},
+    {"op":"await","attempt":"c-write","status":"COMMITTED","max_rounds":1000},
+    {"op":"invoke","as":"c-read","request":{"op":"snapshot","read_id":"independent-c-read","keys":["c"]}},
+    {"op":"await","attempt":"c-read","status":"OK","max_rounds":1000},
+    {"op":"await","attempt":"migration","status":"COMPLETE","within_rounds":2000}
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "task": "atomic-shard-rebalancing",
+  "agent": "codex",
+  "model": "openai/gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "independent_student_runs": 3,
+  "same_student_visible_task": true,
+  "same_model_configuration": true,
+  "same_resource_and_time_budgets": true,
+  "fresh_starter_and_session_per_run": true,
+  "prior_student_or_teacher_feedback_shared": false,
+  "final_verifier": {
+    "same_for_all_runs": true,
+    "image_id": "sha256:cb3576d16948f114abe0ddf40bd549bb77f88d19bfbe340b12b910614dbd957b",
+    "group_scenarios_sha256": "fcd4228d8b9295be0e6743cb2cd84b59d2384d913fd833782b387a9bb3016b3a"
+  },
+  "results": [
+    {
+      "run": 1,
+      "trial": "atomic-shard-rebalancing__TkEximK",
+      "reward": 0,
+      "business_passed": 28,
+      "business_failed": 2,
+      "genuine_student_failure": true,
+      "record": "codex-standard-01/result.json"
+    },
+    {
+      "run": 2,
+      "trial": "atomic-shard-rebalancing__3UbXvR8",
+      "reward": 0,
+      "business_passed": 29,
+      "business_failed": 1,
+      "genuine_student_failure": true,
+      "record": "codex-standard-02/result.json"
+    },
+    {
+      "run": 3,
+      "trial": "atomic-shard-rebalancing__dL6Z5XX",
+      "reward": 0,
+      "business_passed": 28,
+      "business_failed": 2,
+      "genuine_student_failure": true,
+      "record": "codex-standard-03/result.json"
+    }
+  ],
+  "all_three_genuinely_failed": true,
+  "artifact_failures": 0,
+  "framework_error_results_counted": 0
+}

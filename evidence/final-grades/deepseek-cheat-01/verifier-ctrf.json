@@ -1,0 +1,438 @@
+{
+    "reportFormat": "CTRF",
+    "specVersion": "0.0.0",
+    "timestamp": "2026-09-13T20:29:13.140480+00:00",
+    "generatedBy": "pytest",
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "9.1.1"
+        },
+        "summary": {
+            "tests": 31,
+            "passed": 29,
+            "failed": 2,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1789331207520,
+            "stop": 1789331353140
+        },
+        "environment": {
+            "buildName": "Pytest JSON CTRF Report",
+            "buildNumber": "000",
+            "buildUrl": "https://ctrf.io"
+        },
+        "tests": [
+            {
+                "name": "test_sharddb.py::test_artifact",
+                "status": "passed",
+                "duration": 1,
+                "start": 1789331207535,
+                "stop": 1789331207536,
+                "retries": 0,
+                "file_path": "test_sharddb.py",
+                "tags": [
+                    "artifact",
+                    "classification:PASS"
+                ]
+            },
+            {
+                "name": "test_sharddb.py::scenario::healthy",
+                "status": "passed",
+                "duration": 4070,
+                "start": 1789331207536,
+                "stop": 1789331211606,
+                "retries": 0,
+                "file_path": "test_sharddb.py",
+                "tags": [
+                    "scenario:healthy",
+                    "classification:PASS"
+                ]
+            },
+            {
+                "name": "test_sharddb.py::scenario::renamed-topology",
+                "status": "passed",
+                "duration": 4251,
+                "start": 1789331211606,
+                "stop": 1789331215857,
+                "retries": 0,
+                "file_path": "test_sharddb.py",
+                "tags": [
+                    "scenario:renamed-topology",
+                    "classification:PASS"
+                ]
+            },
+            {
+                "name": "test_sharddb.py::scenario::overlapping-reads-and-writes",
+                "status": "passed",
+                "duration": 3825,
+                "start": 1789331215857,
+                "stop": 1789331219682,
+                "retries": 0,
+                "file_path": "test_sharddb.py",
+                "tags": [
+                    "scenario:overlapping-reads-and-writes",
+                    "classification:PASS"
+                ]
+            },
+            {
+                "name": "test_sharddb.py::scenario::read-live-during-migration",
+                "status": "passed",
+                "duration": 6717,
+                "start": 1789331219682,
+                "stop": 1789331226399,
+                "retries": 0,
+                "file_path": "test_sharddb.py",
+                "tags": [
+                    "scenario:read-live-during-migration",
+                    "classification:PASS"
+                ]
+            },
+            {
+                "name": "test_sharddb.py::scenario::settled-result-coordinator-restart",
+                "status": "passed",
+                "duration": 4234,
+                "start": 1789331226399,
+                "stop": 1789331230633,
+                "retries": 0,
+                "file_path": "test_sharddb.py",
+                "tags": [
+                    "scenario:settled-result-coordinator-restart",
+                    "classification:PASS"
+                ]
+            },
+            {
+                "name": "test_sharddb.py::scenario::durable-commit-coordinator-restart",
+                "status": "passed",
+                "duration": 4394,
+                "start": 1789331230634,
+                "stop": 1789331235028,
+                "retries": 0,
+                "file_path": "test_sharddb.py",
+                "tags": [
+                    "scenario:durable-commit-coordinator-restart",
+                    "classification:PASS"
+                ]
+            },
+            {
+                "name": "test_sharddb.py::scenario::source-first-persist-restart",
+                "status": "passed",
+                "duration": 5105,
+                "start": 1789331235028,
+                "stop": 1789331240133,
+                "retries": 0,
+                "file_path": "test_sharddb.py",
+                "tags": [
+                    "scenario:source-first-persist-restart",
+                    "classification:PASS"
+                ]
+            },
+            {
+                "name": "test_sharddb.py::scenario::target-first-persist-restart",
+                "status": "passed",
+                "duration": 4783,
+                "start": 1789331240134,
+                "stop": 1789331244917,
+                "retries": 0,
+                "file_path": "test_sharddb.py",
+                "tags": [
+                    "scenario:target-first-persist-restart",
+                    "classification:PASS"
+                ]
+            },
+            {
+                "name": "test_sharddb.py::scenario::owner-swap-source-restart",
+                "status": "passed",
+                "duration": 5257,
+                "start": 1789331244918,
+                "stop": 1789331250175,
+                "retries": 0,
+                "file_path": "test_sharddb.py",
+                "tags": [
+                    "scenario:owner-swap-source-restart",
+                    "classification:PASS"
+                ]
+            },
+            {
+                "name": "test_sharddb.py::scenario::migration-reply-target-restart",
+                "status": "passed",
+                "duration": 5523,
+                "start": 1789331250175,
+                "stop": 1789331255698,
+                "retries": 0,
+                "file_path": "test_sharddb.py",
+                "tags": [
+                    "scenario:migration-reply-target-restart",
+                    "classification:PASS"
+                ]
+            },
+            {
+                "name": "test_sharddb.py::scenario::target-reply-loss-restart",
+                "status": "passed",
+                "duration": 5219,
+                "start": 1789331255699,
+                "stop": 1789331260918,
+                "retries": 0,
+                "file_path": "test_sharddb.py",
+                "tags": [
+                    "scenario:target-reply-loss-restart",
+                    "classification:PASS"
+                ]
+            },
+            {
+                "name": "test_sharddb.py::scenario::retired-source-offline",
+                "status": "passed",
+                "duration": 5247,
+                "start": 1789331260918,
+                "stop": 1789331266165,
+                "retries": 0,
+                "file_path": "test_sharddb.py",
+                "tags": [
+                    "scenario:retired-source-offline",
+                    "classification:PASS"
+                ]
+            },
+            {
+                "name": "test_sharddb.py::scenario::compat-prepared",
+                "status": "passed",
+                "duration": 3957,
+                "start": 1789331266166,
+                "stop": 1789331270123,
+                "retries": 0,
+                "file_path": "test_sharddb.py",
+                "tags": [
+                    "scenario:compat-prepared",
+                    "classification:PASS"
+                ]
+            },
+            {
+                "name": "test_sharddb.py::scenario::compat-read-grant",
+                "status": "passed",
+                "duration": 4770,
+                "start": 1789331270124,
+                "stop": 1789331274894,
+                "retries": 0,
+                "file_path": "test_sharddb.py",
+                "tags": [
+                    "scenario:compat-read-grant",
+                    "classification:PASS"
+                ]
+            },
+            {
+                "name": "test_sharddb.py::scenario::compat-single-commit",
+                "status": "passed",
+                "duration": 3893,
+                "start": 1789331274894,
+                "stop": 1789331278787,
+                "retries": 0,
+                "file_path": "test_sharddb.py",
+                "tags": [
+                    "scenario:compat-single-commit",
+                    "classification:PASS"
+                ]
+            },
+            {
+                "name": "test_sharddb.py::scenario::compat-single-abort",
+                "status": "passed",
+                "duration": 4107,
+                "start": 1789331278787,
+                "stop": 1789331282894,
+                "retries": 0,
+                "file_path": "test_sharddb.py",
+                "tags": [
+                    "scenario:compat-single-abort",
+                    "classification:PASS"
+                ]
+            },
+            {
+                "name": "test_sharddb.py::scenario::compat-migration-draining",
+                "status": "passed",
+                "duration": 4208,
+                "start": 1789331282894,
+                "stop": 1789331287102,
+                "retries": 0,
+                "file_path": "test_sharddb.py",
+                "tags": [
+                    "scenario:compat-migration-draining",
+                    "classification:PASS"
+                ]
+            },
+            {
+                "name": "test_sharddb.py::scenario::compat-migration-settled",
+                "status": "passed",
+                "duration": 3878,
+                "start": 1789331287102,
+                "stop": 1789331290980,
+                "retries": 0,
+                "file_path": "test_sharddb.py",
+                "tags": [
+                    "scenario:compat-migration-settled",
+                    "classification:PASS"
+                ]
+            },
+            {
+                "name": "test_sharddb.py::scenario::compat-migration-complete-checkpoint",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 2981,
+                "start": 1789331290981,
+                "stop": 1789331293962,
+                "retries": 0,
+                "file_path": "test_sharddb.py",
+                "tags": [
+                    "scenario:compat-migration-complete-checkpoint",
+                    "classification:CANDIDATE_FAIL"
+                ],
+                "trace": "compat-migration-complete-checkpoint [CANDIDATE_FAIL / CANDIDATE_CONTRACT]: ProtocolError: owner CAS contains an unregistered state\nTrusted scenario artifacts: /work/scenarios/compat-migration-complete-checkpoint",
+                "message": "The test failed in the call phase"
+            },
+            {
+                "name": "test_sharddb.py::scenario::rebalance-exchange-cycle",
+                "status": "passed",
+                "duration": 8350,
+                "start": 1789331293962,
+                "stop": 1789331302312,
+                "retries": 0,
+                "file_path": "test_sharddb.py",
+                "tags": [
+                    "scenario:rebalance-exchange-cycle",
+                    "classification:PASS"
+                ]
+            },
+            {
+                "name": "test_sharddb.py::scenario::rebalance-renamed-multikey",
+                "status": "passed",
+                "duration": 6907,
+                "start": 1789331302312,
+                "stop": 1789331309219,
+                "retries": 0,
+                "file_path": "test_sharddb.py",
+                "tags": [
+                    "scenario:rebalance-renamed-multikey",
+                    "classification:PASS"
+                ]
+            },
+            {
+                "name": "test_sharddb.py::scenario::rebalance-colocation",
+                "status": "passed",
+                "duration": 4721,
+                "start": 1789331309219,
+                "stop": 1789331313940,
+                "retries": 0,
+                "file_path": "test_sharddb.py",
+                "tags": [
+                    "scenario:rebalance-colocation",
+                    "classification:PASS"
+                ]
+            },
+            {
+                "name": "test_sharddb.py::scenario::rebalance-unresolved-commit",
+                "status": "passed",
+                "duration": 5494,
+                "start": 1789331313940,
+                "stop": 1789331319434,
+                "retries": 0,
+                "file_path": "test_sharddb.py",
+                "tags": [
+                    "scenario:rebalance-unresolved-commit",
+                    "classification:PASS"
+                ]
+            },
+            {
+                "name": "test_sharddb.py::scenario::rebalance-live-local-read",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 6217,
+                "start": 1789331319435,
+                "stop": 1789331325652,
+                "retries": 0,
+                "file_path": "test_sharddb.py",
+                "tags": [
+                    "scenario:rebalance-live-local-read",
+                    "classification:CANDIDATE_FAIL"
+                ],
+                "trace": "rebalance-live-local-read [CANDIDATE_FAIL / CANDIDATE_CONTRACT]: ScenarioFailure: public logical progress budget exhausted at round 10081\nTrusted scenario artifacts: /work/scenarios/rebalance-live-local-read",
+                "message": "The test failed in the call phase"
+            },
+            {
+                "name": "test_sharddb.py::scenario::rebalance-source-first-persist",
+                "status": "passed",
+                "duration": 4818,
+                "start": 1789331325652,
+                "stop": 1789331330470,
+                "retries": 0,
+                "file_path": "test_sharddb.py",
+                "tags": [
+                    "scenario:rebalance-source-first-persist",
+                    "classification:PASS"
+                ]
+            },
+            {
+                "name": "test_sharddb.py::scenario::rebalance-target-first-persist",
+                "status": "passed",
+                "duration": 4792,
+                "start": 1789331330471,
+                "stop": 1789331335263,
+                "retries": 0,
+                "file_path": "test_sharddb.py",
+                "tags": [
+                    "scenario:rebalance-target-first-persist",
+                    "classification:PASS"
+                ]
+            },
+            {
+                "name": "test_sharddb.py::scenario::rebalance-vector-cas-restart",
+                "status": "passed",
+                "duration": 4320,
+                "start": 1789331335263,
+                "stop": 1789331339583,
+                "retries": 0,
+                "file_path": "test_sharddb.py",
+                "tags": [
+                    "scenario:rebalance-vector-cas-restart",
+                    "classification:PASS"
+                ]
+            },
+            {
+                "name": "test_sharddb.py::scenario::rebalance-retired-sources-offline",
+                "status": "passed",
+                "duration": 3645,
+                "start": 1789331339583,
+                "stop": 1789331343228,
+                "retries": 0,
+                "file_path": "test_sharddb.py",
+                "tags": [
+                    "scenario:rebalance-retired-sources-offline",
+                    "classification:PASS"
+                ]
+            },
+            {
+                "name": "test_sharddb.py::scenario::rebalance-target-restart-replay",
+                "status": "passed",
+                "duration": 5673,
+                "start": 1789331343228,
+                "stop": 1789331348901,
+                "retries": 0,
+                "file_path": "test_sharddb.py",
+                "tags": [
+                    "scenario:rebalance-target-restart-replay",
+                    "classification:PASS"
+                ]
+            },
+            {
+                "name": "test_sharddb.py::scenario::rebalance-after-legacy-migration",
+                "status": "passed",
+                "duration": 4238,
+                "start": 1789331348902,
+                "stop": 1789331353140,
+                "retries": 0,
+                "file_path": "test_sharddb.py",
+                "tags": [
+                    "scenario:rebalance-after-legacy-migration",
+                    "classification:PASS"
+                ]
+            }
+        ]
+    }
+}

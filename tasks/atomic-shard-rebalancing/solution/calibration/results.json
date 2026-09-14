@@ -1,0 +1,2788 @@
+{
+  "source": "task-local author validation measurements",
+  "positive_profiles": [
+    {
+      "label": "oracle-01",
+      "reward": 1,
+      "cases_passed": 30,
+      "image_id": "sha256:9828b62afa876e9a59535c4b7f59b7478eaa56879f15646a99a463f8bc04a410",
+      "verifier_wall_seconds": 176.114,
+      "engine_manifest": [
+        {
+          "path": "__init__.py",
+          "sha256": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+          "size": 58
+        },
+        {
+          "path": "migration.py",
+          "sha256": "4686f7d13c535f6fbfce1dc8d2ad4e15be167b2b6a28186e4a74d11d6eb218ad",
+          "size": 12239
+        },
+        {
+          "path": "node.py",
+          "sha256": "af3713e6e827de696f3588b0d7ab10b02b6fe451d6c46f9dad96f534020b4749",
+          "size": 7644
+        },
+        {
+          "path": "participant.py",
+          "sha256": "b288b6ba9109013a028cdb6c36abf6503bdd6d5765f3492f12bc2d944e7ddedd",
+          "size": 10779
+        },
+        {
+          "path": "rebalancing.py",
+          "sha256": "6215f0cd4a1106dc8bdabc0f882b565c2134da1a83f7d8f196c7cf1c4d9ca0b8",
+          "size": 10169
+        },
+        {
+          "path": "records.py",
+          "sha256": "92d32126bceb5964c8c92e8b6cd6c6aaec1825c15b63fbceb8bcd81ab6bd07eb",
+          "size": 3664
+        },
+        {
+          "path": "recovery.py",
+          "sha256": "c5444a172e74ca1e4ece2fdefcfce2bc4f08a6344e0b3eab8032bf8588c413f7",
+          "size": 625
+        },
+        {
+          "path": "transactions.py",
+          "sha256": "ea9c591b1c84484423577f08b216838725ad2d3858e53d28b8a2c7e8dfdf25f0",
+          "size": 10381
+        }
+      ],
+      "groups": {
+        "1000": {
+          "count": 41,
+          "maximum_used": 58
+        },
+        "2000": {
+          "count": 33,
+          "maximum_used": 205
+        },
+        "10000": {
+          "count": 70,
+          "maximum_used": 332
+        }
+      },
+      "phase_samples": [
+        {
+          "case": "healthy",
+          "deadline_round": 10000,
+          "label": "healthy-service",
+          "start_round": 0,
+          "end_round": 306,
+          "used": 306,
+          "budget": 10000
+        },
+        {
+          "case": "renamed-topology",
+          "deadline_round": 10000,
+          "label": "healthy-service",
+          "start_round": 0,
+          "end_round": 306,
+          "used": 306,
+          "budget": 10000
+        },
+        {
+          "case": "overlapping-reads-and-writes",
+          "deadline_round": 10000,
+          "label": "healthy-overlap",
+          "start_round": 0,
+          "end_round": 230,
+          "used": 230,
+          "budget": 10000
+        },
+        {
+          "case": "read-live-during-migration",
+          "deadline_round": 10000,
+          "label": "live-read-prefix",
+          "start_round": 0,
+          "end_round": 64,
+          "used": 64,
+          "budget": 10000
+        },
+        {
+          "case": "read-live-during-migration",
+          "deadline_round": 10064,
+          "label": "live-read-migration",
+          "start_round": 64,
+          "end_round": 83,
+          "used": 19,
+          "budget": 10000
+        },
+        {
+          "case": "read-live-during-migration",
+          "deadline_round": 483,
+          "label": "held-read-message",
+          "start_round": 83,
+          "end_round": 483,
+          "used": 400,
+          "budget": 400
+        },
+        {
+          "case": "read-live-during-migration",
+          "deadline_round": 10483,
+          "label": "live-read-stable-recovery",
+          "start_round": 483,
+          "end_round": 642,
+          "used": 159,
+          "budget": 10000
+        },
+        {
+          "case": "settled-result-coordinator-restart",
+          "deadline_round": 10000,
+          "label": "settled-transaction-prefix",
+          "start_round": 0,
+          "end_round": 72,
+          "used": 72,
+          "budget": 10000
+        },
+        {
+          "case": "settled-result-coordinator-restart",
+          "deadline_round": 10072,
+          "label": "settled-transaction-recovery",
+          "start_round": 72,
+          "end_round": 280,
+          "used": 208,
+          "budget": 10000
+        },
+        {
+          "case": "durable-commit-coordinator-restart",
+          "deadline_round": 10000,
+          "label": "healthy-prefix",
+          "start_round": 0,
+          "end_round": 17,
+          "used": 17,
+          "budget": 10000
+        },
+        {
+          "case": "durable-commit-coordinator-restart",
+          "deadline_round": 2017,
+          "label": "coordinator-offline-migration",
+          "start_round": 17,
+          "end_round": 90,
+          "used": 73,
+          "budget": 2000
+        },
+        {
+          "case": "durable-commit-coordinator-restart",
+          "deadline_round": 10090,
+          "label": "stable-recovery",
+          "start_round": 90,
+          "end_round": 357,
+          "used": 267,
+          "budget": 10000
+        },
+        {
+          "case": "source-first-persist-restart",
+          "deadline_round": 10000,
+          "label": "healthy-prefix",
+          "start_round": 0,
+          "end_round": 17,
+          "used": 17,
+          "budget": 10000
+        },
+        {
+          "case": "source-first-persist-restart",
+          "deadline_round": 2017,
+          "label": "coordinator-offline-migration",
+          "start_round": 17,
+          "end_round": 222,
+          "used": 205,
+          "budget": 2000
+        },
+        {
+          "case": "source-first-persist-restart",
+          "deadline_round": 10222,
+          "label": "stable-recovery",
+          "start_round": 222,
+          "end_round": 554,
+          "used": 332,
+          "budget": 10000
+        },
+        {
+          "case": "target-first-persist-restart",
+          "deadline_round": 10000,
+          "label": "healthy-prefix",
+          "start_round": 0,
+          "end_round": 17,
+          "used": 17,
+          "budget": 10000
+        },
+        {
+          "case": "target-first-persist-restart",
+          "deadline_round": 2017,
+          "label": "coordinator-offline-migration",
+          "start_round": 17,
+          "end_round": 90,
+          "used": 73,
+          "budget": 2000
+        },
+        {
+          "case": "target-first-persist-restart",
+          "deadline_round": 10090,
+          "label": "stable-recovery",
+          "start_round": 90,
+          "end_round": 332,
+          "used": 242,
+          "budget": 10000
+        },
+        {
+          "case": "owner-swap-source-restart",
+          "deadline_round": 10000,
+          "label": "healthy-prefix",
+          "start_round": 0,
+          "end_round": 17,
+          "used": 17,
+          "budget": 10000
+        },
+        {
+          "case": "owner-swap-source-restart",
+          "deadline_round": 2017,
+          "label": "coordinator-offline-migration",
+          "start_round": 17,
+          "end_round": 222,
+          "used": 205,
+          "budget": 2000
+        },
+        {
+          "case": "owner-swap-source-restart",
+          "deadline_round": 10222,
+          "label": "stable-recovery",
+          "start_round": 222,
+          "end_round": 554,
+          "used": 332,
+          "budget": 10000
+        },
+        {
+          "case": "migration-reply-target-restart",
+          "deadline_round": 10000,
+          "label": "healthy-prefix",
+          "start_round": 0,
+          "end_round": 17,
+          "used": 17,
+          "budget": 10000
+        },
+        {
+          "case": "migration-reply-target-restart",
+          "deadline_round": 2017,
+          "label": "coordinator-offline-migration",
+          "start_round": 17,
+          "end_round": 90,
+          "used": 73,
+          "budget": 2000
+        },
+        {
+          "case": "migration-reply-target-restart",
+          "deadline_round": 10090,
+          "label": "stable-recovery",
+          "start_round": 90,
+          "end_round": 341,
+          "used": 251,
+          "budget": 10000
+        },
+        {
+          "case": "target-reply-loss-restart",
+          "deadline_round": 10000,
+          "label": "healthy-prefix",
+          "start_round": 0,
+          "end_round": 17,
+          "used": 17,
+          "budget": 10000
+        },
+        {
+          "case": "target-reply-loss-restart",
+          "deadline_round": 2017,
+          "label": "coordinator-offline-migration",
+          "start_round": 17,
+          "end_round": 90,
+          "used": 73,
+          "budget": 2000
+        },
+        {
+          "case": "target-reply-loss-restart",
+          "deadline_round": 10090,
+          "label": "stable-recovery",
+          "start_round": 90,
+          "end_round": 332,
+          "used": 242,
+          "budget": 10000
+        },
+        {
+          "case": "retired-source-offline",
+          "deadline_round": 10000,
+          "label": "healthy-prefix",
+          "start_round": 0,
+          "end_round": 17,
+          "used": 17,
+          "budget": 10000
+        },
+        {
+          "case": "retired-source-offline",
+          "deadline_round": 2017,
+          "label": "coordinator-offline-migration",
+          "start_round": 17,
+          "end_round": 90,
+          "used": 73,
+          "budget": 2000
+        },
+        {
+          "case": "retired-source-offline",
+          "deadline_round": 10090,
+          "label": "stable-recovery",
+          "start_round": 90,
+          "end_round": 356,
+          "used": 266,
+          "budget": 10000
+        },
+        {
+          "case": "compat-prepared",
+          "deadline_round": 2008,
+          "label": "compatibility-offline-migration",
+          "start_round": 8,
+          "end_round": 67,
+          "used": 59,
+          "budget": 2000
+        },
+        {
+          "case": "compat-prepared",
+          "deadline_round": 10067,
+          "label": "compatibility-stable-recovery",
+          "start_round": 67,
+          "end_round": 277,
+          "used": 210,
+          "budget": 10000
+        },
+        {
+          "case": "compat-read-grant",
+          "deadline_round": 2008,
+          "label": "compatibility-offline-migration",
+          "start_round": 8,
+          "end_round": 67,
+          "used": 59,
+          "budget": 2000
+        },
+        {
+          "case": "compat-read-grant",
+          "deadline_round": 10067,
+          "label": "compatibility-stable-recovery",
+          "start_round": 67,
+          "end_round": 266,
+          "used": 199,
+          "budget": 10000
+        },
+        {
+          "case": "compat-single-commit",
+          "deadline_round": 10019,
+          "label": "compatibility-service",
+          "start_round": 19,
+          "end_round": 78,
+          "used": 59,
+          "budget": 10000
+        },
+        {
+          "case": "compat-single-commit",
+          "deadline_round": 10078,
+          "label": "compatibility-stable-recovery",
+          "start_round": 78,
+          "end_round": 276,
+          "used": 198,
+          "budget": 10000
+        },
+        {
+          "case": "compat-single-abort",
+          "deadline_round": 10024,
+          "label": "compatibility-service",
+          "start_round": 24,
+          "end_round": 83,
+          "used": 59,
+          "budget": 10000
+        },
+        {
+          "case": "compat-single-abort",
+          "deadline_round": 10083,
+          "label": "compatibility-stable-recovery",
+          "start_round": 83,
+          "end_round": 386,
+          "used": 303,
+          "budget": 10000
+        },
+        {
+          "case": "compat-migration-draining",
+          "deadline_round": 10005,
+          "label": "compatibility-service",
+          "start_round": 5,
+          "end_round": 64,
+          "used": 59,
+          "budget": 10000
+        },
+        {
+          "case": "compat-migration-draining",
+          "deadline_round": 10064,
+          "label": "compatibility-stable-recovery",
+          "start_round": 64,
+          "end_round": 211,
+          "used": 147,
+          "budget": 10000
+        },
+        {
+          "case": "compat-migration-settled",
+          "deadline_round": 10033,
+          "label": "compatibility-service",
+          "start_round": 33,
+          "end_round": 92,
+          "used": 59,
+          "budget": 10000
+        },
+        {
+          "case": "compat-migration-settled",
+          "deadline_round": 10092,
+          "label": "compatibility-stable-recovery",
+          "start_round": 92,
+          "end_round": 267,
+          "used": 175,
+          "budget": 10000
+        },
+        {
+          "case": "compat-migration-complete-checkpoint",
+          "deadline_round": 10018,
+          "label": "compatibility-service",
+          "start_round": 18,
+          "end_round": 77,
+          "used": 59,
+          "budget": 10000
+        },
+        {
+          "case": "compat-migration-complete-checkpoint",
+          "deadline_round": 10077,
+          "label": "compatibility-stable-recovery",
+          "start_round": 77,
+          "end_round": 111,
+          "used": 34,
+          "budget": 10000
+        },
+        {
+          "case": "compat-migration-complete-checkpoint",
+          "deadline_round": 10111,
+          "label": "checkpoint-retired-source-service",
+          "start_round": 111,
+          "end_round": 141,
+          "used": 30,
+          "budget": 10000
+        },
+        {
+          "case": "compat-migration-complete-checkpoint",
+          "deadline_round": 10141,
+          "label": "checkpoint-returning-source-recovery",
+          "start_round": 141,
+          "end_round": 236,
+          "used": 95,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-exchange-cycle",
+          "deadline_round": 10000,
+          "label": "stable-service",
+          "start_round": 0,
+          "end_round": 57,
+          "used": 57,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-exchange-cycle",
+          "deadline_round": 2057,
+          "label": "rebalance-exchange",
+          "start_round": 57,
+          "end_round": 185,
+          "used": 128,
+          "budget": 2000
+        },
+        {
+          "case": "rebalance-exchange-cycle",
+          "deadline_round": 10185,
+          "label": "stable-service",
+          "start_round": 185,
+          "end_round": 243,
+          "used": 58,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-exchange-cycle",
+          "deadline_round": 2243,
+          "label": "rebalance-combine",
+          "start_round": 243,
+          "end_round": 337,
+          "used": 94,
+          "budget": 2000
+        },
+        {
+          "case": "rebalance-exchange-cycle",
+          "deadline_round": 10337,
+          "label": "stable-service",
+          "start_round": 337,
+          "end_round": 459,
+          "used": 122,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-exchange-cycle",
+          "deadline_round": 2459,
+          "label": "rebalance-return",
+          "start_round": 459,
+          "end_round": 590,
+          "used": 131,
+          "budget": 2000
+        },
+        {
+          "case": "rebalance-exchange-cycle",
+          "deadline_round": 10590,
+          "label": "stable-service",
+          "start_round": 590,
+          "end_round": 798,
+          "used": 208,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-renamed-multikey",
+          "deadline_round": 10000,
+          "label": "stable-service",
+          "start_round": 0,
+          "end_round": 57,
+          "used": 57,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-renamed-multikey",
+          "deadline_round": 2057,
+          "label": "rebalance-exchange",
+          "start_round": 57,
+          "end_round": 185,
+          "used": 128,
+          "budget": 2000
+        },
+        {
+          "case": "rebalance-renamed-multikey",
+          "deadline_round": 10185,
+          "label": "stable-service",
+          "start_round": 185,
+          "end_round": 243,
+          "used": 58,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-renamed-multikey",
+          "deadline_round": 2243,
+          "label": "rebalance-combine",
+          "start_round": 243,
+          "end_round": 337,
+          "used": 94,
+          "budget": 2000
+        },
+        {
+          "case": "rebalance-renamed-multikey",
+          "deadline_round": 10337,
+          "label": "stable-service",
+          "start_round": 337,
+          "end_round": 459,
+          "used": 122,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-renamed-multikey",
+          "deadline_round": 2459,
+          "label": "rebalance-return",
+          "start_round": 459,
+          "end_round": 590,
+          "used": 131,
+          "budget": 2000
+        },
+        {
+          "case": "rebalance-renamed-multikey",
+          "deadline_round": 10590,
+          "label": "stable-service",
+          "start_round": 590,
+          "end_round": 798,
+          "used": 208,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-colocation",
+          "deadline_round": 2000,
+          "label": "rebalance-combine",
+          "start_round": 0,
+          "end_round": 66,
+          "used": 66,
+          "budget": 2000
+        },
+        {
+          "case": "rebalance-colocation",
+          "deadline_round": 10066,
+          "label": "stable-service",
+          "start_round": 66,
+          "end_round": 304,
+          "used": 238,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-colocation",
+          "deadline_round": 2304,
+          "label": "rebalance-separate",
+          "start_round": 304,
+          "end_round": 425,
+          "used": 121,
+          "budget": 2000
+        },
+        {
+          "case": "rebalance-colocation",
+          "deadline_round": 10425,
+          "label": "stable-service",
+          "start_round": 425,
+          "end_round": 547,
+          "used": 122,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-unresolved-commit",
+          "deadline_round": 10000,
+          "label": "establish-real-durable-decision",
+          "start_round": 0,
+          "end_round": 17,
+          "used": 17,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-unresolved-commit",
+          "deadline_round": 2017,
+          "label": "rebalance-paused-exchange",
+          "start_round": 17,
+          "end_round": 101,
+          "used": 84,
+          "budget": 2000
+        },
+        {
+          "case": "rebalance-unresolved-commit",
+          "deadline_round": 10101,
+          "label": "stable-service",
+          "start_round": 101,
+          "end_round": 165,
+          "used": 64,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-unresolved-commit",
+          "deadline_round": 2165,
+          "label": "rebalance-paused-combine",
+          "start_round": 165,
+          "end_round": 248,
+          "used": 83,
+          "budget": 2000
+        },
+        {
+          "case": "rebalance-unresolved-commit",
+          "deadline_round": 10248,
+          "label": "recover-with-former-owner-down",
+          "start_round": 248,
+          "end_round": 408,
+          "used": 160,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-unresolved-commit",
+          "deadline_round": 2408,
+          "label": "rebalance-paused-return",
+          "start_round": 408,
+          "end_round": 524,
+          "used": 116,
+          "budget": 2000
+        },
+        {
+          "case": "rebalance-unresolved-commit",
+          "deadline_round": 10524,
+          "label": "stable-service",
+          "start_round": 524,
+          "end_round": 549,
+          "used": 25,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-live-local-read",
+          "deadline_round": 10000,
+          "label": "live-original-local-read",
+          "start_round": 0,
+          "end_round": 32,
+          "used": 32,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-live-local-read",
+          "deadline_round": 2032,
+          "label": "rebalance-read-exchange",
+          "start_round": 32,
+          "end_round": 123,
+          "used": 91,
+          "budget": 2000
+        },
+        {
+          "case": "rebalance-live-local-read",
+          "deadline_round": 10123,
+          "label": "stable-service",
+          "start_round": 123,
+          "end_round": 193,
+          "used": 70,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-source-first-persist",
+          "deadline_round": 10000,
+          "label": "real-action-crash-cut",
+          "start_round": 0,
+          "end_round": 18,
+          "used": 18,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-source-first-persist",
+          "deadline_round": 2018,
+          "label": "rebalance-crash-combine",
+          "start_round": 18,
+          "end_round": 149,
+          "used": 131,
+          "budget": 2000
+        },
+        {
+          "case": "rebalance-source-first-persist",
+          "deadline_round": 10149,
+          "label": "stable-service",
+          "start_round": 149,
+          "end_round": 224,
+          "used": 75,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-source-first-persist",
+          "deadline_round": 2224,
+          "label": "rebalance-crash-return",
+          "start_round": 224,
+          "end_round": 355,
+          "used": 131,
+          "budget": 2000
+        },
+        {
+          "case": "rebalance-source-first-persist",
+          "deadline_round": 10355,
+          "label": "stable-service",
+          "start_round": 355,
+          "end_round": 385,
+          "used": 30,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-target-first-persist",
+          "deadline_round": 10000,
+          "label": "real-action-crash-cut",
+          "start_round": 0,
+          "end_round": 21,
+          "used": 21,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-target-first-persist",
+          "deadline_round": 2021,
+          "label": "rebalance-crash-combine",
+          "start_round": 21,
+          "end_round": 89,
+          "used": 68,
+          "budget": 2000
+        },
+        {
+          "case": "rebalance-target-first-persist",
+          "deadline_round": 10089,
+          "label": "stable-service",
+          "start_round": 89,
+          "end_round": 217,
+          "used": 128,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-target-first-persist",
+          "deadline_round": 2217,
+          "label": "rebalance-crash-return",
+          "start_round": 217,
+          "end_round": 349,
+          "used": 132,
+          "budget": 2000
+        },
+        {
+          "case": "rebalance-target-first-persist",
+          "deadline_round": 10349,
+          "label": "stable-service",
+          "start_round": 349,
+          "end_round": 378,
+          "used": 29,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-vector-cas-restart",
+          "deadline_round": 10000,
+          "label": "real-action-crash-cut",
+          "start_round": 0,
+          "end_round": 69,
+          "used": 69,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-vector-cas-restart",
+          "deadline_round": 2069,
+          "label": "rebalance-crash-combine",
+          "start_round": 69,
+          "end_round": 200,
+          "used": 131,
+          "budget": 2000
+        },
+        {
+          "case": "rebalance-vector-cas-restart",
+          "deadline_round": 10200,
+          "label": "stable-service",
+          "start_round": 200,
+          "end_round": 284,
+          "used": 84,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-vector-cas-restart",
+          "deadline_round": 2284,
+          "label": "rebalance-crash-return",
+          "start_round": 284,
+          "end_round": 403,
+          "used": 119,
+          "budget": 2000
+        },
+        {
+          "case": "rebalance-vector-cas-restart",
+          "deadline_round": 10403,
+          "label": "stable-service",
+          "start_round": 403,
+          "end_round": 425,
+          "used": 22,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-retired-sources-offline",
+          "deadline_round": 10000,
+          "label": "stable-service",
+          "start_round": 0,
+          "end_round": 51,
+          "used": 51,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-retired-sources-offline",
+          "deadline_round": 2051,
+          "label": "rebalance-evacuate",
+          "start_round": 51,
+          "end_round": 138,
+          "used": 87,
+          "budget": 2000
+        },
+        {
+          "case": "rebalance-retired-sources-offline",
+          "deadline_round": 10138,
+          "label": "both-retired-sources-offline",
+          "start_round": 138,
+          "end_round": 326,
+          "used": 188,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-target-restart-replay",
+          "deadline_round": 2000,
+          "label": "rebalance-first-exchange",
+          "start_round": 0,
+          "end_round": 75,
+          "used": 75,
+          "budget": 2000
+        },
+        {
+          "case": "rebalance-target-restart-replay",
+          "deadline_round": 10075,
+          "label": "stable-service",
+          "start_round": 75,
+          "end_round": 98,
+          "used": 23,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-target-restart-replay",
+          "deadline_round": 2098,
+          "label": "rebalance-then-combine",
+          "start_round": 98,
+          "end_round": 170,
+          "used": 72,
+          "budget": 2000
+        },
+        {
+          "case": "rebalance-target-restart-replay",
+          "deadline_round": 10170,
+          "label": "stable-service",
+          "start_round": 170,
+          "end_round": 258,
+          "used": 88,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-target-restart-replay",
+          "deadline_round": 10258,
+          "label": "target-restart-and-old-messages",
+          "start_round": 258,
+          "end_round": 340,
+          "used": 82,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-target-restart-replay",
+          "deadline_round": 2340,
+          "label": "rebalance-third-return",
+          "start_round": 340,
+          "end_round": 467,
+          "used": 127,
+          "budget": 2000
+        },
+        {
+          "case": "rebalance-target-restart-replay",
+          "deadline_round": 10467,
+          "label": "stable-service",
+          "start_round": 467,
+          "end_round": 503,
+          "used": 36,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-after-legacy-migration",
+          "deadline_round": 10000,
+          "label": "stable-service",
+          "start_round": 0,
+          "end_round": 48,
+          "used": 48,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-after-legacy-migration",
+          "deadline_round": 2048,
+          "label": "rebalance-after-legacy",
+          "start_round": 48,
+          "end_round": 160,
+          "used": 112,
+          "budget": 2000
+        },
+        {
+          "case": "rebalance-after-legacy-migration",
+          "deadline_round": 10160,
+          "label": "stable-service",
+          "start_round": 160,
+          "end_round": 194,
+          "used": 34,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-after-legacy-migration",
+          "deadline_round": 2194,
+          "label": "rebalance-legacy-return",
+          "start_round": 194,
+          "end_round": 321,
+          "used": 127,
+          "budget": 2000
+        },
+        {
+          "case": "rebalance-after-legacy-migration",
+          "deadline_round": 10321,
+          "label": "stable-service",
+          "start_round": 321,
+          "end_round": 382,
+          "used": 61,
+          "budget": 10000
+        }
+      ],
+      "c_only_request_samples": [
+        {
+          "case": "healthy",
+          "attempt": "attempt-119",
+          "used": 46,
+          "budget": 1000
+        },
+        {
+          "case": "renamed-topology",
+          "attempt": "attempt-119",
+          "used": 46,
+          "budget": 1000
+        },
+        {
+          "case": "overlapping-reads-and-writes",
+          "attempt": "attempt-261",
+          "used": 19,
+          "budget": 1000
+        },
+        {
+          "case": "read-live-during-migration",
+          "attempt": "attempt-442",
+          "used": 29,
+          "budget": 1000
+        },
+        {
+          "case": "settled-result-coordinator-restart",
+          "attempt": "attempt-243",
+          "used": 19,
+          "budget": 1000
+        },
+        {
+          "case": "durable-commit-coordinator-restart",
+          "attempt": "attempt-40",
+          "used": 20,
+          "budget": 1000
+        },
+        {
+          "case": "durable-commit-coordinator-restart",
+          "attempt": "attempt-101",
+          "used": 53,
+          "budget": 1000
+        },
+        {
+          "case": "source-first-persist-restart",
+          "attempt": "attempt-40",
+          "used": 20,
+          "budget": 1000
+        },
+        {
+          "case": "source-first-persist-restart",
+          "attempt": "attempt-99",
+          "used": 53,
+          "budget": 1000
+        },
+        {
+          "case": "target-first-persist-restart",
+          "attempt": "attempt-40",
+          "used": 20,
+          "budget": 1000
+        },
+        {
+          "case": "target-first-persist-restart",
+          "attempt": "attempt-92",
+          "used": 53,
+          "budget": 1000
+        },
+        {
+          "case": "owner-swap-source-restart",
+          "attempt": "attempt-40",
+          "used": 20,
+          "budget": 1000
+        },
+        {
+          "case": "owner-swap-source-restart",
+          "attempt": "attempt-102",
+          "used": 53,
+          "budget": 1000
+        },
+        {
+          "case": "migration-reply-target-restart",
+          "attempt": "attempt-40",
+          "used": 20,
+          "budget": 1000
+        },
+        {
+          "case": "migration-reply-target-restart",
+          "attempt": "attempt-101",
+          "used": 53,
+          "budget": 1000
+        },
+        {
+          "case": "target-reply-loss-restart",
+          "attempt": "attempt-40",
+          "used": 20,
+          "budget": 1000
+        },
+        {
+          "case": "target-reply-loss-restart",
+          "attempt": "attempt-92",
+          "used": 53,
+          "budget": 1000
+        },
+        {
+          "case": "retired-source-offline",
+          "attempt": "attempt-40",
+          "used": 20,
+          "budget": 1000
+        },
+        {
+          "case": "retired-source-offline",
+          "attempt": "attempt-101",
+          "used": 53,
+          "budget": 1000
+        },
+        {
+          "case": "compat-prepared",
+          "attempt": "attempt-23",
+          "used": 22,
+          "budget": 1000
+        },
+        {
+          "case": "compat-prepared",
+          "attempt": "attempt-82",
+          "used": 37,
+          "budget": 1000
+        },
+        {
+          "case": "compat-read-grant",
+          "attempt": "attempt-23",
+          "used": 22,
+          "budget": 1000
+        },
+        {
+          "case": "compat-read-grant",
+          "attempt": "attempt-82",
+          "used": 37,
+          "budget": 1000
+        },
+        {
+          "case": "compat-single-commit",
+          "attempt": "attempt-31",
+          "used": 22,
+          "budget": 1000
+        },
+        {
+          "case": "compat-single-commit",
+          "attempt": "attempt-88",
+          "used": 37,
+          "budget": 1000
+        },
+        {
+          "case": "compat-single-abort",
+          "attempt": "attempt-38",
+          "used": 22,
+          "budget": 1000
+        },
+        {
+          "case": "compat-single-abort",
+          "attempt": "attempt-89",
+          "used": 37,
+          "budget": 1000
+        },
+        {
+          "case": "compat-migration-draining",
+          "attempt": "attempt-17",
+          "used": 22,
+          "budget": 1000
+        },
+        {
+          "case": "compat-migration-draining",
+          "attempt": "attempt-85",
+          "used": 37,
+          "budget": 1000
+        },
+        {
+          "case": "compat-migration-settled",
+          "attempt": "attempt-48",
+          "used": 22,
+          "budget": 1000
+        },
+        {
+          "case": "compat-migration-settled",
+          "attempt": "attempt-114",
+          "used": 37,
+          "budget": 1000
+        },
+        {
+          "case": "compat-migration-complete-checkpoint",
+          "attempt": "attempt-39",
+          "used": 22,
+          "budget": 1000
+        },
+        {
+          "case": "compat-migration-complete-checkpoint",
+          "attempt": "attempt-85",
+          "used": 37,
+          "budget": 1000
+        },
+        {
+          "case": "rebalance-exchange-cycle",
+          "attempt": "attempt-1822",
+          "used": 20,
+          "budget": 1000
+        },
+        {
+          "case": "rebalance-exchange-cycle",
+          "attempt": "attempt-1872",
+          "used": 53,
+          "budget": 1000
+        },
+        {
+          "case": "rebalance-renamed-multikey",
+          "attempt": "attempt-1822",
+          "used": 20,
+          "budget": 1000
+        },
+        {
+          "case": "rebalance-renamed-multikey",
+          "attempt": "attempt-1872",
+          "used": 53,
+          "budget": 1000
+        },
+        {
+          "case": "rebalance-unresolved-commit",
+          "attempt": "attempt-218",
+          "used": 19,
+          "budget": 1000
+        },
+        {
+          "case": "rebalance-unresolved-commit",
+          "attempt": "attempt-247",
+          "used": 45,
+          "budget": 1000
+        },
+        {
+          "case": "rebalance-retired-sources-offline",
+          "attempt": "attempt-475",
+          "used": 29,
+          "budget": 1000
+        },
+        {
+          "case": "rebalance-retired-sources-offline",
+          "attempt": "attempt-542",
+          "used": 58,
+          "budget": 1000
+        }
+      ]
+    },
+    {
+      "label": "leader-release-120-01",
+      "reward": 1,
+      "cases_passed": 30,
+      "image_id": "sha256:9828b62afa876e9a59535c4b7f59b7478eaa56879f15646a99a463f8bc04a410",
+      "verifier_wall_seconds": 156.774,
+      "engine_manifest": [
+        {
+          "path": "__init__.py",
+          "sha256": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+          "size": 58
+        },
+        {
+          "path": "migration.py",
+          "sha256": "4686f7d13c535f6fbfce1dc8d2ad4e15be167b2b6a28186e4a74d11d6eb218ad",
+          "size": 12239
+        },
+        {
+          "path": "node.py",
+          "sha256": "112783677c0546f6b2eef992d2be20cf96bd0456ae69d920eac7537ce94ba6ff",
+          "size": 7645
+        },
+        {
+          "path": "participant.py",
+          "sha256": "b288b6ba9109013a028cdb6c36abf6503bdd6d5765f3492f12bc2d944e7ddedd",
+          "size": 10779
+        },
+        {
+          "path": "rebalancing.py",
+          "sha256": "4817841e8be5f74855f5e0f06922cb8f56ed8882c9aa8c22171eca78d10b5497",
+          "size": 10215
+        },
+        {
+          "path": "records.py",
+          "sha256": "92d32126bceb5964c8c92e8b6cd6c6aaec1825c15b63fbceb8bcd81ab6bd07eb",
+          "size": 3664
+        },
+        {
+          "path": "recovery.py",
+          "sha256": "c5444a172e74ca1e4ece2fdefcfce2bc4f08a6344e0b3eab8032bf8588c413f7",
+          "size": 625
+        },
+        {
+          "path": "transactions.py",
+          "sha256": "77d03497be7fd6dcf43cf193d102d3232e9ddef901872a3cc4d54bfd1f38935d",
+          "size": 10383
+        }
+      ],
+      "groups": {
+        "1000": {
+          "count": 41,
+          "maximum_used": 58
+        },
+        "2000": {
+          "count": 33,
+          "maximum_used": 190
+        },
+        "10000": {
+          "count": 70,
+          "maximum_used": 301
+        }
+      },
+      "phase_samples": [
+        {
+          "case": "healthy",
+          "deadline_round": 10000,
+          "label": "healthy-service",
+          "start_round": 0,
+          "end_round": 290,
+          "used": 290,
+          "budget": 10000
+        },
+        {
+          "case": "renamed-topology",
+          "deadline_round": 10000,
+          "label": "healthy-service",
+          "start_round": 0,
+          "end_round": 290,
+          "used": 290,
+          "budget": 10000
+        },
+        {
+          "case": "overlapping-reads-and-writes",
+          "deadline_round": 10000,
+          "label": "healthy-overlap",
+          "start_round": 0,
+          "end_round": 301,
+          "used": 301,
+          "budget": 10000
+        },
+        {
+          "case": "read-live-during-migration",
+          "deadline_round": 10000,
+          "label": "live-read-prefix",
+          "start_round": 0,
+          "end_round": 64,
+          "used": 64,
+          "budget": 10000
+        },
+        {
+          "case": "read-live-during-migration",
+          "deadline_round": 10064,
+          "label": "live-read-migration",
+          "start_round": 64,
+          "end_round": 81,
+          "used": 17,
+          "budget": 10000
+        },
+        {
+          "case": "read-live-during-migration",
+          "deadline_round": 481,
+          "label": "held-read-message",
+          "start_round": 81,
+          "end_round": 481,
+          "used": 400,
+          "budget": 400
+        },
+        {
+          "case": "read-live-during-migration",
+          "deadline_round": 10481,
+          "label": "live-read-stable-recovery",
+          "start_round": 481,
+          "end_round": 615,
+          "used": 134,
+          "budget": 10000
+        },
+        {
+          "case": "settled-result-coordinator-restart",
+          "deadline_round": 10000,
+          "label": "settled-transaction-prefix",
+          "start_round": 0,
+          "end_round": 72,
+          "used": 72,
+          "budget": 10000
+        },
+        {
+          "case": "settled-result-coordinator-restart",
+          "deadline_round": 10072,
+          "label": "settled-transaction-recovery",
+          "start_round": 72,
+          "end_round": 280,
+          "used": 208,
+          "budget": 10000
+        },
+        {
+          "case": "durable-commit-coordinator-restart",
+          "deadline_round": 10000,
+          "label": "healthy-prefix",
+          "start_round": 0,
+          "end_round": 17,
+          "used": 17,
+          "budget": 10000
+        },
+        {
+          "case": "durable-commit-coordinator-restart",
+          "deadline_round": 2017,
+          "label": "coordinator-offline-migration",
+          "start_round": 17,
+          "end_round": 75,
+          "used": 58,
+          "budget": 2000
+        },
+        {
+          "case": "durable-commit-coordinator-restart",
+          "deadline_round": 10075,
+          "label": "stable-recovery",
+          "start_round": 75,
+          "end_round": 256,
+          "used": 181,
+          "budget": 10000
+        },
+        {
+          "case": "source-first-persist-restart",
+          "deadline_round": 10000,
+          "label": "healthy-prefix",
+          "start_round": 0,
+          "end_round": 17,
+          "used": 17,
+          "budget": 10000
+        },
+        {
+          "case": "source-first-persist-restart",
+          "deadline_round": 2017,
+          "label": "coordinator-offline-migration",
+          "start_round": 17,
+          "end_round": 207,
+          "used": 190,
+          "budget": 2000
+        },
+        {
+          "case": "source-first-persist-restart",
+          "deadline_round": 10207,
+          "label": "stable-recovery",
+          "start_round": 207,
+          "end_round": 408,
+          "used": 201,
+          "budget": 10000
+        },
+        {
+          "case": "target-first-persist-restart",
+          "deadline_round": 10000,
+          "label": "healthy-prefix",
+          "start_round": 0,
+          "end_round": 17,
+          "used": 17,
+          "budget": 10000
+        },
+        {
+          "case": "target-first-persist-restart",
+          "deadline_round": 2017,
+          "label": "coordinator-offline-migration",
+          "start_round": 17,
+          "end_round": 75,
+          "used": 58,
+          "budget": 2000
+        },
+        {
+          "case": "target-first-persist-restart",
+          "deadline_round": 10075,
+          "label": "stable-recovery",
+          "start_round": 75,
+          "end_round": 251,
+          "used": 176,
+          "budget": 10000
+        },
+        {
+          "case": "owner-swap-source-restart",
+          "deadline_round": 10000,
+          "label": "healthy-prefix",
+          "start_round": 0,
+          "end_round": 17,
+          "used": 17,
+          "budget": 10000
+        },
+        {
+          "case": "owner-swap-source-restart",
+          "deadline_round": 2017,
+          "label": "coordinator-offline-migration",
+          "start_round": 17,
+          "end_round": 207,
+          "used": 190,
+          "budget": 2000
+        },
+        {
+          "case": "owner-swap-source-restart",
+          "deadline_round": 10207,
+          "label": "stable-recovery",
+          "start_round": 207,
+          "end_round": 408,
+          "used": 201,
+          "budget": 10000
+        },
+        {
+          "case": "migration-reply-target-restart",
+          "deadline_round": 10000,
+          "label": "healthy-prefix",
+          "start_round": 0,
+          "end_round": 17,
+          "used": 17,
+          "budget": 10000
+        },
+        {
+          "case": "migration-reply-target-restart",
+          "deadline_round": 2017,
+          "label": "coordinator-offline-migration",
+          "start_round": 17,
+          "end_round": 75,
+          "used": 58,
+          "budget": 2000
+        },
+        {
+          "case": "migration-reply-target-restart",
+          "deadline_round": 10075,
+          "label": "stable-recovery",
+          "start_round": 75,
+          "end_round": 255,
+          "used": 180,
+          "budget": 10000
+        },
+        {
+          "case": "target-reply-loss-restart",
+          "deadline_round": 10000,
+          "label": "healthy-prefix",
+          "start_round": 0,
+          "end_round": 17,
+          "used": 17,
+          "budget": 10000
+        },
+        {
+          "case": "target-reply-loss-restart",
+          "deadline_round": 2017,
+          "label": "coordinator-offline-migration",
+          "start_round": 17,
+          "end_round": 75,
+          "used": 58,
+          "budget": 2000
+        },
+        {
+          "case": "target-reply-loss-restart",
+          "deadline_round": 10075,
+          "label": "stable-recovery",
+          "start_round": 75,
+          "end_round": 251,
+          "used": 176,
+          "budget": 10000
+        },
+        {
+          "case": "retired-source-offline",
+          "deadline_round": 10000,
+          "label": "healthy-prefix",
+          "start_round": 0,
+          "end_round": 17,
+          "used": 17,
+          "budget": 10000
+        },
+        {
+          "case": "retired-source-offline",
+          "deadline_round": 2017,
+          "label": "coordinator-offline-migration",
+          "start_round": 17,
+          "end_round": 75,
+          "used": 58,
+          "budget": 2000
+        },
+        {
+          "case": "retired-source-offline",
+          "deadline_round": 10075,
+          "label": "stable-recovery",
+          "start_round": 75,
+          "end_round": 256,
+          "used": 181,
+          "budget": 10000
+        },
+        {
+          "case": "compat-prepared",
+          "deadline_round": 2008,
+          "label": "compatibility-offline-migration",
+          "start_round": 8,
+          "end_round": 69,
+          "used": 61,
+          "budget": 2000
+        },
+        {
+          "case": "compat-prepared",
+          "deadline_round": 10069,
+          "label": "compatibility-stable-recovery",
+          "start_round": 69,
+          "end_round": 252,
+          "used": 183,
+          "budget": 10000
+        },
+        {
+          "case": "compat-read-grant",
+          "deadline_round": 2008,
+          "label": "compatibility-offline-migration",
+          "start_round": 8,
+          "end_round": 69,
+          "used": 61,
+          "budget": 2000
+        },
+        {
+          "case": "compat-read-grant",
+          "deadline_round": 10069,
+          "label": "compatibility-stable-recovery",
+          "start_round": 69,
+          "end_round": 233,
+          "used": 164,
+          "budget": 10000
+        },
+        {
+          "case": "compat-single-commit",
+          "deadline_round": 10019,
+          "label": "compatibility-service",
+          "start_round": 19,
+          "end_round": 80,
+          "used": 61,
+          "budget": 10000
+        },
+        {
+          "case": "compat-single-commit",
+          "deadline_round": 10080,
+          "label": "compatibility-stable-recovery",
+          "start_round": 80,
+          "end_round": 246,
+          "used": 166,
+          "budget": 10000
+        },
+        {
+          "case": "compat-single-abort",
+          "deadline_round": 10024,
+          "label": "compatibility-service",
+          "start_round": 24,
+          "end_round": 85,
+          "used": 61,
+          "budget": 10000
+        },
+        {
+          "case": "compat-single-abort",
+          "deadline_round": 10085,
+          "label": "compatibility-stable-recovery",
+          "start_round": 85,
+          "end_round": 277,
+          "used": 192,
+          "budget": 10000
+        },
+        {
+          "case": "compat-migration-draining",
+          "deadline_round": 10005,
+          "label": "compatibility-service",
+          "start_round": 5,
+          "end_round": 66,
+          "used": 61,
+          "budget": 10000
+        },
+        {
+          "case": "compat-migration-draining",
+          "deadline_round": 10066,
+          "label": "compatibility-stable-recovery",
+          "start_round": 66,
+          "end_round": 207,
+          "used": 141,
+          "budget": 10000
+        },
+        {
+          "case": "compat-migration-settled",
+          "deadline_round": 10033,
+          "label": "compatibility-service",
+          "start_round": 33,
+          "end_round": 94,
+          "used": 61,
+          "budget": 10000
+        },
+        {
+          "case": "compat-migration-settled",
+          "deadline_round": 10094,
+          "label": "compatibility-stable-recovery",
+          "start_round": 94,
+          "end_round": 248,
+          "used": 154,
+          "budget": 10000
+        },
+        {
+          "case": "compat-migration-complete-checkpoint",
+          "deadline_round": 10018,
+          "label": "compatibility-service",
+          "start_round": 18,
+          "end_round": 79,
+          "used": 61,
+          "budget": 10000
+        },
+        {
+          "case": "compat-migration-complete-checkpoint",
+          "deadline_round": 10079,
+          "label": "compatibility-stable-recovery",
+          "start_round": 79,
+          "end_round": 103,
+          "used": 24,
+          "budget": 10000
+        },
+        {
+          "case": "compat-migration-complete-checkpoint",
+          "deadline_round": 10103,
+          "label": "checkpoint-retired-source-service",
+          "start_round": 103,
+          "end_round": 126,
+          "used": 23,
+          "budget": 10000
+        },
+        {
+          "case": "compat-migration-complete-checkpoint",
+          "deadline_round": 10126,
+          "label": "checkpoint-returning-source-recovery",
+          "start_round": 126,
+          "end_round": 214,
+          "used": 88,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-exchange-cycle",
+          "deadline_round": 10000,
+          "label": "stable-service",
+          "start_round": 0,
+          "end_round": 73,
+          "used": 73,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-exchange-cycle",
+          "deadline_round": 2073,
+          "label": "rebalance-exchange",
+          "start_round": 73,
+          "end_round": 139,
+          "used": 66,
+          "budget": 2000
+        },
+        {
+          "case": "rebalance-exchange-cycle",
+          "deadline_round": 10139,
+          "label": "stable-service",
+          "start_round": 139,
+          "end_round": 209,
+          "used": 70,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-exchange-cycle",
+          "deadline_round": 2209,
+          "label": "rebalance-combine",
+          "start_round": 209,
+          "end_round": 270,
+          "used": 61,
+          "budget": 2000
+        },
+        {
+          "case": "rebalance-exchange-cycle",
+          "deadline_round": 10270,
+          "label": "stable-service",
+          "start_round": 270,
+          "end_round": 372,
+          "used": 102,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-exchange-cycle",
+          "deadline_round": 2372,
+          "label": "rebalance-return",
+          "start_round": 372,
+          "end_round": 468,
+          "used": 96,
+          "budget": 2000
+        },
+        {
+          "case": "rebalance-exchange-cycle",
+          "deadline_round": 10468,
+          "label": "stable-service",
+          "start_round": 468,
+          "end_round": 646,
+          "used": 178,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-renamed-multikey",
+          "deadline_round": 10000,
+          "label": "stable-service",
+          "start_round": 0,
+          "end_round": 73,
+          "used": 73,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-renamed-multikey",
+          "deadline_round": 2073,
+          "label": "rebalance-exchange",
+          "start_round": 73,
+          "end_round": 139,
+          "used": 66,
+          "budget": 2000
+        },
+        {
+          "case": "rebalance-renamed-multikey",
+          "deadline_round": 10139,
+          "label": "stable-service",
+          "start_round": 139,
+          "end_round": 209,
+          "used": 70,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-renamed-multikey",
+          "deadline_round": 2209,
+          "label": "rebalance-combine",
+          "start_round": 209,
+          "end_round": 270,
+          "used": 61,
+          "budget": 2000
+        },
+        {
+          "case": "rebalance-renamed-multikey",
+          "deadline_round": 10270,
+          "label": "stable-service",
+          "start_round": 270,
+          "end_round": 372,
+          "used": 102,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-renamed-multikey",
+          "deadline_round": 2372,
+          "label": "rebalance-return",
+          "start_round": 372,
+          "end_round": 468,
+          "used": 96,
+          "budget": 2000
+        },
+        {
+          "case": "rebalance-renamed-multikey",
+          "deadline_round": 10468,
+          "label": "stable-service",
+          "start_round": 468,
+          "end_round": 646,
+          "used": 178,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-colocation",
+          "deadline_round": 2000,
+          "label": "rebalance-combine",
+          "start_round": 0,
+          "end_round": 57,
+          "used": 57,
+          "budget": 2000
+        },
+        {
+          "case": "rebalance-colocation",
+          "deadline_round": 10057,
+          "label": "stable-service",
+          "start_round": 57,
+          "end_round": 214,
+          "used": 157,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-colocation",
+          "deadline_round": 2214,
+          "label": "rebalance-separate",
+          "start_round": 214,
+          "end_round": 292,
+          "used": 78,
+          "budget": 2000
+        },
+        {
+          "case": "rebalance-colocation",
+          "deadline_round": 10292,
+          "label": "stable-service",
+          "start_round": 292,
+          "end_round": 409,
+          "used": 117,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-unresolved-commit",
+          "deadline_round": 10000,
+          "label": "establish-real-durable-decision",
+          "start_round": 0,
+          "end_round": 17,
+          "used": 17,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-unresolved-commit",
+          "deadline_round": 2017,
+          "label": "rebalance-paused-exchange",
+          "start_round": 17,
+          "end_round": 82,
+          "used": 65,
+          "budget": 2000
+        },
+        {
+          "case": "rebalance-unresolved-commit",
+          "deadline_round": 10082,
+          "label": "stable-service",
+          "start_round": 82,
+          "end_round": 159,
+          "used": 77,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-unresolved-commit",
+          "deadline_round": 2159,
+          "label": "rebalance-paused-combine",
+          "start_round": 159,
+          "end_round": 218,
+          "used": 59,
+          "budget": 2000
+        },
+        {
+          "case": "rebalance-unresolved-commit",
+          "deadline_round": 10218,
+          "label": "recover-with-former-owner-down",
+          "start_round": 218,
+          "end_round": 334,
+          "used": 116,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-unresolved-commit",
+          "deadline_round": 2334,
+          "label": "rebalance-paused-return",
+          "start_round": 334,
+          "end_round": 419,
+          "used": 85,
+          "budget": 2000
+        },
+        {
+          "case": "rebalance-unresolved-commit",
+          "deadline_round": 10419,
+          "label": "stable-service",
+          "start_round": 419,
+          "end_round": 466,
+          "used": 47,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-live-local-read",
+          "deadline_round": 10000,
+          "label": "live-original-local-read",
+          "start_round": 0,
+          "end_round": 32,
+          "used": 32,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-live-local-read",
+          "deadline_round": 2032,
+          "label": "rebalance-read-exchange",
+          "start_round": 32,
+          "end_round": 97,
+          "used": 65,
+          "budget": 2000
+        },
+        {
+          "case": "rebalance-live-local-read",
+          "deadline_round": 10097,
+          "label": "stable-service",
+          "start_round": 97,
+          "end_round": 179,
+          "used": 82,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-source-first-persist",
+          "deadline_round": 10000,
+          "label": "real-action-crash-cut",
+          "start_round": 0,
+          "end_round": 18,
+          "used": 18,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-source-first-persist",
+          "deadline_round": 2018,
+          "label": "rebalance-crash-combine",
+          "start_round": 18,
+          "end_round": 149,
+          "used": 131,
+          "budget": 2000
+        },
+        {
+          "case": "rebalance-source-first-persist",
+          "deadline_round": 10149,
+          "label": "stable-service",
+          "start_round": 149,
+          "end_round": 219,
+          "used": 70,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-source-first-persist",
+          "deadline_round": 2219,
+          "label": "rebalance-crash-return",
+          "start_round": 219,
+          "end_round": 311,
+          "used": 92,
+          "budget": 2000
+        },
+        {
+          "case": "rebalance-source-first-persist",
+          "deadline_round": 10311,
+          "label": "stable-service",
+          "start_round": 311,
+          "end_round": 356,
+          "used": 45,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-target-first-persist",
+          "deadline_round": 10000,
+          "label": "real-action-crash-cut",
+          "start_round": 0,
+          "end_round": 21,
+          "used": 21,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-target-first-persist",
+          "deadline_round": 2021,
+          "label": "rebalance-crash-combine",
+          "start_round": 21,
+          "end_round": 72,
+          "used": 51,
+          "budget": 2000
+        },
+        {
+          "case": "rebalance-target-first-persist",
+          "deadline_round": 10072,
+          "label": "stable-service",
+          "start_round": 72,
+          "end_round": 157,
+          "used": 85,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-target-first-persist",
+          "deadline_round": 2157,
+          "label": "rebalance-crash-return",
+          "start_round": 157,
+          "end_round": 230,
+          "used": 73,
+          "budget": 2000
+        },
+        {
+          "case": "rebalance-target-first-persist",
+          "deadline_round": 10230,
+          "label": "stable-service",
+          "start_round": 230,
+          "end_round": 283,
+          "used": 53,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-vector-cas-restart",
+          "deadline_round": 10000,
+          "label": "real-action-crash-cut",
+          "start_round": 0,
+          "end_round": 61,
+          "used": 61,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-vector-cas-restart",
+          "deadline_round": 2061,
+          "label": "rebalance-crash-combine",
+          "start_round": 61,
+          "end_round": 192,
+          "used": 131,
+          "budget": 2000
+        },
+        {
+          "case": "rebalance-vector-cas-restart",
+          "deadline_round": 10192,
+          "label": "stable-service",
+          "start_round": 192,
+          "end_round": 278,
+          "used": 86,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-vector-cas-restart",
+          "deadline_round": 2278,
+          "label": "rebalance-crash-return",
+          "start_round": 278,
+          "end_round": 353,
+          "used": 75,
+          "budget": 2000
+        },
+        {
+          "case": "rebalance-vector-cas-restart",
+          "deadline_round": 10353,
+          "label": "stable-service",
+          "start_round": 353,
+          "end_round": 410,
+          "used": 57,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-retired-sources-offline",
+          "deadline_round": 10000,
+          "label": "stable-service",
+          "start_round": 0,
+          "end_round": 41,
+          "used": 41,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-retired-sources-offline",
+          "deadline_round": 2041,
+          "label": "rebalance-evacuate",
+          "start_round": 41,
+          "end_round": 97,
+          "used": 56,
+          "budget": 2000
+        },
+        {
+          "case": "rebalance-retired-sources-offline",
+          "deadline_round": 10097,
+          "label": "both-retired-sources-offline",
+          "start_round": 97,
+          "end_round": 236,
+          "used": 139,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-target-restart-replay",
+          "deadline_round": 2000,
+          "label": "rebalance-first-exchange",
+          "start_round": 0,
+          "end_round": 68,
+          "used": 68,
+          "budget": 2000
+        },
+        {
+          "case": "rebalance-target-restart-replay",
+          "deadline_round": 10068,
+          "label": "stable-service",
+          "start_round": 68,
+          "end_round": 87,
+          "used": 19,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-target-restart-replay",
+          "deadline_round": 2087,
+          "label": "rebalance-then-combine",
+          "start_round": 87,
+          "end_round": 161,
+          "used": 74,
+          "budget": 2000
+        },
+        {
+          "case": "rebalance-target-restart-replay",
+          "deadline_round": 10161,
+          "label": "stable-service",
+          "start_round": 161,
+          "end_round": 240,
+          "used": 79,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-target-restart-replay",
+          "deadline_round": 10240,
+          "label": "target-restart-and-old-messages",
+          "start_round": 240,
+          "end_round": 297,
+          "used": 57,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-target-restart-replay",
+          "deadline_round": 2297,
+          "label": "rebalance-third-return",
+          "start_round": 297,
+          "end_round": 371,
+          "used": 74,
+          "budget": 2000
+        },
+        {
+          "case": "rebalance-target-restart-replay",
+          "deadline_round": 10371,
+          "label": "stable-service",
+          "start_round": 371,
+          "end_round": 425,
+          "used": 54,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-after-legacy-migration",
+          "deadline_round": 10000,
+          "label": "stable-service",
+          "start_round": 0,
+          "end_round": 47,
+          "used": 47,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-after-legacy-migration",
+          "deadline_round": 2047,
+          "label": "rebalance-after-legacy",
+          "start_round": 47,
+          "end_round": 117,
+          "used": 70,
+          "budget": 2000
+        },
+        {
+          "case": "rebalance-after-legacy-migration",
+          "deadline_round": 10117,
+          "label": "stable-service",
+          "start_round": 117,
+          "end_round": 140,
+          "used": 23,
+          "budget": 10000
+        },
+        {
+          "case": "rebalance-after-legacy-migration",
+          "deadline_round": 2140,
+          "label": "rebalance-legacy-return",
+          "start_round": 140,
+          "end_round": 239,
+          "used": 99,
+          "budget": 2000
+        },
+        {
+          "case": "rebalance-after-legacy-migration",
+          "deadline_round": 10239,
+          "label": "stable-service",
+          "start_round": 239,
+          "end_round": 316,
+          "used": 77,
+          "budget": 10000
+        }
+      ],
+      "c_only_request_samples": [
+        {
+          "case": "healthy",
+          "attempt": "attempt-137",
+          "used": 19,
+          "budget": 1000
+        },
+        {
+          "case": "renamed-topology",
+          "attempt": "attempt-137",
+          "used": 19,
+          "budget": 1000
+        },
+        {
+          "case": "overlapping-reads-and-writes",
+          "attempt": "attempt-214",
+          "used": 19,
+          "budget": 1000
+        },
+        {
+          "case": "read-live-during-migration",
+          "attempt": "attempt-254",
+          "used": 19,
+          "budget": 1000
+        },
+        {
+          "case": "settled-result-coordinator-restart",
+          "attempt": "attempt-177",
+          "used": 19,
+          "budget": 1000
+        },
+        {
+          "case": "durable-commit-coordinator-restart",
+          "attempt": "attempt-40",
+          "used": 19,
+          "budget": 1000
+        },
+        {
+          "case": "durable-commit-coordinator-restart",
+          "attempt": "attempt-90",
+          "used": 39,
+          "budget": 1000
+        },
+        {
+          "case": "source-first-persist-restart",
+          "attempt": "attempt-40",
+          "used": 19,
+          "budget": 1000
+        },
+        {
+          "case": "source-first-persist-restart",
+          "attempt": "attempt-91",
+          "used": 39,
+          "budget": 1000
+        },
+        {
+          "case": "target-first-persist-restart",
+          "attempt": "attempt-40",
+          "used": 19,
+          "budget": 1000
+        },
+        {
+          "case": "target-first-persist-restart",
+          "attempt": "attempt-83",
+          "used": 39,
+          "budget": 1000
+        },
+        {
+          "case": "owner-swap-source-restart",
+          "attempt": "attempt-40",
+          "used": 19,
+          "budget": 1000
+        },
+        {
+          "case": "owner-swap-source-restart",
+          "attempt": "attempt-92",
+          "used": 39,
+          "budget": 1000
+        },
+        {
+          "case": "migration-reply-target-restart",
+          "attempt": "attempt-40",
+          "used": 19,
+          "budget": 1000
+        },
+        {
+          "case": "migration-reply-target-restart",
+          "attempt": "attempt-90",
+          "used": 39,
+          "budget": 1000
+        },
+        {
+          "case": "target-reply-loss-restart",
+          "attempt": "attempt-40",
+          "used": 19,
+          "budget": 1000
+        },
+        {
+          "case": "target-reply-loss-restart",
+          "attempt": "attempt-84",
+          "used": 39,
+          "budget": 1000
+        },
+        {
+          "case": "retired-source-offline",
+          "attempt": "attempt-40",
+          "used": 19,
+          "budget": 1000
+        },
+        {
+          "case": "retired-source-offline",
+          "attempt": "attempt-90",
+          "used": 39,
+          "budget": 1000
+        },
+        {
+          "case": "compat-prepared",
+          "attempt": "attempt-23",
+          "used": 22,
+          "budget": 1000
+        },
+        {
+          "case": "compat-prepared",
+          "attempt": "attempt-82",
+          "used": 39,
+          "budget": 1000
+        },
+        {
+          "case": "compat-read-grant",
+          "attempt": "attempt-23",
+          "used": 22,
+          "budget": 1000
+        },
+        {
+          "case": "compat-read-grant",
+          "attempt": "attempt-82",
+          "used": 39,
+          "budget": 1000
+        },
+        {
+          "case": "compat-single-commit",
+          "attempt": "attempt-31",
+          "used": 22,
+          "budget": 1000
+        },
+        {
+          "case": "compat-single-commit",
+          "attempt": "attempt-88",
+          "used": 39,
+          "budget": 1000
+        },
+        {
+          "case": "compat-single-abort",
+          "attempt": "attempt-38",
+          "used": 22,
+          "budget": 1000
+        },
+        {
+          "case": "compat-single-abort",
+          "attempt": "attempt-89",
+          "used": 39,
+          "budget": 1000
+        },
+        {
+          "case": "compat-migration-draining",
+          "attempt": "attempt-17",
+          "used": 22,
+          "budget": 1000
+        },
+        {
+          "case": "compat-migration-draining",
+          "attempt": "attempt-85",
+          "used": 39,
+          "budget": 1000
+        },
+        {
+          "case": "compat-migration-settled",
+          "attempt": "attempt-48",
+          "used": 22,
+          "budget": 1000
+        },
+        {
+          "case": "compat-migration-settled",
+          "attempt": "attempt-114",
+          "used": 39,
+          "budget": 1000
+        },
+        {
+          "case": "compat-migration-complete-checkpoint",
+          "attempt": "attempt-39",
+          "used": 22,
+          "budget": 1000
+        },
+        {
+          "case": "compat-migration-complete-checkpoint",
+          "attempt": "attempt-85",
+          "used": 39,
+          "budget": 1000
+        },
+        {
+          "case": "rebalance-exchange-cycle",
+          "attempt": "attempt-1177",
+          "used": 19,
+          "budget": 1000
+        },
+        {
+          "case": "rebalance-exchange-cycle",
+          "attempt": "attempt-1207",
+          "used": 39,
+          "budget": 1000
+        },
+        {
+          "case": "rebalance-renamed-multikey",
+          "attempt": "attempt-1177",
+          "used": 19,
+          "budget": 1000
+        },
+        {
+          "case": "rebalance-renamed-multikey",
+          "attempt": "attempt-1207",
+          "used": 39,
+          "budget": 1000
+        },
+        {
+          "case": "rebalance-unresolved-commit",
+          "attempt": "attempt-166",
+          "used": 19,
+          "budget": 1000
+        },
+        {
+          "case": "rebalance-unresolved-commit",
+          "attempt": "attempt-189",
+          "used": 58,
+          "budget": 1000
+        },
+        {
+          "case": "rebalance-retired-sources-offline",
+          "attempt": "attempt-289",
+          "used": 19,
+          "budget": 1000
+        },
+        {
+          "case": "rebalance-retired-sources-offline",
+          "attempt": "attempt-345",
+          "used": 39,
+          "budget": 1000
+        }
+      ]
+    }
+  ],
+  "negative_controls": [
+    {
+      "label": "keep-old-values-01",
+      "cases": [
+        {
+          "case": "rebalance-exchange-cycle",
+          "status": "CANDIDATE_FAIL",
+          "error": "no strict-serializable ordering explains all successful snapshots"
+        },
+        {
+          "case": "rebalance-renamed-multikey",
+          "status": "CANDIDATE_FAIL",
+          "error": "no strict-serializable ordering explains all successful snapshots"
+        }
+      ]
+    },
+    {
+      "label": "reinstall-old-image-01",
+      "cases": [
+        {
+          "case": "rebalance-target-restart-replay",
+          "status": "CANDIDATE_FAIL",
+          "error": "no strict-serializable ordering explains all successful snapshots"
+        },
+        {
+          "case": "rebalance-exchange-cycle",
+          "status": "PASS"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Finite validation, not a guarantee that a student will fail.",
+    "Correct alternative changes publisher selection, read completion policy and retry interval but shares reference primitives.",
+    "Negative controls are author-created errors, not student or cheat results.",
+    "Unmodified fixture-source and isolation mechanisms reuse prior evidence; added host calls have fresh schema tests."
+  ],
+  "sample_definition": {
+    "1000": "C-only terminal/successful attempt from actual trace",
+    "2000": "Complete recorded healthy-plan phase",
+    "10000": "Complete stable service/recovery phase",
+    "phase_end": "Next phase start or final scenario round; conservatively includes intervening steps"
+  },
+  "tests_manifest": [
+    {
+      "path": ".dockerignore",
+      "size": 100,
+      "sha256": "8bfaaf81e0f7fdf08f9d0d592793bebafb82eedb73846c028c0b615fd3d3113b"
+    },
+    {
+      "path": "Dockerfile",
+      "size": 642,
+      "sha256": "bcb7f387613d612c0b0f81b7686d6b3f58429b6c6be97491a5a731e7a8b01aa7"
+    },
+    {
+      "path": "baseline/engine/__init__.py",
+      "size": 58,
+      "sha256": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f"
+    },
+    {
+      "path": "baseline/engine/migration.py",
+      "size": 10124,
+      "sha256": "91463e9d33a17a1f356477d04c4264b3ba60e70bcf7a8d731d2f869f1d44f35a"
+    },
+    {
+      "path": "baseline/engine/node.py",
+      "size": 6838,
+      "sha256": "1c3cf2afac2766b347c3bdbf162dff27e4db1ceaa9c3a22aec387909447a396d"
+    },
+    {
+      "path": "baseline/engine/participant.py",
+      "size": 10779,
+      "sha256": "b288b6ba9109013a028cdb6c36abf6503bdd6d5765f3492f12bc2d944e7ddedd"
+    },
+    {
+      "path": "baseline/engine/records.py",
+      "size": 3664,
+      "sha256": "92d32126bceb5964c8c92e8b6cd6c6aaec1825c15b63fbceb8bcd81ab6bd07eb"
+    },
+    {
+      "path": "baseline/engine/recovery.py",
+      "size": 574,
+      "sha256": "30299d4498e7624eab17456952160ca3ccd3d17a0f0bec5cfcd605bea1a84b3d"
+    },
+    {
+      "path": "baseline/engine/transactions.py",
+      "size": 10381,
+      "sha256": "ea9c591b1c84484423577f08b216838725ad2d3858e53d28b8a2c7e8dfdf25f0"
+    },
+    {
+      "path": "fixtures/_sources/author/fixtures.py",
+      "size": 51560,
+      "sha256": "cb5e9aee40514f03ee3e5bc99c43e7d7a8460249ce8d3103b3521e50532b9c3f"
+    },
+    {
+      "path": "fixtures/_sources/author/make_fixtures.py",
+      "size": 20858,
+      "sha256": "b3dfcf59cda763cfa1aec0999be0d56c12e8032ab8940ef2878d298c0bb6d282"
+    },
+    {
+      "path": "fixtures/_sources/engine/__init__.py",
+      "size": 58,
+      "sha256": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f"
+    },
+    {
+      "path": "fixtures/_sources/engine/migration.py",
+      "size": 10124,
+      "sha256": "91463e9d33a17a1f356477d04c4264b3ba60e70bcf7a8d731d2f869f1d44f35a"
+    },
+    {
+      "path": "fixtures/_sources/engine/node.py",
+      "size": 6838,
+      "sha256": "1c3cf2afac2766b347c3bdbf162dff27e4db1ceaa9c3a22aec387909447a396d"
+    },
+    {
+      "path": "fixtures/_sources/engine/participant.py",
+      "size": 10779,
+      "sha256": "b288b6ba9109013a028cdb6c36abf6503bdd6d5765f3492f12bc2d944e7ddedd"
+    },
+    {
+      "path": "fixtures/_sources/engine/records.py",
+      "size": 3664,
+      "sha256": "92d32126bceb5964c8c92e8b6cd6c6aaec1825c15b63fbceb8bcd81ab6bd07eb"
+    },
+    {
+      "path": "fixtures/_sources/engine/recovery.py",
+      "size": 574,
+      "sha256": "30299d4498e7624eab17456952160ca3ccd3d17a0f0bec5cfcd605bea1a84b3d"
+    },
+    {
+      "path": "fixtures/_sources/engine/transactions.py",
+      "size": 10381,
+      "sha256": "ea9c591b1c84484423577f08b216838725ad2d3858e53d28b8a2c7e8dfdf25f0"
+    },
+    {
+      "path": "fixtures/_sources/runtime/__init__.py",
+      "size": 129,
+      "sha256": "366a05bb62fffa297fc070006c5d40b4949d52eba99b7d1663adda79ac75149a"
+    },
+    {
+      "path": "fixtures/_sources/runtime/devhost/__init__.py",
+      "size": 136,
+      "sha256": "0b286e6fff28a658fc89fff5f1b417812fadd6870e69f0f5f06999166f27688f"
+    },
+    {
+      "path": "fixtures/_sources/runtime/devhost/__main__.py",
+      "size": 8258,
+      "sha256": "76f6f836bda5329a005858908fdad0a1f487fae4f1fd99ba50953274df57dc4d"
+    },
+    {
+      "path": "fixtures/_sources/runtime/host_sdk/__init__.py",
+      "size": 137,
+      "sha256": "12592d738ede857f1722142de7e31810db468a5dccfaf91174d7e6e9cf8f9785"
+    },
+    {
+      "path": "fixtures/_sources/runtime/host_sdk/cluster.py",
+      "size": 30824,
+      "sha256": "e52d118033105aa330866f3cbf7b577eae50a6074043a0fe5ef760c07370ce75"
+    },
+    {
+      "path": "fixtures/_sources/runtime/host_sdk/isolation.py",
+      "size": 34656,
+      "sha256": "746bd5e3514af303c10bdabbeb35ad84a587660aa42016adb3ebe0ec23b4e290"
+    },
+    {
+      "path": "fixtures/_sources/runtime/host_sdk/storage.py",
+      "size": 6628,
+      "sha256": "6e44219906205df2270061e71de16d766f169b81d1c3af2f6f7bb1fa45d8edd8"
+    },
+    {
+      "path": "fixtures/migration_complete_checkpoint.json",
+      "size": 55769,
+      "sha256": "b51f7df4f23ce3a0a4e561f54293f0232abfc38dc83519aabc5dfbc1c6262474"
+    },
+    {
+      "path": "fixtures/migration_draining.json",
+      "size": 16457,
+      "sha256": "3733778f7183df2418b30f968ee9538da1ccc3ac15b6d5da2d31131fb1a1f11c"
+    },
+    {
+      "path": "fixtures/migration_settled.json",
+      "size": 73804,
+      "sha256": "cd67cf3c20d888794ce618c693952abf40b5945ea0fe90b493bd887ebd9752cb"
+    },
+    {
+      "path": "fixtures/prepared.json",
+      "size": 28852,
+      "sha256": "369a7a02c9231eafffcce1eb67cf9818837c2adf63f2e61d2057c7ed567f634d"
+    },
+    {
+      "path": "fixtures/read_grant.json",
+      "size": 29146,
+      "sha256": "8703297b441d2c7b72a08190836b7d1646b15b88bedb33a95b13d798bd4356cf"
+    },
+    {
+      "path": "fixtures/single_abort.json",
+      "size": 54682,
+      "sha256": "23a636f2c3b8e808f34c301f5a5684ee18317b5544fafa14af5816e7df69672f"
+    },
+    {
+      "path": "fixtures/single_commit.json",
+      "size": 40843,
+      "sha256": "46eaec2352b86ef56566d739c19a44e7848bf64a92bed66dd00297b0db4f58c5"
+    },
+    {
+      "path": "fixtures/validation.json",
+      "size": 5270,
+      "sha256": "9f4cc16ca5e77ddda245e7e26aa91de728e659a38518f21d5321ef3d0b893908"
+    },
+    {
+      "path": "run_verifier.py",
+      "size": 17711,
+      "sha256": "123f038f91ec3f8cac2645d92771f1dcb869b627aceab2b5c0cee004a2327c1d"
+    },
+    {
+      "path": "runtime/sharddb/__init__.py",
+      "size": 129,
+      "sha256": "366a05bb62fffa297fc070006c5d40b4949d52eba99b7d1663adda79ac75149a"
+    },
+    {
+      "path": "runtime/sharddb/devhost/__init__.py",
+      "size": 136,
+      "sha256": "0b286e6fff28a658fc89fff5f1b417812fadd6870e69f0f5f06999166f27688f"
+    },
+    {
+      "path": "runtime/sharddb/devhost/__main__.py",
+      "size": 8258,
+      "sha256": "76f6f836bda5329a005858908fdad0a1f487fae4f1fd99ba50953274df57dc4d"
+    },
+    {
+      "path": "runtime/sharddb/host_sdk/__init__.py",
+      "size": 137,
+      "sha256": "12592d738ede857f1722142de7e31810db468a5dccfaf91174d7e6e9cf8f9785"
+    },
+    {
+      "path": "runtime/sharddb/host_sdk/cluster.py",
+      "size": 36664,
+      "sha256": "1991c2fa79ab2e13e12a6963bf851fc5c78109022c87e2aef64ecc4920f6646d"
+    },
+    {
+      "path": "runtime/sharddb/host_sdk/isolation.py",
+      "size": 35656,
+      "sha256": "2b6b4ae6a853d037161810270cb88034fb1a68a685518f0301fe7e692335fe8e"
+    },
+    {
+      "path": "runtime/sharddb/host_sdk/storage.py",
+      "size": 6628,
+      "sha256": "6e44219906205df2270061e71de16d766f169b81d1c3af2f6f7bb1fa45d8edd8"
+    },
+    {
+      "path": "test.sh",
+      "size": 456,
+      "sha256": "c41115b2856921c20b62ea2baf9c1b324b03b25fee1fe03f69b18fa05eacb942"
+    },
+    {
+      "path": "test_sharddb.py",
+      "size": 1376,
+      "sha256": "d2088d74dfab8b32cbd57836f876172e8c0fe505913ab965887e9542b3871193"
+    },
+    {
+      "path": "trusted/artifact.py",
+      "size": 3737,
+      "sha256": "e8babe01a3afeacb0be3b2a6ec438a0303e7be842b49fd370c6345c9a16ad75e"
+    },
+    {
+      "path": "trusted/fixtures.py",
+      "size": 52534,
+      "sha256": "d5ca04f789eacb3e68636a56eea2d76a0487c0e803859ae9091419d9febe129a"
+    },
+    {
+      "path": "trusted/group_scenarios.py",
+      "size": 8532,
+      "sha256": "82e4ec87c16cace9f0ad916bb31716c771687fff33c25e899057fdd75c907453"
+    },
+    {
+      "path": "trusted/history.py",
+      "size": 15257,
+      "sha256": "f26547eb54ed1f27966a555bd8e25ebc781de15c9cbe66355f1b5040cf8ee220"
+    },
+    {
+      "path": "trusted/scenarios.py",
+      "size": 27073,
+      "sha256": "6ec951cde23682fa4588cf251c7a72d35f84e42cb2c7bcc3bfd19455d1d2894e"
+    }
+  ]
+}

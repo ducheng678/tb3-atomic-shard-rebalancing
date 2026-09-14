@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "description": "Public A/B exchange, post-handoff transaction and snapshot; the original starter lacks rebalance.",
+  "steps": [
+    {"op":"invoke","request":{"op":"rebalance","plan_id":"exchange-1","moves":{"A":"b","B":"a_old"}},"as":"plan"},
+    {"op":"await","attempt":"plan","status":"COMPLETE","within_rounds":2000},
+    {"op":"invoke","request":{"op":"txn","txn_id":"after-exchange","delta_map":{"a":-7,"b":7}},"as":"write"},
+    {"op":"await","attempt":"write","status":"COMMITTED","within_rounds":10000},
+    {"op":"invoke","request":{"op":"snapshot","read_id":"after-exchange-read","keys":["a","b","c"]},"as":"read"},
+    {"op":"await","attempt":"read","status":"OK","within_rounds":10000}
+  ]
+}

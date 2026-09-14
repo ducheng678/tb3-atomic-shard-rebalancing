@@ -1,0 +1,952 @@
+{
+  "status": "PASS",
+  "scope": "Full 22-check pinned upstream shell run",
+  "source_manifest": [
+    {
+      "path": "README.md",
+      "size": 2711,
+      "sha256": "7c8f055b2b57582d326ebad28ec9340ddfc0115e93ad707eac326aef77b0ebc9"
+    },
+    {
+      "path": "environment/.dockerignore",
+      "size": 67,
+      "sha256": "d076491304ea9b22ed3c19f75043b8b0c3ace18b16da98ceacc3f1b8e4492a6a"
+    },
+    {
+      "path": "environment/Dockerfile",
+      "size": 442,
+      "sha256": "f65d9dab3c4e2eecbddc237c13b46371c0ccc8ac5ce16d1e1e77852cc7b64664"
+    },
+    {
+      "path": "environment/app/sharddb/__init__.py",
+      "size": 129,
+      "sha256": "366a05bb62fffa297fc070006c5d40b4949d52eba99b7d1663adda79ac75149a"
+    },
+    {
+      "path": "environment/app/sharddb/devhost/__init__.py",
+      "size": 136,
+      "sha256": "0b286e6fff28a658fc89fff5f1b417812fadd6870e69f0f5f06999166f27688f"
+    },
+    {
+      "path": "environment/app/sharddb/devhost/__main__.py",
+      "size": 8258,
+      "sha256": "76f6f836bda5329a005858908fdad0a1f487fae4f1fd99ba50953274df57dc4d"
+    },
+    {
+      "path": "environment/app/sharddb/engine/__init__.py",
+      "size": 58,
+      "sha256": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f"
+    },
+    {
+      "path": "environment/app/sharddb/engine/migration.py",
+      "size": 10124,
+      "sha256": "91463e9d33a17a1f356477d04c4264b3ba60e70bcf7a8d731d2f869f1d44f35a"
+    },
+    {
+      "path": "environment/app/sharddb/engine/node.py",
+      "size": 6838,
+      "sha256": "1c3cf2afac2766b347c3bdbf162dff27e4db1ceaa9c3a22aec387909447a396d"
+    },
+    {
+      "path": "environment/app/sharddb/engine/participant.py",
+      "size": 10779,
+      "sha256": "b288b6ba9109013a028cdb6c36abf6503bdd6d5765f3492f12bc2d944e7ddedd"
+    },
+    {
+      "path": "environment/app/sharddb/engine/records.py",
+      "size": 3664,
+      "sha256": "92d32126bceb5964c8c92e8b6cd6c6aaec1825c15b63fbceb8bcd81ab6bd07eb"
+    },
+    {
+      "path": "environment/app/sharddb/engine/recovery.py",
+      "size": 574,
+      "sha256": "30299d4498e7624eab17456952160ca3ccd3d17a0f0bec5cfcd605bea1a84b3d"
+    },
+    {
+      "path": "environment/app/sharddb/engine/transactions.py",
+      "size": 10381,
+      "sha256": "ea9c591b1c84484423577f08b216838725ad2d3858e53d28b8a2c7e8dfdf25f0"
+    },
+    {
+      "path": "environment/app/sharddb/host_sdk/__init__.py",
+      "size": 137,
+      "sha256": "12592d738ede857f1722142de7e31810db468a5dccfaf91174d7e6e9cf8f9785"
+    },
+    {
+      "path": "environment/app/sharddb/host_sdk/cluster.py",
+      "size": 36664,
+      "sha256": "1991c2fa79ab2e13e12a6963bf851fc5c78109022c87e2aef64ecc4920f6646d"
+    },
+    {
+      "path": "environment/app/sharddb/host_sdk/isolation.py",
+      "size": 35656,
+      "sha256": "2b6b4ae6a853d037161810270cb88034fb1a68a685518f0301fe7e692335fe8e"
+    },
+    {
+      "path": "environment/app/sharddb/host_sdk/storage.py",
+      "size": 6628,
+      "sha256": "6e44219906205df2270061e71de16d766f169b81d1c3af2f6f7bb1fa45d8edd8"
+    },
+    {
+      "path": "environment/app/sharddb/repro/healthy.json",
+      "size": 1314,
+      "sha256": "5a4315cd6b7ba080970e82f0d0f1f970724c09f23a9c4a609e63d244718ea26a"
+    },
+    {
+      "path": "environment/app/sharddb/repro/prepared-stall.json",
+      "size": 1215,
+      "sha256": "9415a2a5be9f6c6c6a5dcf59e41a74ee3f4cc13e18286bd08d4251f0341fbfe1"
+    },
+    {
+      "path": "environment/app/sharddb/repro/rebalance-exchange.json",
+      "size": 725,
+      "sha256": "beed25830c69d3fa7ecf404215e61de93084358fd7cc8068472eb00e812045c4"
+    },
+    {
+      "path": "environment/app/sharddb/spec/contract.md",
+      "size": 12221,
+      "sha256": "6082aeb96f60794a2f2556b85ce1f21edf54a314e979c304c8abe6232e7b3c02"
+    },
+    {
+      "path": "environment/app/sharddb/spec/host-abi.md",
+      "size": 18443,
+      "sha256": "1022537069b2b35bd8975e9e231daa67e904c841e7b20cb42d4962388f21d37f"
+    },
+    {
+      "path": "environment/app/sharddb/spec/persistence-format.md",
+      "size": 18046,
+      "sha256": "84adec89683892308aad64d3dacfd44055aa3ba4a55c247b8589cedf51f354b7"
+    },
+    {
+      "path": "environment/app/sharddb/spec/rebalance-contract.md",
+      "size": 7534,
+      "sha256": "f4d1d7de0cdf6223fb761c86a3e6a4bc4f5f8f869dddfa38dc213f720abf86e0"
+    },
+    {
+      "path": "instruction.md",
+      "size": 4712,
+      "sha256": "13d9135b7f5a302abd7a7b320510431532475dcd1b2e6c57079897fed492c7eb"
+    },
+    {
+      "path": "solution/calibration/README.md",
+      "size": 1261,
+      "sha256": "7d011111fad49e36b5849ab182a8e0d0d5275fcd8c1c62eee0e687bcafa30c5b"
+    },
+    {
+      "path": "solution/calibration/build_variant.py",
+      "size": 2891,
+      "sha256": "2b8894d43d7cabf067e4cc82c53cf66fc10e040729d219d88b1c1b088e74bede"
+    },
+    {
+      "path": "solution/calibration/results.json",
+      "size": 78360,
+      "sha256": "a3af706dd4eed253e21933743d81cbb1f3061c9315df89e9b8c102df0b1ce89c"
+    },
+    {
+      "path": "solution/reference/engine/__init__.py",
+      "size": 58,
+      "sha256": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f"
+    },
+    {
+      "path": "solution/reference/engine/migration.py",
+      "size": 12239,
+      "sha256": "4686f7d13c535f6fbfce1dc8d2ad4e15be167b2b6a28186e4a74d11d6eb218ad"
+    },
+    {
+      "path": "solution/reference/engine/node.py",
+      "size": 7644,
+      "sha256": "af3713e6e827de696f3588b0d7ab10b02b6fe451d6c46f9dad96f534020b4749"
+    },
+    {
+      "path": "solution/reference/engine/participant.py",
+      "size": 10779,
+      "sha256": "b288b6ba9109013a028cdb6c36abf6503bdd6d5765f3492f12bc2d944e7ddedd"
+    },
+    {
+      "path": "solution/reference/engine/rebalancing.py",
+      "size": 10169,
+      "sha256": "6215f0cd4a1106dc8bdabc0f882b565c2134da1a83f7d8f196c7cf1c4d9ca0b8"
+    },
+    {
+      "path": "solution/reference/engine/records.py",
+      "size": 3664,
+      "sha256": "92d32126bceb5964c8c92e8b6cd6c6aaec1825c15b63fbceb8bcd81ab6bd07eb"
+    },
+    {
+      "path": "solution/reference/engine/recovery.py",
+      "size": 625,
+      "sha256": "c5444a172e74ca1e4ece2fdefcfce2bc4f08a6344e0b3eab8032bf8588c413f7"
+    },
+    {
+      "path": "solution/reference/engine/transactions.py",
+      "size": 10381,
+      "sha256": "ea9c591b1c84484423577f08b216838725ad2d3858e53d28b8a2c7e8dfdf25f0"
+    },
+    {
+      "path": "solution/solve.sh",
+      "size": 304,
+      "sha256": "305e57d90a1ee4a0b365b4a23d98f5d33cb936fcc594688f5f9840794825c46b"
+    },
+    {
+      "path": "task.toml",
+      "size": 4825,
+      "sha256": "3890004a2a19170612a3c3d2e12b2f35d4bcf180678098fe2b7c7a51d4c7d0f7"
+    },
+    {
+      "path": "tests/.dockerignore",
+      "size": 100,
+      "sha256": "8bfaaf81e0f7fdf08f9d0d592793bebafb82eedb73846c028c0b615fd3d3113b"
+    },
+    {
+      "path": "tests/Dockerfile",
+      "size": 642,
+      "sha256": "bcb7f387613d612c0b0f81b7686d6b3f58429b6c6be97491a5a731e7a8b01aa7"
+    },
+    {
+      "path": "tests/baseline/engine/__init__.py",
+      "size": 58,
+      "sha256": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f"
+    },
+    {
+      "path": "tests/baseline/engine/migration.py",
+      "size": 10124,
+      "sha256": "91463e9d33a17a1f356477d04c4264b3ba60e70bcf7a8d731d2f869f1d44f35a"
+    },
+    {
+      "path": "tests/baseline/engine/node.py",
+      "size": 6838,
+      "sha256": "1c3cf2afac2766b347c3bdbf162dff27e4db1ceaa9c3a22aec387909447a396d"
+    },
+    {
+      "path": "tests/baseline/engine/participant.py",
+      "size": 10779,
+      "sha256": "b288b6ba9109013a028cdb6c36abf6503bdd6d5765f3492f12bc2d944e7ddedd"
+    },
+    {
+      "path": "tests/baseline/engine/records.py",
+      "size": 3664,
+      "sha256": "92d32126bceb5964c8c92e8b6cd6c6aaec1825c15b63fbceb8bcd81ab6bd07eb"
+    },
+    {
+      "path": "tests/baseline/engine/recovery.py",
+      "size": 574,
+      "sha256": "30299d4498e7624eab17456952160ca3ccd3d17a0f0bec5cfcd605bea1a84b3d"
+    },
+    {
+      "path": "tests/baseline/engine/transactions.py",
+      "size": 10381,
+      "sha256": "ea9c591b1c84484423577f08b216838725ad2d3858e53d28b8a2c7e8dfdf25f0"
+    },
+    {
+      "path": "tests/fixtures/_sources/author/fixtures.py",
+      "size": 51560,
+      "sha256": "cb5e9aee40514f03ee3e5bc99c43e7d7a8460249ce8d3103b3521e50532b9c3f"
+    },
+    {
+      "path": "tests/fixtures/_sources/author/make_fixtures.py",
+      "size": 20858,
+      "sha256": "b3dfcf59cda763cfa1aec0999be0d56c12e8032ab8940ef2878d298c0bb6d282"
+    },
+    {
+      "path": "tests/fixtures/_sources/engine/__init__.py",
+      "size": 58,
+      "sha256": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f"
+    },
+    {
+      "path": "tests/fixtures/_sources/engine/migration.py",
+      "size": 10124,
+      "sha256": "91463e9d33a17a1f356477d04c4264b3ba60e70bcf7a8d731d2f869f1d44f35a"
+    },
+    {
+      "path": "tests/fixtures/_sources/engine/node.py",
+      "size": 6838,
+      "sha256": "1c3cf2afac2766b347c3bdbf162dff27e4db1ceaa9c3a22aec387909447a396d"
+    },
+    {
+      "path": "tests/fixtures/_sources/engine/participant.py",
+      "size": 10779,
+      "sha256": "b288b6ba9109013a028cdb6c36abf6503bdd6d5765f3492f12bc2d944e7ddedd"
+    },
+    {
+      "path": "tests/fixtures/_sources/engine/records.py",
+      "size": 3664,
+      "sha256": "92d32126bceb5964c8c92e8b6cd6c6aaec1825c15b63fbceb8bcd81ab6bd07eb"
+    },
+    {
+      "path": "tests/fixtures/_sources/engine/recovery.py",
+      "size": 574,
+      "sha256": "30299d4498e7624eab17456952160ca3ccd3d17a0f0bec5cfcd605bea1a84b3d"
+    },
+    {
+      "path": "tests/fixtures/_sources/engine/transactions.py",
+      "size": 10381,
+      "sha256": "ea9c591b1c84484423577f08b216838725ad2d3858e53d28b8a2c7e8dfdf25f0"
+    },
+    {
+      "path": "tests/fixtures/_sources/runtime/__init__.py",
+      "size": 129,
+      "sha256": "366a05bb62fffa297fc070006c5d40b4949d52eba99b7d1663adda79ac75149a"
+    },
+    {
+      "path": "tests/fixtures/_sources/runtime/devhost/__init__.py",
+      "size": 136,
+      "sha256": "0b286e6fff28a658fc89fff5f1b417812fadd6870e69f0f5f06999166f27688f"
+    },
+    {
+      "path": "tests/fixtures/_sources/runtime/devhost/__main__.py",
+      "size": 8258,
+      "sha256": "76f6f836bda5329a005858908fdad0a1f487fae4f1fd99ba50953274df57dc4d"
+    },
+    {
+      "path": "tests/fixtures/_sources/runtime/host_sdk/__init__.py",
+      "size": 137,
+      "sha256": "12592d738ede857f1722142de7e31810db468a5dccfaf91174d7e6e9cf8f9785"
+    },
+    {
+      "path": "tests/fixtures/_sources/runtime/host_sdk/cluster.py",
+      "size": 30824,
+      "sha256": "e52d118033105aa330866f3cbf7b577eae50a6074043a0fe5ef760c07370ce75"
+    },
+    {
+      "path": "tests/fixtures/_sources/runtime/host_sdk/isolation.py",
+      "size": 34656,
+      "sha256": "746bd5e3514af303c10bdabbeb35ad84a587660aa42016adb3ebe0ec23b4e290"
+    },
+    {
+      "path": "tests/fixtures/_sources/runtime/host_sdk/storage.py",
+      "size": 6628,
+      "sha256": "6e44219906205df2270061e71de16d766f169b81d1c3af2f6f7bb1fa45d8edd8"
+    },
+    {
+      "path": "tests/fixtures/migration_complete_checkpoint.json",
+      "size": 55769,
+      "sha256": "b51f7df4f23ce3a0a4e561f54293f0232abfc38dc83519aabc5dfbc1c6262474"
+    },
+    {
+      "path": "tests/fixtures/migration_draining.json",
+      "size": 16457,
+      "sha256": "3733778f7183df2418b30f968ee9538da1ccc3ac15b6d5da2d31131fb1a1f11c"
+    },
+    {
+      "path": "tests/fixtures/migration_settled.json",
+      "size": 73804,
+      "sha256": "cd67cf3c20d888794ce618c693952abf40b5945ea0fe90b493bd887ebd9752cb"
+    },
+    {
+      "path": "tests/fixtures/prepared.json",
+      "size": 28852,
+      "sha256": "369a7a02c9231eafffcce1eb67cf9818837c2adf63f2e61d2057c7ed567f634d"
+    },
+    {
+      "path": "tests/fixtures/read_grant.json",
+      "size": 29146,
+      "sha256": "8703297b441d2c7b72a08190836b7d1646b15b88bedb33a95b13d798bd4356cf"
+    },
+    {
+      "path": "tests/fixtures/single_abort.json",
+      "size": 54682,
+      "sha256": "23a636f2c3b8e808f34c301f5a5684ee18317b5544fafa14af5816e7df69672f"
+    },
+    {
+      "path": "tests/fixtures/single_commit.json",
+      "size": 40843,
+      "sha256": "46eaec2352b86ef56566d739c19a44e7848bf64a92bed66dd00297b0db4f58c5"
+    },
+    {
+      "path": "tests/fixtures/validation.json",
+      "size": 5270,
+      "sha256": "9f4cc16ca5e77ddda245e7e26aa91de728e659a38518f21d5321ef3d0b893908"
+    },
+    {
+      "path": "tests/run_verifier.py",
+      "size": 17711,
+      "sha256": "123f038f91ec3f8cac2645d92771f1dcb869b627aceab2b5c0cee004a2327c1d"
+    },
+    {
+      "path": "tests/runtime/sharddb/__init__.py",
+      "size": 129,
+      "sha256": "366a05bb62fffa297fc070006c5d40b4949d52eba99b7d1663adda79ac75149a"
+    },
+    {
+      "path": "tests/runtime/sharddb/devhost/__init__.py",
+      "size": 136,
+      "sha256": "0b286e6fff28a658fc89fff5f1b417812fadd6870e69f0f5f06999166f27688f"
+    },
+    {
+      "path": "tests/runtime/sharddb/devhost/__main__.py",
+      "size": 8258,
+      "sha256": "76f6f836bda5329a005858908fdad0a1f487fae4f1fd99ba50953274df57dc4d"
+    },
+    {
+      "path": "tests/runtime/sharddb/host_sdk/__init__.py",
+      "size": 137,
+      "sha256": "12592d738ede857f1722142de7e31810db468a5dccfaf91174d7e6e9cf8f9785"
+    },
+    {
+      "path": "tests/runtime/sharddb/host_sdk/cluster.py",
+      "size": 36664,
+      "sha256": "1991c2fa79ab2e13e12a6963bf851fc5c78109022c87e2aef64ecc4920f6646d"
+    },
+    {
+      "path": "tests/runtime/sharddb/host_sdk/isolation.py",
+      "size": 35656,
+      "sha256": "2b6b4ae6a853d037161810270cb88034fb1a68a685518f0301fe7e692335fe8e"
+    },
+    {
+      "path": "tests/runtime/sharddb/host_sdk/storage.py",
+      "size": 6628,
+      "sha256": "6e44219906205df2270061e71de16d766f169b81d1c3af2f6f7bb1fa45d8edd8"
+    },
+    {
+      "path": "tests/test.sh",
+      "size": 456,
+      "sha256": "c41115b2856921c20b62ea2baf9c1b324b03b25fee1fe03f69b18fa05eacb942"
+    },
+    {
+      "path": "tests/test_sharddb.py",
+      "size": 1376,
+      "sha256": "d2088d74dfab8b32cbd57836f876172e8c0fe505913ab965887e9542b3871193"
+    },
+    {
+      "path": "tests/trusted/artifact.py",
+      "size": 3737,
+      "sha256": "e8babe01a3afeacb0be3b2a6ec438a0303e7be842b49fd370c6345c9a16ad75e"
+    },
+    {
+      "path": "tests/trusted/fixtures.py",
+      "size": 52534,
+      "sha256": "d5ca04f789eacb3e68636a56eea2d76a0487c0e803859ae9091419d9febe129a"
+    },
+    {
+      "path": "tests/trusted/group_scenarios.py",
+      "size": 8532,
+      "sha256": "82e4ec87c16cace9f0ad916bb31716c771687fff33c25e899057fdd75c907453"
+    },
+    {
+      "path": "tests/trusted/history.py",
+      "size": 15257,
+      "sha256": "f26547eb54ed1f27966a555bd8e25ebc781de15c9cbe66355f1b5040cf8ee220"
+    },
+    {
+      "path": "tests/trusted/scenarios.py",
+      "size": 27073,
+      "sha256": "6ec951cde23682fa4588cf251c7a72d35f84e42cb2c7bcc3bfd19455d1d2894e"
+    }
+  ],
+  "checks": [
+    {
+      "command": [
+        "docker",
+        "exec",
+        "-w",
+        "/app/task-under-review",
+        "shard-static-41bdffc63d30",
+        "env",
+        "LC_ALL=C.UTF-8",
+        "LANG=C.UTF-8",
+        "bash",
+        "/opt/terminal-bench-pinned/scripts/checks/check-allow-internet.sh",
+        "/app/task-under-review/atomic-shard-rebalancing"
+      ],
+      "duration_seconds": 1.1701,
+      "executed": true,
+      "exit_code": 0,
+      "name": "check-allow-internet.sh",
+      "source_sha256": "3381127a1fe657c350f4d84b261757865311d3eb252afabfa1bc6e96490c394c",
+      "status": "PASS",
+      "stderr": "check-allow-internet.stderr.log",
+      "stdout": "check-allow-internet.stdout.log"
+    },
+    {
+      "command": [
+        "docker",
+        "exec",
+        "-w",
+        "/app/task-under-review",
+        "shard-static-41bdffc63d30",
+        "env",
+        "LC_ALL=C.UTF-8",
+        "LANG=C.UTF-8",
+        "bash",
+        "/opt/terminal-bench-pinned/scripts/checks/check-canary.sh",
+        "/app/task-under-review/atomic-shard-rebalancing"
+      ],
+      "duration_seconds": 2.0558,
+      "executed": true,
+      "exit_code": 0,
+      "name": "check-canary.sh",
+      "source_sha256": "364754f72e349828587afaa7473daaebf36ba5758446deedf622041115b24980",
+      "status": "PASS",
+      "stderr": "check-canary.stderr.log",
+      "stdout": "check-canary.stdout.log"
+    },
+    {
+      "command": [
+        "docker",
+        "exec",
+        "-w",
+        "/app/task-under-review",
+        "shard-static-41bdffc63d30",
+        "env",
+        "LC_ALL=C.UTF-8",
+        "LANG=C.UTF-8",
+        "bash",
+        "/opt/terminal-bench-pinned/scripts/checks/check-compose-host-binds.sh",
+        "/app/task-under-review/atomic-shard-rebalancing"
+      ],
+      "duration_seconds": 1.0643,
+      "executed": true,
+      "exit_code": 0,
+      "name": "check-compose-host-binds.sh",
+      "reason": "No environment Compose file or sidecar host-bind configuration exists",
+      "source_sha256": "05a3d0b56248764a417af54ce105e06241b640c0a0afe70385ae79d211d7920e",
+      "status": "NOT_APPLICABLE",
+      "stderr": "check-compose-host-binds.stderr.log",
+      "stdout": "check-compose-host-binds.stdout.log"
+    },
+    {
+      "command": [
+        "docker",
+        "exec",
+        "-w",
+        "/app/task-under-review",
+        "shard-static-41bdffc63d30",
+        "env",
+        "LC_ALL=C.UTF-8",
+        "LANG=C.UTF-8",
+        "bash",
+        "/opt/terminal-bench-pinned/scripts/checks/check-dockerfile-platform.sh",
+        "/app/task-under-review/atomic-shard-rebalancing"
+      ],
+      "duration_seconds": 0.9409,
+      "executed": true,
+      "exit_code": 0,
+      "name": "check-dockerfile-platform.sh",
+      "source_sha256": "278cb32f983bbc2406686d2145d0ee6d37a146734a47549a4e6935fa105254b7",
+      "status": "PASS",
+      "stderr": "check-dockerfile-platform.stderr.log",
+      "stdout": "check-dockerfile-platform.stdout.log"
+    },
+    {
+      "command": [
+        "docker",
+        "exec",
+        "-w",
+        "/app/task-under-review",
+        "shard-static-41bdffc63d30",
+        "env",
+        "LC_ALL=C.UTF-8",
+        "LANG=C.UTF-8",
+        "bash",
+        "/opt/terminal-bench-pinned/scripts/checks/check-dockerfile-references.sh",
+        "/app/task-under-review/atomic-shard-rebalancing"
+      ],
+      "duration_seconds": 0.9875,
+      "executed": true,
+      "exit_code": 0,
+      "name": "check-dockerfile-references.sh",
+      "source_sha256": "42109fb65183b24959755afa0b88e6a3c562b89bcd18c24461cbfc6d0af13043",
+      "status": "PASS",
+      "stderr": "check-dockerfile-references.stderr.log",
+      "stdout": "check-dockerfile-references.stdout.log"
+    },
+    {
+      "command": [
+        "docker",
+        "exec",
+        "-w",
+        "/app/task-under-review",
+        "shard-static-41bdffc63d30",
+        "env",
+        "LC_ALL=C.UTF-8",
+        "LANG=C.UTF-8",
+        "bash",
+        "/opt/terminal-bench-pinned/scripts/checks/check-dockerfile-sanity.sh",
+        "/app/task-under-review/atomic-shard-rebalancing"
+      ],
+      "duration_seconds": 0.9236,
+      "executed": true,
+      "exit_code": 0,
+      "name": "check-dockerfile-sanity.sh",
+      "source_sha256": "519805bf87fdaaa0c5082e061f99ba050a920a1738c1a5d2b8ef77e0963fa222",
+      "status": "PASS",
+      "stderr": "check-dockerfile-sanity.stderr.log",
+      "stdout": "check-dockerfile-sanity.stdout.log"
+    },
+    {
+      "command": [
+        "docker",
+        "exec",
+        "-w",
+        "/app/task-under-review",
+        "shard-static-41bdffc63d30",
+        "env",
+        "LC_ALL=C.UTF-8",
+        "LANG=C.UTF-8",
+        "bash",
+        "/opt/terminal-bench-pinned/scripts/checks/check-gpu-types.sh",
+        "/app/task-under-review/atomic-shard-rebalancing"
+      ],
+      "duration_seconds": 1.0855,
+      "executed": true,
+      "exit_code": 0,
+      "name": "check-gpu-types.sh",
+      "reason": "This CPU-only task declares no GPU type list",
+      "source_sha256": "f556fa27ac25b3eb9dc9cee0252466a3ef4078f6e55255df4c38280db9c3cb88",
+      "status": "NOT_APPLICABLE",
+      "stderr": "check-gpu-types.stderr.log",
+      "stdout": "check-gpu-types.stdout.log"
+    },
+    {
+      "command": [
+        "docker",
+        "exec",
+        "-w",
+        "/app/task-under-review",
+        "shard-static-41bdffc63d30",
+        "env",
+        "LC_ALL=C.UTF-8",
+        "LANG=C.UTF-8",
+        "bash",
+        "/opt/terminal-bench-pinned/scripts/checks/check-instruction-suffix.sh",
+        "/app/task-under-review/atomic-shard-rebalancing"
+      ],
+      "duration_seconds": 1.2795,
+      "executed": true,
+      "exit_code": 0,
+      "name": "check-instruction-suffix.sh",
+      "source_sha256": "71470461d67710c9a1ecd357a93a0b8a19fafb7c27b5056a289cb95492332206",
+      "status": "PASS",
+      "stderr": "check-instruction-suffix.stderr.log",
+      "stdout": "check-instruction-suffix.stdout.log"
+    },
+    {
+      "command": [
+        "docker",
+        "exec",
+        "-w",
+        "/app/task-under-review",
+        "shard-static-41bdffc63d30",
+        "env",
+        "LC_ALL=C.UTF-8",
+        "LANG=C.UTF-8",
+        "bash",
+        "/opt/terminal-bench-pinned/scripts/checks/check-no-allow-internet-true.sh",
+        "/app/task-under-review/atomic-shard-rebalancing"
+      ],
+      "duration_seconds": 1.4479,
+      "executed": true,
+      "exit_code": 0,
+      "name": "check-no-allow-internet-true.sh",
+      "source_sha256": "5fb646301d5ea0e6d3a6b55d607f7a553ca4c9c81aec82892a527b0b4e7e59ca",
+      "status": "PASS",
+      "stderr": "check-no-allow-internet-true.stderr.log",
+      "stdout": "check-no-allow-internet-true.stdout.log"
+    },
+    {
+      "command": [
+        "docker",
+        "exec",
+        "-w",
+        "/app/task-under-review",
+        "shard-static-41bdffc63d30",
+        "env",
+        "LC_ALL=C.UTF-8",
+        "LANG=C.UTF-8",
+        "bash",
+        "/opt/terminal-bench-pinned/scripts/checks/check-nproc.sh",
+        "/app/task-under-review/atomic-shard-rebalancing"
+      ],
+      "duration_seconds": 1.6127,
+      "executed": true,
+      "exit_code": 0,
+      "name": "check-nproc.sh",
+      "source_sha256": "302c073877da7a52fff4ce4906a27e1562a45097ce3adcdf7405da32ca47afc5",
+      "status": "PASS",
+      "stderr": "check-nproc.stderr.log",
+      "stdout": "check-nproc.stdout.log"
+    },
+    {
+      "command": [
+        "docker",
+        "exec",
+        "-w",
+        "/app/task-under-review",
+        "shard-static-41bdffc63d30",
+        "env",
+        "LC_ALL=C.UTF-8",
+        "LANG=C.UTF-8",
+        "bash",
+        "/opt/terminal-bench-pinned/scripts/checks/check-pip-pinning.sh",
+        "/app/task-under-review/atomic-shard-rebalancing"
+      ],
+      "duration_seconds": 1.2638,
+      "executed": true,
+      "exit_code": 0,
+      "name": "check-pip-pinning.sh",
+      "source_sha256": "8b0cd9bb6002ba4d9e72b7084f903ecc13bc3c8c0c7cba77cdee6a3f2c55fa75",
+      "status": "PASS",
+      "stderr": "check-pip-pinning.stderr.log",
+      "stdout": "check-pip-pinning.stdout.log"
+    },
+    {
+      "command": [
+        "docker",
+        "exec",
+        "-w",
+        "/app/task-under-review",
+        "shard-static-41bdffc63d30",
+        "env",
+        "LC_ALL=C.UTF-8",
+        "LANG=C.UTF-8",
+        "bash",
+        "/opt/terminal-bench-pinned/scripts/checks/check-pytest-version.sh",
+        "/app/task-under-review/atomic-shard-rebalancing"
+      ],
+      "duration_seconds": 1.4994,
+      "executed": true,
+      "exit_code": 0,
+      "name": "check-pytest-version.sh",
+      "source_sha256": "c418f7bc2f76304c7a89ccb1de41efdc036796a6c4a344122ce2d007ca04262e",
+      "status": "PASS",
+      "stderr": "check-pytest-version.stderr.log",
+      "stdout": "check-pytest-version.stdout.log"
+    },
+    {
+      "command": [
+        "docker",
+        "exec",
+        "-w",
+        "/app/task-under-review",
+        "shard-static-41bdffc63d30",
+        "env",
+        "LC_ALL=C.UTF-8",
+        "LANG=C.UTF-8",
+        "bash",
+        "/opt/terminal-bench-pinned/scripts/checks/check-separate-verifier.sh",
+        "/app/task-under-review/atomic-shard-rebalancing"
+      ],
+      "duration_seconds": 1.5273,
+      "executed": true,
+      "exit_code": 0,
+      "name": "check-separate-verifier.sh",
+      "source_sha256": "34b55c6fad6dbb67d0f6a97a03ff70f2c96d890a8d6508694ea9744865dc047f",
+      "status": "PASS",
+      "stderr": "check-separate-verifier.stderr.log",
+      "stdout": "check-separate-verifier.stdout.log"
+    },
+    {
+      "command": [
+        "docker",
+        "exec",
+        "-w",
+        "/app/task-under-review",
+        "shard-static-41bdffc63d30",
+        "env",
+        "LC_ALL=C.UTF-8",
+        "LANG=C.UTF-8",
+        "bash",
+        "/opt/terminal-bench-pinned/scripts/checks/check-task-absolute-path.sh",
+        "/app/task-under-review/atomic-shard-rebalancing"
+      ],
+      "duration_seconds": 1.322,
+      "executed": true,
+      "exit_code": 0,
+      "name": "check-task-absolute-path.sh",
+      "source_sha256": "1a12d0d6d0d6d9e6685e4a3f5ada189b6e6242217d03866c7e77369336367388",
+      "status": "PASS",
+      "stderr": "check-task-absolute-path.stderr.log",
+      "stdout": "check-task-absolute-path.stdout.log"
+    },
+    {
+      "command": [
+        "docker",
+        "exec",
+        "-w",
+        "/app/task-under-review",
+        "shard-static-41bdffc63d30",
+        "env",
+        "LC_ALL=C.UTF-8",
+        "LANG=C.UTF-8",
+        "bash",
+        "/opt/terminal-bench-pinned/scripts/checks/check-task-fields.sh",
+        "/app/task-under-review/atomic-shard-rebalancing"
+      ],
+      "duration_seconds": 0.8832,
+      "executed": true,
+      "exit_code": 0,
+      "name": "check-task-fields.sh",
+      "source_sha256": "576419e5f7c3994984d066ae14b91460c6525848b2b0ee1a768d601ba9d886e3",
+      "status": "PASS",
+      "stderr": "check-task-fields.stderr.log",
+      "stdout": "check-task-fields.stdout.log"
+    },
+    {
+      "command": [
+        "docker",
+        "exec",
+        "-w",
+        "/app/task-under-review",
+        "shard-static-41bdffc63d30",
+        "env",
+        "LC_ALL=C.UTF-8",
+        "LANG=C.UTF-8",
+        "bash",
+        "/opt/terminal-bench-pinned/scripts/checks/check-task-package-name.sh",
+        "/app/task-under-review/atomic-shard-rebalancing"
+      ],
+      "duration_seconds": 1.0911,
+      "executed": true,
+      "exit_code": 0,
+      "name": "check-task-package-name.sh",
+      "source_sha256": "75430aa745dbc14d41c84c3bd517c65b323469b9543dcfb942c1fb08fe29151c",
+      "status": "PASS",
+      "stderr": "check-task-package-name.stderr.log",
+      "stdout": "check-task-package-name.stdout.log"
+    },
+    {
+      "command": [
+        "docker",
+        "exec",
+        "-w",
+        "/app/task-under-review",
+        "shard-static-41bdffc63d30",
+        "env",
+        "LC_ALL=C.UTF-8",
+        "LANG=C.UTF-8",
+        "bash",
+        "/opt/terminal-bench-pinned/scripts/checks/check-task-slug.sh",
+        "/app/task-under-review/atomic-shard-rebalancing"
+      ],
+      "duration_seconds": 2.5541,
+      "executed": true,
+      "exit_code": 0,
+      "name": "check-task-slug.sh",
+      "source_sha256": "2a0d5bfac2c859280241de609be6c1df5059d046f6cce606a9138e1d77468210",
+      "status": "PASS",
+      "stderr": "check-task-slug.stderr.log",
+      "stdout": "check-task-slug.stdout.log"
+    },
+    {
+      "command": [
+        "docker",
+        "exec",
+        "-w",
+        "/app/task-under-review",
+        "shard-static-41bdffc63d30",
+        "env",
+        "LC_ALL=C.UTF-8",
+        "LANG=C.UTF-8",
+        "bash",
+        "/opt/terminal-bench-pinned/scripts/checks/check-task-timeout.sh",
+        "/app/task-under-review/atomic-shard-rebalancing"
+      ],
+      "duration_seconds": 1.3577,
+      "executed": true,
+      "exit_code": 0,
+      "name": "check-task-timeout.sh",
+      "source_sha256": "279d4a835e4b7d9a5e2c4d761c2d36b5b81e8f1b950acf36fcd6113eb0de8b18",
+      "status": "PASS",
+      "stderr": "check-task-timeout.stderr.log",
+      "stdout": "check-task-timeout.stdout.log"
+    },
+    {
+      "command": [
+        "docker",
+        "exec",
+        "-w",
+        "/app/task-under-review",
+        "shard-static-41bdffc63d30",
+        "env",
+        "LC_ALL=C.UTF-8",
+        "LANG=C.UTF-8",
+        "bash",
+        "/opt/terminal-bench-pinned/scripts/checks/check-test-file-references.sh",
+        "/app/task-under-review/atomic-shard-rebalancing"
+      ],
+      "duration_seconds": 1.0949,
+      "executed": true,
+      "exit_code": 0,
+      "name": "check-test-file-references.sh",
+      "source_sha256": "c648e513ba8f7c8e2b8e699dd08313c8bee32e6359ec92be514f499394d02ea6",
+      "status": "PASS",
+      "stderr": "check-test-file-references.stderr.log",
+      "stdout": "check-test-file-references.stdout.log"
+    },
+    {
+      "command": [
+        "docker",
+        "exec",
+        "-w",
+        "/app/task-under-review",
+        "shard-static-41bdffc63d30",
+        "env",
+        "LC_ALL=C.UTF-8",
+        "LANG=C.UTF-8",
+        "bash",
+        "/opt/terminal-bench-pinned/scripts/checks/check-test-sh-sanity.sh",
+        "/app/task-under-review/atomic-shard-rebalancing"
+      ],
+      "duration_seconds": 1.8037,
+      "executed": true,
+      "exit_code": 0,
+      "name": "check-test-sh-sanity.sh",
+      "source_sha256": "d80628b61b69c5a5a4f879b23869259fb21ff4a3575f54f281991e7c4b39002d",
+      "status": "PASS",
+      "stderr": "check-test-sh-sanity.stderr.log",
+      "stdout": "check-test-sh-sanity.stdout.log"
+    },
+    {
+      "command": [
+        "docker",
+        "exec",
+        "-w",
+        "/app/task-under-review",
+        "shard-static-41bdffc63d30",
+        "env",
+        "LC_ALL=C.UTF-8",
+        "LANG=C.UTF-8",
+        "bash",
+        "/opt/terminal-bench-pinned/scripts/checks/check-trial-network-fetch.sh",
+        "/app/task-under-review/atomic-shard-rebalancing"
+      ],
+      "duration_seconds": 1.5405,
+      "executed": true,
+      "exit_code": 0,
+      "name": "check-trial-network-fetch.sh",
+      "source_sha256": "54dd5c1431f03364e128696a054629719e0b93df9f37b89badb655fcc5537ef7",
+      "status": "PASS",
+      "stderr": "check-trial-network-fetch.stderr.log",
+      "stdout": "check-trial-network-fetch.stdout.log"
+    },
+    {
+      "command": [
+        "docker",
+        "exec",
+        "-w",
+        "/app/task-under-review",
+        "shard-static-41bdffc63d30",
+        "env",
+        "LC_ALL=C.UTF-8",
+        "LANG=C.UTF-8",
+        "bash",
+        "/opt/terminal-bench-pinned/scripts/checks/check-verifier-tooling-baked.sh",
+        "/app/task-under-review/atomic-shard-rebalancing"
+      ],
+      "duration_seconds": 1.7607,
+      "executed": true,
+      "exit_code": 0,
+      "name": "check-verifier-tooling-baked.sh",
+      "source_sha256": "c3a7d305634aac433dec50a5ec55bcbae6515b8346d6beeb0bb11efd336171f6",
+      "status": "PASS",
+      "stderr": "check-verifier-tooling-baked.stderr.log",
+      "stdout": "check-verifier-tooling-baked.stdout.log"
+    }
+  ],
+  "counts": {
+    "PASS": 20,
+    "NOT_APPLICABLE": 2
+  },
+  "human_readme_status": "PENDING_CONTRIBUTOR_FINAL_WORDING",
+  "model_rubric_status": "NOT_RUN"
+}

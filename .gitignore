@@ -1,0 +1,24 @@
+# Secrets and local environment
+.env
+.env.*
+*.key
+*.pem
+auth.json
+
+# Python and test caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local Harbor jobs and generated runtime output
+harbor-jobs/
+repro-runs/
+*.log
+
+# Editor and operating-system files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "trial": "atomic-shard-rebalancing__3UbXvR8",
+  "student_run": 2,
+  "agent": "codex",
+  "model": "openai/gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "agent_execution_seconds": 1432.501961,
+  "independent_run": true,
+  "execution_valid": true,
+  "final_verifier": {
+    "image_id": "sha256:cb3576d16948f114abe0ddf40bd549bb77f88d19bfbe340b12b910614dbd957b",
+    "group_scenarios_sha256": "fcd4228d8b9295be0e6743cb2cd84b59d2384d913fd833782b387a9bb3016b3a"
+  },
+  "reward": 0,
+  "artifact": "PASS",
+  "business_scenarios": {
+    "passed": 29,
+    "failed": 1,
+    "total": 30
+  },
+  "failed_cases": [
+    "rebalance-live-local-read"
+  ],
+  "failure_kind": "WRONG_TERMINAL_ABORT_FOR_HEALTHY_TRANSACTION",
+  "genuine_student_failure": true,
+  "framework_errors": [],
+  "submitted_source_manifest": "../../trials/codex-standard-02/submitted-source-manifest.json",
+  "verifier_summary": "verifier-summary.json",
+  "verifier_ctrf": "verifier-ctrf.json"
+}

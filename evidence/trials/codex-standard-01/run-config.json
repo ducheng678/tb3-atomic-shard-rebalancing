@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "trial": "atomic-shard-rebalancing__TkEximK",
+  "task": "atomic-shard-rebalancing",
+  "evaluation_kind": "standard",
+  "agent": "codex",
+  "agent_version": "0.154.0",
+  "model": "openai/gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "environment": "docker",
+  "attempts": 1,
+  "concurrency": 1,
+  "automatic_retries": 0,
+  "agent_timeout_seconds": 14400,
+  "verifier_timeout_seconds": 900,
+  "resources": {
+    "cpus": 4,
+    "memory_mb": 4096,
+    "storage_mb": 10240,
+    "gpus": 0
+  },
+  "fresh_starter": true,
+  "fresh_model_session": true,
+  "prior_submission_or_teacher_feedback_supplied": false
+}

@@ -1,0 +1,3347 @@
+{
+  "artifact": {
+    "classification": "PASS",
+    "name": "artifact",
+    "status": "PASS"
+  },
+  "cases": [
+    {
+      "classification": "PASS",
+      "duration_seconds": 4.061162,
+      "name": "healthy",
+      "result": {
+        "crash_counts": {
+          "a_old": 0,
+          "a_target": 0,
+          "b": 0,
+          "c": 0,
+          "coord": 0
+        },
+        "elapsed_seconds": "3.760492",
+        "history_result": {
+          "aborted_txn_ids": [],
+          "committed_txn_ids": [
+            "transfer-1",
+            "independent-2",
+            "new-owner-3",
+            "transfer-4"
+          ],
+          "final_values": {
+            "a": 119,
+            "b": 118,
+            "c": 29
+          },
+          "serial_order": [
+            [
+              "txn",
+              "transfer-1"
+            ],
+            [
+              "read",
+              "read-1"
+            ],
+            [
+              "txn",
+              "independent-2"
+            ],
+            [
+              "txn",
+              "new-owner-3"
+            ],
+            [
+              "txn",
+              "transfer-4"
+            ],
+            [
+              "read",
+              "read-2"
+            ],
+            [
+              "read",
+              "read-3"
+            ]
+          ]
+        },
+        "owners": {
+          "A": {
+            "epoch": 1,
+            "migration_id": "migration-275",
+            "owner": "a_target"
+          },
+          "B": {
+            "epoch": 0,
+            "migration_id": null,
+            "owner": "b"
+          },
+          "C": {
+            "epoch": 0,
+            "migration_id": null,
+            "owner": "c"
+          }
+        },
+        "phases": [
+          {
+            "deadline_round": 10000,
+            "label": "healthy-service",
+            "start_round": 0
+          }
+        ],
+        "rounds": 323,
+        "status": "PASS"
+      },
+      "status": "PASS",
+      "work_dir": "/work/scenarios/healthy"
+    },
+    {
+      "classification": "PASS",
+      "duration_seconds": 4.240039,
+      "name": "renamed-topology",
+      "result": {
+        "crash_counts": {
+          "worker-11-δ": 0,
+          "worker-12-δ": 0,
+          "worker-13-δ": 0,
+          "worker-14-δ": 0,
+          "worker-15-δ": 0
+        },
+        "elapsed_seconds": "3.936389",
+        "history_result": {
+          "aborted_txn_ids": [],
+          "committed_txn_ids": [
+            "transfer-1",
+            "independent-2",
+            "new-owner-3",
+            "transfer-4"
+          ],
+          "final_values": {
+            "alpha/乙": -1000000000000000000000000,
+            "alpha/甲": 1000000000000000000000000,
+            "beta/乙": -1000000000000000000000039,
+            "beta/甲": 1000000000000000000000038,
+            "gamma/乙": -1000000000000000000000066,
+            "gamma/甲": 1000000000000000000000076
+          },
+          "serial_order": [
+            [
+              "txn",
+              "transfer-1"
+            ],
+            [
+              "read",
+              "read-1"
+            ],
+            [
+              "txn",
+              "independent-2"
+            ],
+            [
+              "txn",
+              "new-owner-3"
+            ],
+            [
+              "txn",
+              "transfer-4"
+            ],
+            [
+              "read",
+              "read-2"
+            ],
+            [
+              "read",
+              "read-3"
+            ]
+          ]
+        },
+        "owners": {
+          "A": {
+            "epoch": 18,
+            "migration_id": "migration-275",
+            "owner": "worker-13-δ"
+          },
+          "B": {
+            "epoch": 18,
+            "migration_id": null,
+            "owner": "worker-14-δ"
+          },
+          "C": {
+            "epoch": 19,
+            "migration_id": null,
+            "owner": "worker-15-δ"
+          }
+        },
+        "phases": [
+          {
+            "deadline_round": 10000,
+            "label": "healthy-service",
+            "start_round": 0
+          }
+        ],
+        "rounds": 323,
+        "status": "PASS"
+      },
+      "status": "PASS",
+      "work_dir": "/work/scenarios/renamed-topology"
+    },
+    {
+      "classification": "PASS",
+      "duration_seconds": 3.816487,
+      "name": "overlapping-reads-and-writes",
+      "result": {
+        "crash_counts": {
+          "a_old": 0,
+          "a_target": 0,
+          "b": 0,
+          "c": 0,
+          "coord": 0
+        },
+        "elapsed_seconds": "3.521391",
+        "history_result": {
+          "aborted_txn_ids": [
+            "overlap-2"
+          ],
+          "committed_txn_ids": [
+            "overlap-1",
+            "independent-3",
+            "post-overlap-4"
+          ],
+          "final_values": {
+            "a": 126,
+            "b": 90,
+            "c": 41
+          },
+          "serial_order": [
+            [
+              "txn",
+              "overlap-1"
+            ],
+            [
+              "read",
+              "read-1"
+            ],
+            [
+              "read",
+              "read-2"
+            ],
+            [
+              "txn",
+              "independent-3"
+            ],
+            [
+              "txn",
+              "post-overlap-4"
+            ],
+            [
+              "read",
+              "read-3"
+            ]
+          ]
+        },
+        "owners": {
+          "A": {
+            "epoch": 1,
+            "migration_id": "migration-325",
+            "owner": "a_target"
+          },
+          "B": {
+            "epoch": 0,
+            "migration_id": null,
+            "owner": "b"
+          },
+          "C": {
+            "epoch": 0,
+            "migration_id": null,
+            "owner": "c"
+          }
+        },
+        "phases": [
+          {
+            "deadline_round": 10000,
+            "label": "healthy-overlap",
+            "start_round": 0
+          }
+        ],
+        "rounds": 230,
+        "status": "PASS"
+      },
+      "status": "PASS",
+      "work_dir": "/work/scenarios/overlapping-reads-and-writes"
+    },
+    {
+      "classification": "PASS",
+      "duration_seconds": 5.055608,
+      "name": "read-live-during-migration",
+      "result": {
+        "crash_counts": {
+          "a_old": 0,
+          "a_target": 0,
+          "b": 0,
+          "c": 0,
+          "coord": 0
+        },
+        "elapsed_seconds": "4.756045",
+        "history_result": {
+          "aborted_txn_ids": [
+            "live-read-write-1"
+          ],
+          "committed_txn_ids": [
+            "live-read-write-2",
+            "live-read-c-3",
+            "live-read-cross-4"
+          ],
+          "final_values": {
+            "a": 11,
+            "b": 268,
+            "c": 83
+          },
+          "serial_order": [
+            [
+              "txn",
+              "live-read-write-2"
+            ],
+            [
+              "read",
+              "read-1"
+            ],
+            [
+              "txn",
+              "live-read-c-3"
+            ],
+            [
+              "txn",
+              "live-read-cross-4"
+            ],
+            [
+              "read",
+              "read-2"
+            ]
+          ]
+        },
+        "owners": {
+          "A": {
+            "epoch": 1,
+            "migration_id": "migration-57",
+            "owner": "a_target"
+          },
+          "B": {
+            "epoch": 0,
+            "migration_id": null,
+            "owner": "b"
+          },
+          "C": {
+            "epoch": 0,
+            "migration_id": null,
+            "owner": "c"
+          }
+        },
+        "phases": [
+          {
+            "deadline_round": 10000,
+            "label": "live-read-prefix",
+            "start_round": 0
+          },
+          {
+            "deadline_round": 10064,
+            "label": "live-read-migration",
+            "start_round": 64
+          },
+          {
+            "deadline_round": 481,
+            "label": "held-read-message",
+            "start_round": 81
+          },
+          {
+            "deadline_round": 10481,
+            "label": "live-read-stable-recovery",
+            "start_round": 481
+          }
+        ],
+        "rounds": 631,
+        "status": "PASS"
+      },
+      "status": "PASS",
+      "work_dir": "/work/scenarios/read-live-during-migration"
+    },
+    {
+      "classification": "PASS",
+      "duration_seconds": 4.224494,
+      "name": "settled-result-coordinator-restart",
+      "result": {
+        "crash_counts": {
+          "a_old": 0,
+          "a_target": 0,
+          "b": 0,
+          "c": 0,
+          "coord": 1
+        },
+        "elapsed_seconds": "3.878878",
+        "history_result": {
+          "aborted_txn_ids": [],
+          "committed_txn_ids": [
+            "settled-1",
+            "settled-c-2",
+            "settled-owner-3",
+            "settled-cross-4"
+          ],
+          "final_values": {
+            "a": -3,
+            "b": 310,
+            "c": 103
+          },
+          "serial_order": [
+            [
+              "txn",
+              "settled-1"
+            ],
+            [
+              "read",
+              "read-1"
+            ],
+            [
+              "txn",
+              "settled-c-2"
+            ],
+            [
+              "txn",
+              "settled-owner-3"
+            ],
+            [
+              "txn",
+              "settled-cross-4"
+            ],
+            [
+              "read",
+              "read-2"
+            ]
+          ]
+        },
+        "owners": {
+          "A": {
+            "epoch": 1,
+            "migration_id": "migration-106",
+            "owner": "a_target"
+          },
+          "B": {
+            "epoch": 0,
+            "migration_id": null,
+            "owner": "b"
+          },
+          "C": {
+            "epoch": 0,
+            "migration_id": null,
+            "owner": "c"
+          }
+        },
+        "phases": [
+          {
+            "deadline_round": 10000,
+            "label": "settled-transaction-prefix",
+            "start_round": 0
+          },
+          {
+            "deadline_round": 10073,
+            "label": "settled-transaction-recovery",
+            "start_round": 73
+          }
+        ],
+        "rounds": 278,
+        "status": "PASS"
+      },
+      "status": "PASS",
+      "work_dir": "/work/scenarios/settled-result-coordinator-restart"
+    },
+    {
+      "classification": "PASS",
+      "duration_seconds": 4.385054,
+      "name": "durable-commit-coordinator-restart",
+      "result": {
+        "crash_counts": {
+          "a_old": 0,
+          "a_target": 0,
+          "b": 0,
+          "c": 0,
+          "coord": 1
+        },
+        "elapsed_seconds": "4.043234",
+        "history_result": {
+          "aborted_txn_ids": [],
+          "committed_txn_ids": [
+            "durable-1",
+            "independent-2",
+            "new-owner-3",
+            "new-cross-shard-4"
+          ],
+          "final_values": {
+            "a": 169,
+            "b": 190,
+            "c": 43
+          },
+          "serial_order": [
+            [
+              "txn",
+              "durable-1"
+            ],
+            [
+              "txn",
+              "independent-2"
+            ],
+            [
+              "read",
+              "read-1"
+            ],
+            [
+              "txn",
+              "new-owner-3"
+            ],
+            [
+              "txn",
+              "new-cross-shard-4"
+            ],
+            [
+              "read",
+              "read-2"
+            ],
+            [
+              "read",
+              "read-3"
+            ]
+          ]
+        },
+        "owners": {
+          "A": {
+            "epoch": 1,
+            "migration_id": "migration-38",
+            "owner": "a_target"
+          },
+          "B": {
+            "epoch": 0,
+            "migration_id": null,
+            "owner": "b"
+          },
+          "C": {
+            "epoch": 0,
+            "migration_id": null,
+            "owner": "c"
+          }
+        },
+        "phases": [
+          {
+            "deadline_round": 10000,
+            "label": "healthy-prefix",
+            "start_round": 0
+          },
+          {
+            "deadline_round": 2017,
+            "label": "coordinator-offline-migration",
+            "start_round": 17
+          },
+          {
+            "deadline_round": 10090,
+            "label": "stable-recovery",
+            "start_round": 90
+          }
+        ],
+        "rounds": 350,
+        "status": "PASS"
+      },
+      "status": "PASS",
+      "work_dir": "/work/scenarios/durable-commit-coordinator-restart"
+    },
+    {
+      "classification": "PASS",
+      "duration_seconds": 5.096214,
+      "name": "source-first-persist-restart",
+      "result": {
+        "crash_counts": {
+          "a_old": 1,
+          "a_target": 0,
+          "b": 0,
+          "c": 0,
+          "coord": 1
+        },
+        "elapsed_seconds": "4.702169",
+        "history_result": {
+          "aborted_txn_ids": [],
+          "committed_txn_ids": [
+            "durable-1",
+            "independent-2",
+            "new-owner-3",
+            "new-cross-shard-4"
+          ],
+          "final_values": {
+            "a": 169,
+            "b": 190,
+            "c": 43
+          },
+          "serial_order": [
+            [
+              "txn",
+              "durable-1"
+            ],
+            [
+              "txn",
+              "independent-2"
+            ],
+            [
+              "read",
+              "read-1"
+            ],
+            [
+              "txn",
+              "new-owner-3"
+            ],
+            [
+              "txn",
+              "new-cross-shard-4"
+            ],
+            [
+              "read",
+              "read-2"
+            ],
+            [
+              "read",
+              "read-3"
+            ]
+          ]
+        },
+        "owners": {
+          "A": {
+            "epoch": 1,
+            "migration_id": "migration-38",
+            "owner": "a_target"
+          },
+          "B": {
+            "epoch": 0,
+            "migration_id": null,
+            "owner": "b"
+          },
+          "C": {
+            "epoch": 0,
+            "migration_id": null,
+            "owner": "c"
+          }
+        },
+        "phases": [
+          {
+            "deadline_round": 10000,
+            "label": "healthy-prefix",
+            "start_round": 0
+          },
+          {
+            "deadline_round": 2017,
+            "label": "coordinator-offline-migration",
+            "start_round": 17
+          },
+          {
+            "deadline_round": 10221,
+            "label": "stable-recovery",
+            "start_round": 221
+          }
+        ],
+        "rounds": 548,
+        "status": "PASS"
+      },
+      "status": "PASS",
+      "work_dir": "/work/scenarios/source-first-persist-restart"
+    },
+    {
+      "classification": "PASS",
+      "duration_seconds": 4.774583,
+      "name": "target-first-persist-restart",
+      "result": {
+        "crash_counts": {
+          "a_old": 0,
+          "a_target": 1,
+          "b": 0,
+          "c": 0,
+          "coord": 1
+        },
+        "elapsed_seconds": "4.413234",
+        "history_result": {
+          "aborted_txn_ids": [],
+          "committed_txn_ids": [
+            "durable-1",
+            "independent-2",
+            "new-owner-3",
+            "new-cross-shard-4"
+          ],
+          "final_values": {
+            "a": 169,
+            "b": 190,
+            "c": 43
+          },
+          "serial_order": [
+            [
+              "txn",
+              "durable-1"
+            ],
+            [
+              "txn",
+              "independent-2"
+            ],
+            [
+              "read",
+              "read-1"
+            ],
+            [
+              "txn",
+              "new-owner-3"
+            ],
+            [
+              "txn",
+              "new-cross-shard-4"
+            ],
+            [
+              "read",
+              "read-2"
+            ],
+            [
+              "read",
+              "read-3"
+            ]
+          ]
+        },
+        "owners": {
+          "A": {
+            "epoch": 1,
+            "migration_id": "migration-38",
+            "owner": "a_target"
+          },
+          "B": {
+            "epoch": 0,
+            "migration_id": null,
+            "owner": "b"
+          },
+          "C": {
+            "epoch": 0,
+            "migration_id": null,
+            "owner": "c"
+          }
+        },
+        "phases": [
+          {
+            "deadline_round": 10000,
+            "label": "healthy-prefix",
+            "start_round": 0
+          },
+          {
+            "deadline_round": 2017,
+            "label": "coordinator-offline-migration",
+            "start_round": 17
+          },
+          {
+            "deadline_round": 10090,
+            "label": "stable-recovery",
+            "start_round": 90
+          }
+        ],
+        "rounds": 303,
+        "status": "PASS"
+      },
+      "status": "PASS",
+      "work_dir": "/work/scenarios/target-first-persist-restart"
+    },
+    {
+      "classification": "PASS",
+      "duration_seconds": 5.245915,
+      "name": "owner-swap-source-restart",
+      "result": {
+        "crash_counts": {
+          "a_old": 1,
+          "a_target": 0,
+          "b": 0,
+          "c": 0,
+          "coord": 1
+        },
+        "elapsed_seconds": "4.782978",
+        "history_result": {
+          "aborted_txn_ids": [],
+          "committed_txn_ids": [
+            "durable-1",
+            "independent-2",
+            "new-owner-3",
+            "new-cross-shard-4"
+          ],
+          "final_values": {
+            "a": 169,
+            "b": 190,
+            "c": 43
+          },
+          "serial_order": [
+            [
+              "txn",
+              "durable-1"
+            ],
+            [
+              "txn",
+              "independent-2"
+            ],
+            [
+              "read",
+              "read-1"
+            ],
+            [
+              "txn",
+              "new-owner-3"
+            ],
+            [
+              "txn",
+              "new-cross-shard-4"
+            ],
+            [
+              "read",
+              "read-2"
+            ],
+            [
+              "read",
+              "read-3"
+            ]
+          ]
+        },
+        "owners": {
+          "A": {
+            "epoch": 1,
+            "migration_id": "migration-38",
+            "owner": "a_target"
+          },
+          "B": {
+            "epoch": 0,
+            "migration_id": null,
+            "owner": "b"
+          },
+          "C": {
+            "epoch": 0,
+            "migration_id": null,
+            "owner": "c"
+          }
+        },
+        "phases": [
+          {
+            "deadline_round": 10000,
+            "label": "healthy-prefix",
+            "start_round": 0
+          },
+          {
+            "deadline_round": 2017,
+            "label": "coordinator-offline-migration",
+            "start_round": 17
+          },
+          {
+            "deadline_round": 10222,
+            "label": "stable-recovery",
+            "start_round": 222
+          }
+        ],
+        "rounds": 549,
+        "status": "PASS"
+      },
+      "status": "PASS",
+      "work_dir": "/work/scenarios/owner-swap-source-restart"
+    },
+    {
+      "classification": "PASS",
+      "duration_seconds": 5.513719,
+      "name": "migration-reply-target-restart",
+      "result": {
+        "crash_counts": {
+          "a_old": 0,
+          "a_target": 1,
+          "b": 0,
+          "c": 0,
+          "coord": 1
+        },
+        "elapsed_seconds": "5.133635",
+        "history_result": {
+          "aborted_txn_ids": [],
+          "committed_txn_ids": [
+            "durable-1",
+            "independent-2",
+            "new-owner-3",
+            "new-cross-shard-4"
+          ],
+          "final_values": {
+            "a": 169,
+            "b": 190,
+            "c": 43
+          },
+          "serial_order": [
+            [
+              "txn",
+              "durable-1"
+            ],
+            [
+              "txn",
+              "independent-2"
+            ],
+            [
+              "read",
+              "read-1"
+            ],
+            [
+              "txn",
+              "new-owner-3"
+            ],
+            [
+              "txn",
+              "new-cross-shard-4"
+            ],
+            [
+              "read",
+              "read-2"
+            ],
+            [
+              "read",
+              "read-3"
+            ]
+          ]
+        },
+        "owners": {
+          "A": {
+            "epoch": 1,
+            "migration_id": "migration-38",
+            "owner": "a_target"
+          },
+          "B": {
+            "epoch": 0,
+            "migration_id": null,
+            "owner": "b"
+          },
+          "C": {
+            "epoch": 0,
+            "migration_id": null,
+            "owner": "c"
+          }
+        },
+        "phases": [
+          {
+            "deadline_round": 10000,
+            "label": "healthy-prefix",
+            "start_round": 0
+          },
+          {
+            "deadline_round": 2017,
+            "label": "coordinator-offline-migration",
+            "start_round": 17
+          },
+          {
+            "deadline_round": 10090,
+            "label": "stable-recovery",
+            "start_round": 90
+          }
+        ],
+        "rounds": 350,
+        "status": "PASS"
+      },
+      "status": "PASS",
+      "work_dir": "/work/scenarios/migration-reply-target-restart"
+    },
+    {
+      "classification": "PASS",
+      "duration_seconds": 5.209637,
+      "name": "target-reply-loss-restart",
+      "result": {
+        "crash_counts": {
+          "a_old": 0,
+          "a_target": 1,
+          "b": 0,
+          "c": 0,
+          "coord": 1
+        },
+        "elapsed_seconds": "4.344237",
+        "history_result": {
+          "aborted_txn_ids": [],
+          "committed_txn_ids": [
+            "durable-1",
+            "independent-2",
+            "new-owner-3",
+            "new-cross-shard-4"
+          ],
+          "final_values": {
+            "a": 169,
+            "b": 190,
+            "c": 43
+          },
+          "serial_order": [
+            [
+              "txn",
+              "durable-1"
+            ],
+            [
+              "txn",
+              "independent-2"
+            ],
+            [
+              "read",
+              "read-1"
+            ],
+            [
+              "txn",
+              "new-owner-3"
+            ],
+            [
+              "txn",
+              "new-cross-shard-4"
+            ],
+            [
+              "read",
+              "read-2"
+            ],
+            [
+              "read",
+              "read-3"
+            ]
+          ]
+        },
+        "owners": {
+          "A": {
+            "epoch": 1,
+            "migration_id": "migration-38",
+            "owner": "a_target"
+          },
+          "B": {
+            "epoch": 0,
+            "migration_id": null,
+            "owner": "b"
+          },
+          "C": {
+            "epoch": 0,
+            "migration_id": null,
+            "owner": "c"
+          }
+        },
+        "phases": [
+          {
+            "deadline_round": 10000,
+            "label": "healthy-prefix",
+            "start_round": 0
+          },
+          {
+            "deadline_round": 2017,
+            "label": "coordinator-offline-migration",
+            "start_round": 17
+          },
+          {
+            "deadline_round": 10090,
+            "label": "stable-recovery",
+            "start_round": 90
+          }
+        ],
+        "rounds": 303,
+        "status": "PASS"
+      },
+      "status": "PASS",
+      "work_dir": "/work/scenarios/target-reply-loss-restart"
+    },
+    {
+      "classification": "PASS",
+      "duration_seconds": 5.236347,
+      "name": "retired-source-offline",
+      "result": {
+        "crash_counts": {
+          "a_old": 1,
+          "a_target": 0,
+          "b": 0,
+          "c": 0,
+          "coord": 1
+        },
+        "elapsed_seconds": "4.9243",
+        "history_result": {
+          "aborted_txn_ids": [],
+          "committed_txn_ids": [
+            "durable-1",
+            "independent-2",
+            "new-owner-3",
+            "new-cross-shard-4"
+          ],
+          "final_values": {
+            "a": 169,
+            "b": 190,
+            "c": 43
+          },
+          "serial_order": [
+            [
+              "txn",
+              "durable-1"
+            ],
+            [
+              "txn",
+              "independent-2"
+            ],
+            [
+              "read",
+              "read-1"
+            ],
+            [
+              "txn",
+              "new-owner-3"
+            ],
+            [
+              "txn",
+              "new-cross-shard-4"
+            ],
+            [
+              "read",
+              "read-2"
+            ],
+            [
+              "read",
+              "read-3"
+            ]
+          ]
+        },
+        "owners": {
+          "A": {
+            "epoch": 1,
+            "migration_id": "migration-38",
+            "owner": "a_target"
+          },
+          "B": {
+            "epoch": 0,
+            "migration_id": null,
+            "owner": "b"
+          },
+          "C": {
+            "epoch": 0,
+            "migration_id": null,
+            "owner": "c"
+          }
+        },
+        "phases": [
+          {
+            "deadline_round": 10000,
+            "label": "healthy-prefix",
+            "start_round": 0
+          },
+          {
+            "deadline_round": 2017,
+            "label": "coordinator-offline-migration",
+            "start_round": 17
+          },
+          {
+            "deadline_round": 10090,
+            "label": "stable-recovery",
+            "start_round": 90
+          }
+        ],
+        "rounds": 326,
+        "status": "PASS"
+      },
+      "status": "PASS",
+      "work_dir": "/work/scenarios/retired-source-offline"
+    },
+    {
+      "classification": "PASS",
+      "duration_seconds": 3.950079,
+      "name": "compat-prepared",
+      "result": {
+        "crash_counts": {
+          "a_old": 1,
+          "a_target": 0,
+          "b": 0,
+          "c": 0,
+          "coord": 1
+        },
+        "elapsed_seconds": "3.670973",
+        "history_result": {
+          "aborted_txn_ids": [
+            "fixture-prepared-txn"
+          ],
+          "committed_txn_ids": [
+            "compat-c-new",
+            "compat-new-owner",
+            "compat-new-cross"
+          ],
+          "final_values": {
+            "a": 96,
+            "b": 171,
+            "c": 61
+          },
+          "serial_order": [
+            [
+              "txn",
+              "compat-c-new"
+            ],
+            [
+              "read",
+              "read-1"
+            ],
+            [
+              "txn",
+              "compat-new-owner"
+            ],
+            [
+              "txn",
+              "compat-new-cross"
+            ],
+            [
+              "read",
+              "read-2"
+            ],
+            [
+              "read",
+              "read-3"
+            ]
+          ]
+        },
+        "owners": {
+          "A": {
+            "epoch": 1,
+            "migration_id": "migration-21",
+            "owner": "a_target"
+          },
+          "B": {
+            "epoch": 0,
+            "migration_id": null,
+            "owner": "b"
+          },
+          "C": {
+            "epoch": 0,
+            "migration_id": null,
+            "owner": "c"
+          }
+        },
+        "phases": [
+          {
+            "deadline_round": 2008,
+            "label": "compatibility-offline-migration",
+            "start_round": 8
+          },
+          {
+            "deadline_round": 10067,
+            "label": "compatibility-stable-recovery",
+            "start_round": 67
+          }
+        ],
+        "rounds": 250,
+        "status": "PASS"
+      },
+      "status": "PASS",
+      "work_dir": "/work/scenarios/compat-prepared"
+    },
+    {
+      "classification": "PASS",
+      "duration_seconds": 4.762076,
+      "name": "compat-read-grant",
+      "result": {
+        "crash_counts": {
+          "a_old": 1,
+          "a_target": 0,
+          "b": 0,
+          "c": 0,
+          "coord": 1
+        },
+        "elapsed_seconds": "4.484634",
+        "history_result": {
+          "aborted_txn_ids": [],
+          "committed_txn_ids": [
+            "compat-c-new",
+            "compat-new-owner",
+            "compat-new-cross"
+          ],
+          "final_values": {
+            "a": 96,
+            "b": 171,
+            "c": 61
+          },
+          "serial_order": [
+            [
+              "txn",
+              "compat-c-new"
+            ],
+            [
+              "read",
+              "read-1"
+            ],
+            [
+              "txn",
+              "compat-new-owner"
+            ],
+            [
+              "txn",
+              "compat-new-cross"
+            ],
+            [
+              "read",
+              "read-2"
+            ],
+            [
+              "read",
+              "read-3"
+            ]
+          ]
+        },
+        "owners": {
+          "A": {
+            "epoch": 1,
+            "migration_id": "migration-21",
+            "owner": "a_target"
+          },
+          "B": {
+            "epoch": 0,
+            "migration_id": null,
+            "owner": "b"
+          },
+          "C": {
+            "epoch": 0,
+            "migration_id": null,
+            "owner": "c"
+          }
+        },
+        "phases": [
+          {
+            "deadline_round": 2008,
+            "label": "compatibility-offline-migration",
+            "start_round": 8
+          },
+          {
+            "deadline_round": 10067,
+            "label": "compatibility-stable-recovery",
+            "start_round": 67
+          }
+        ],
+        "rounds": 270,
+        "status": "PASS"
+      },
+      "status": "PASS",
+      "work_dir": "/work/scenarios/compat-read-grant"
+    },
+    {
+      "classification": "PASS",
+      "duration_seconds": 3.883265,
+      "name": "compat-single-commit",
+      "result": {
+        "crash_counts": {
+          "a_old": 1,
+          "a_target": 0,
+          "b": 0,
+          "c": 0,
+          "coord": 0
+        },
+        "elapsed_seconds": "3.618138",
+        "history_result": {
+          "aborted_txn_ids": [],
+          "committed_txn_ids": [
+            "fixture-single-commit-txn",
+            "compat-c-new",
+            "compat-new-owner",
+            "compat-new-cross"
+          ],
+          "final_values": {
+            "a": 109,
+            "b": 171,
+            "c": 61
+          },
+          "serial_order": [
+            [
+              "txn",
+              "fixture-single-commit-txn"
+            ],
+            [
+              "txn",
+              "compat-c-new"
+            ],
+            [
+              "read",
+              "read-1"
+            ],
+            [
+              "txn",
+              "compat-new-owner"
+            ],
+            [
+              "txn",
+              "compat-new-cross"
+            ],
+            [
+              "read",
+              "read-2"
+            ],
+            [
+              "read",
+              "read-3"
+            ]
+          ]
+        },
+        "owners": {
+          "A": {
+            "epoch": 1,
+            "migration_id": "migration-29",
+            "owner": "a_target"
+          },
+          "B": {
+            "epoch": 0,
+            "migration_id": null,
+            "owner": "b"
+          },
+          "C": {
+            "epoch": 0,
+            "migration_id": null,
+            "owner": "c"
+          }
+        },
+        "phases": [
+          {
+            "deadline_round": 10019,
+            "label": "compatibility-service",
+            "start_round": 19
+          },
+          {
+            "deadline_round": 10078,
+            "label": "compatibility-stable-recovery",
+            "start_round": 78
+          }
+        ],
+        "rounds": 235,
+        "status": "PASS"
+      },
+      "status": "PASS",
+      "work_dir": "/work/scenarios/compat-single-commit"
+    },
+    {
+      "classification": "PASS",
+      "duration_seconds": 4.096825,
+      "name": "compat-single-abort",
+      "result": {
+        "crash_counts": {
+          "a_old": 1,
+          "a_target": 0,
+          "b": 0,
+          "c": 0,
+          "coord": 0
+        },
+        "elapsed_seconds": "3.788349",
+        "history_result": {
+          "aborted_txn_ids": [
+            "fixture-single-abort-txn"
+          ],
+          "committed_txn_ids": [
+            "compat-c-new",
+            "compat-new-owner",
+            "compat-new-cross"
+          ],
+          "final_values": {
+            "a": 96,
+            "b": 171,
+            "c": 61
+          },
+          "serial_order": [
+            [
+              "txn",
+              "compat-c-new"
+            ],
+            [
+              "read",
+              "read-1"
+            ],
+            [
+              "txn",
+              "compat-new-owner"
+            ],
+            [
+              "txn",
+              "compat-new-cross"
+            ],
+            [
+              "read",
+              "read-2"
+            ],
+            [
+              "read",
+              "read-3"
+            ]
+          ]
+        },
+        "owners": {
+          "A": {
+            "epoch": 1,
+            "migration_id": "migration-36",
+            "owner": "a_target"
+          },
+          "B": {
+            "epoch": 0,
+            "migration_id": null,
+            "owner": "b"
+          },
+          "C": {
+            "epoch": 0,
+            "migration_id": null,
+            "owner": "c"
+          }
+        },
+        "phases": [
+          {
+            "deadline_round": 10024,
+            "label": "compatibility-service",
+            "start_round": 24
+          },
+          {
+            "deadline_round": 10083,
+            "label": "compatibility-stable-recovery",
+            "start_round": 83
+          }
+        ],
+        "rounds": 317,
+        "status": "PASS"
+      },
+      "status": "PASS",
+      "work_dir": "/work/scenarios/compat-single-abort"
+    },
+    {
+      "classification": "PASS",
+      "duration_seconds": 4.199553,
+      "name": "compat-migration-draining",
+      "result": {
+        "crash_counts": {
+          "a_old": 1,
+          "a_target": 0,
+          "b": 0,
+          "c": 0,
+          "coord": 0
+        },
+        "elapsed_seconds": "3.927076",
+        "history_result": {
+          "aborted_txn_ids": [],
+          "committed_txn_ids": [
+            "compat-c-new",
+            "compat-new-owner",
+            "compat-new-cross"
+          ],
+          "final_values": {
+            "a": 96,
+            "b": 171,
+            "c": 61
+          },
+          "serial_order": [
+            [
+              "txn",
+              "compat-c-new"
+            ],
+            [
+              "read",
+              "read-1"
+            ],
+            [
+              "txn",
+              "compat-new-owner"
+            ],
+            [
+              "txn",
+              "compat-new-cross"
+            ],
+            [
+              "read",
+              "read-2"
+            ],
+            [
+              "read",
+              "read-3"
+            ]
+          ]
+        },
+        "owners": {
+          "A": {
+            "epoch": 1,
+            "migration_id": "migration-4",
+            "owner": "a_target"
+          },
+          "B": {
+            "epoch": 0,
+            "migration_id": null,
+            "owner": "b"
+          },
+          "C": {
+            "epoch": 0,
+            "migration_id": null,
+            "owner": "c"
+          }
+        },
+        "phases": [
+          {
+            "deadline_round": 10005,
+            "label": "compatibility-service",
+            "start_round": 5
+          },
+          {
+            "deadline_round": 10064,
+            "label": "compatibility-stable-recovery",
+            "start_round": 64
+          }
+        ],
+        "rounds": 248,
+        "status": "PASS"
+      },
+      "status": "PASS",
+      "work_dir": "/work/scenarios/compat-migration-draining"
+    },
+    {
+      "classification": "PASS",
+      "duration_seconds": 3.867944,
+      "name": "compat-migration-settled",
+      "result": {
+        "crash_counts": {
+          "a_old": 1,
+          "a_target": 0,
+          "b": 0,
+          "c": 0,
+          "coord": 0
+        },
+        "elapsed_seconds": "3.566429",
+        "history_result": {
+          "aborted_txn_ids": [],
+          "committed_txn_ids": [
+            "fixture-migration-settled-txn",
+            "compat-c-new",
+            "compat-new-owner",
+            "compat-new-cross"
+          ],
+          "final_values": {
+            "a": 109,
+            "b": 171,
+            "c": 61
+          },
+          "serial_order": [
+            [
+              "txn",
+              "fixture-migration-settled-txn"
+            ],
+            [
+              "txn",
+              "compat-c-new"
+            ],
+            [
+              "read",
+              "read-1"
+            ],
+            [
+              "txn",
+              "compat-new-owner"
+            ],
+            [
+              "txn",
+              "compat-new-cross"
+            ],
+            [
+              "read",
+              "read-2"
+            ],
+            [
+              "read",
+              "read-3"
+            ]
+          ]
+        },
+        "owners": {
+          "A": {
+            "epoch": 1,
+            "migration_id": "migration-29",
+            "owner": "a_target"
+          },
+          "B": {
+            "epoch": 0,
+            "migration_id": null,
+            "owner": "b"
+          },
+          "C": {
+            "epoch": 0,
+            "migration_id": null,
+            "owner": "c"
+          }
+        },
+        "phases": [
+          {
+            "deadline_round": 10033,
+            "label": "compatibility-service",
+            "start_round": 33
+          },
+          {
+            "deadline_round": 10092,
+            "label": "compatibility-stable-recovery",
+            "start_round": 92
+          }
+        ],
+        "rounds": 283,
+        "status": "PASS"
+      },
+      "status": "PASS",
+      "work_dir": "/work/scenarios/compat-migration-settled"
+    },
+    {
+      "classification": "CANDIDATE_FAIL",
+      "code": "CANDIDATE_CONTRACT",
+      "detail": "ProtocolError: owner CAS contains an unregistered state",
+      "duration_seconds": 2.971445,
+      "name": "compat-migration-complete-checkpoint",
+      "status": "FAIL",
+      "trace": "Traceback (most recent call last):\n  File \"/tests/run_verifier.py\", line 187, in execute_case\n    result = self.run_case(name, ACCEPTED_ENGINE, CASE_WORK / name)\n  File \"/tests/trusted/scenarios.py\", line 514, in run_case\n    compatibility(scenario, kind)\n    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^\n  File \"/tests/trusted/scenarios.py\", line 456, in compatibility\n    s.write(\"compat-c-new\", {key_c: 61}, deadline=c.round + 1000)\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tests/trusted/scenarios.py\", line 141, in write\n    return self.request({\"op\": \"txn\", \"txn_id\": txn_id, \"delta_map\": delta},\n           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n                        {\"COMMITTED\", \"ABORTED\"}, deadline=deadline,\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n                        must=\"COMMITTED\" if healthy else None)\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tests/trusted/scenarios.py\", line 138, in request\n    self.tick(deadline)\n    ~~~~~~~~~^^^^^^^^^^\n  File \"/tests/trusted/scenarios.py\", line 95, in tick\n    self.cluster.tick()\n    ~~~~~~~~~~~~~~~~~^^\n  File \"/tests/runtime/sharddb/host_sdk/cluster.py\", line 656, in tick\n    result = self._execute(action)\n  File \"/tests/runtime/sharddb/host_sdk/cluster.py\", line 614, in _execute\n    return self._cas(node, args)\n           ~~~~~~~~~^^^^^^^^^^^^\n  File \"/tests/runtime/sharddb/host_sdk/cluster.py\", line 515, in _cas\n    raise ProtocolError(\"owner CAS contains an unregistered state\")\nsharddb.host_sdk.storage.ProtocolError: owner CAS contains an unregistered state\n",
+      "work_dir": "/work/scenarios/compat-migration-complete-checkpoint"
+    },
+    {
+      "classification": "PASS",
+      "duration_seconds": 8.338812,
+      "name": "rebalance-exchange-cycle",
+      "result": {
+        "crash_counts": {
+          "a_old": 0,
+          "a_target": 0,
+          "b": 0,
+          "c": 0,
+          "coord": 0
+        },
+        "elapsed_seconds": "7.813731",
+        "history_result": {
+          "aborted_txn_ids": [],
+          "committed_txn_ids": [
+            "before-cycle",
+            "after-exchange",
+            "combined-local",
+            "combined-cross",
+            "returned-new",
+            "independent-c"
+          ],
+          "final_values": {
+            "a": 117,
+            "b": 119,
+            "c": 11
+          },
+          "serial_order": [
+            [
+              "txn",
+              "before-cycle"
+            ],
+            [
+              "read",
+              "read-1"
+            ],
+            [
+              "txn",
+              "after-exchange"
+            ],
+            [
+              "read",
+              "read-2"
+            ],
+            [
+              "txn",
+              "combined-local"
+            ],
+            [
+              "txn",
+              "combined-cross"
+            ],
+            [
+              "read",
+              "read-3"
+            ],
+            [
+              "txn",
+              "returned-new"
+            ],
+            [
+              "txn",
+              "independent-c"
+            ],
+            [
+              "read",
+              "read-4"
+            ],
+            [
+              "read",
+              "read-5"
+            ]
+          ]
+        },
+        "owners": {
+          "A": {
+            "epoch": 3,
+            "migration_id": "return",
+            "owner": "a_old"
+          },
+          "B": {
+            "epoch": 3,
+            "migration_id": "return",
+            "owner": "b"
+          },
+          "C": {
+            "epoch": 0,
+            "migration_id": null,
+            "owner": "c"
+          }
+        },
+        "phases": [
+          {
+            "deadline_round": 10000,
+            "label": "stable-service",
+            "start_round": 0
+          },
+          {
+            "deadline_round": 2057,
+            "label": "rebalance-exchange",
+            "start_round": 57
+          },
+          {
+            "deadline_round": 10104,
+            "label": "stable-service",
+            "start_round": 104
+          },
+          {
+            "deadline_round": 2181,
+            "label": "rebalance-combine",
+            "start_round": 181
+          },
+          {
+            "deadline_round": 10219,
+            "label": "stable-service",
+            "start_round": 219
+          },
+          {
+            "deadline_round": 2412,
+            "label": "rebalance-return",
+            "start_round": 412
+          },
+          {
+            "deadline_round": 10458,
+            "label": "stable-service",
+            "start_round": 458
+          }
+        ],
+        "rounds": 686,
+        "status": "PASS"
+      },
+      "status": "PASS",
+      "work_dir": "/work/scenarios/rebalance-exchange-cycle"
+    },
+    {
+      "classification": "PASS",
+      "duration_seconds": 6.894049,
+      "name": "rebalance-renamed-multikey",
+      "result": {
+        "crash_counts": {
+          "worker-11-δ": 0,
+          "worker-12-δ": 0,
+          "worker-13-δ": 0,
+          "worker-14-δ": 0,
+          "worker-15-δ": 0
+        },
+        "elapsed_seconds": "6.326324",
+        "history_result": {
+          "aborted_txn_ids": [],
+          "committed_txn_ids": [
+            "before-cycle",
+            "after-exchange",
+            "combined-local",
+            "combined-cross",
+            "returned-new",
+            "independent-c"
+          ],
+          "final_values": {
+            "alpha/乙": -999999999999999999999995,
+            "alpha/甲": 1000000000000000000000003,
+            "beta/乙": -1000000000000000000000024,
+            "beta/甲": 1000000000000000000000055,
+            "gamma/乙": -1000000000000000000000084,
+            "gamma/甲": 1000000000000000000000076
+          },
+          "serial_order": [
+            [
+              "txn",
+              "before-cycle"
+            ],
+            [
+              "read",
+              "read-1"
+            ],
+            [
+              "txn",
+              "after-exchange"
+            ],
+            [
+              "read",
+              "read-2"
+            ],
+            [
+              "txn",
+              "combined-local"
+            ],
+            [
+              "txn",
+              "combined-cross"
+            ],
+            [
+              "read",
+              "read-3"
+            ],
+            [
+              "txn",
+              "returned-new"
+            ],
+            [
+              "txn",
+              "independent-c"
+            ],
+            [
+              "read",
+              "read-4"
+            ],
+            [
+              "read",
+              "read-5"
+            ]
+          ]
+        },
+        "owners": {
+          "A": {
+            "epoch": 20,
+            "migration_id": "return",
+            "owner": "worker-12-δ"
+          },
+          "B": {
+            "epoch": 21,
+            "migration_id": "return",
+            "owner": "worker-14-δ"
+          },
+          "C": {
+            "epoch": 19,
+            "migration_id": null,
+            "owner": "worker-15-δ"
+          }
+        },
+        "phases": [
+          {
+            "deadline_round": 10000,
+            "label": "stable-service",
+            "start_round": 0
+          },
+          {
+            "deadline_round": 2057,
+            "label": "rebalance-exchange",
+            "start_round": 57
+          },
+          {
+            "deadline_round": 10104,
+            "label": "stable-service",
+            "start_round": 104
+          },
+          {
+            "deadline_round": 2181,
+            "label": "rebalance-combine",
+            "start_round": 181
+          },
+          {
+            "deadline_round": 10219,
+            "label": "stable-service",
+            "start_round": 219
+          },
+          {
+            "deadline_round": 2412,
+            "label": "rebalance-return",
+            "start_round": 412
+          },
+          {
+            "deadline_round": 10458,
+            "label": "stable-service",
+            "start_round": 458
+          }
+        ],
+        "rounds": 686,
+        "status": "PASS"
+      },
+      "status": "PASS",
+      "work_dir": "/work/scenarios/rebalance-renamed-multikey"
+    },
+    {
+      "classification": "PASS",
+      "duration_seconds": 4.712106,
+      "name": "rebalance-colocation",
+      "result": {
+        "crash_counts": {
+          "a_old": 0,
+          "a_target": 0,
+          "b": 0,
+          "c": 0,
+          "coord": 0
+        },
+        "elapsed_seconds": "4.357375",
+        "history_result": {
+          "aborted_txn_ids": [],
+          "committed_txn_ids": [
+            "local-a",
+            "local-b",
+            "cross-ab",
+            "new-a",
+            "new-b"
+          ],
+          "final_values": {
+            "a": 207,
+            "b": -21,
+            "c": 0
+          },
+          "serial_order": [
+            [
+              "txn",
+              "local-a"
+            ],
+            [
+              "txn",
+              "local-b"
+            ],
+            [
+              "txn",
+              "cross-ab"
+            ],
+            [
+              "read",
+              "read-1"
+            ],
+            [
+              "txn",
+              "new-a"
+            ],
+            [
+              "txn",
+              "new-b"
+            ],
+            [
+              "read",
+              "read-2"
+            ]
+          ]
+        },
+        "owners": {
+          "A": {
+            "epoch": 2,
+            "migration_id": "separate",
+            "owner": "b"
+          },
+          "B": {
+            "epoch": 2,
+            "migration_id": "separate",
+            "owner": "a_old"
+          },
+          "C": {
+            "epoch": 0,
+            "migration_id": null,
+            "owner": "c"
+          }
+        },
+        "phases": [
+          {
+            "deadline_round": 2000,
+            "label": "rebalance-combine",
+            "start_round": 0
+          },
+          {
+            "deadline_round": 10025,
+            "label": "stable-service",
+            "start_round": 25
+          },
+          {
+            "deadline_round": 2228,
+            "label": "rebalance-separate",
+            "start_round": 228
+          },
+          {
+            "deadline_round": 10274,
+            "label": "stable-service",
+            "start_round": 274
+          }
+        ],
+        "rounds": 406,
+        "status": "PASS"
+      },
+      "status": "PASS",
+      "work_dir": "/work/scenarios/rebalance-colocation"
+    },
+    {
+      "classification": "PASS",
+      "duration_seconds": 5.481269,
+      "name": "rebalance-unresolved-commit",
+      "result": {
+        "crash_counts": {
+          "a_old": 1,
+          "a_target": 0,
+          "b": 0,
+          "c": 0,
+          "coord": 1
+        },
+        "elapsed_seconds": "4.96699",
+        "history_result": {
+          "aborted_txn_ids": [],
+          "committed_txn_ids": [
+            "durable-cross",
+            "independent-c",
+            "post-recovery"
+          ],
+          "final_values": {
+            "a": 110,
+            "b": 88,
+            "c": 11
+          },
+          "serial_order": [
+            [
+              "txn",
+              "durable-cross"
+            ],
+            [
+              "txn",
+              "independent-c"
+            ],
+            [
+              "read",
+              "read-1"
+            ],
+            [
+              "txn",
+              "post-recovery"
+            ],
+            [
+              "read",
+              "read-2"
+            ],
+            [
+              "read",
+              "read-3"
+            ]
+          ]
+        },
+        "owners": {
+          "A": {
+            "epoch": 3,
+            "migration_id": "paused-return",
+            "owner": "a_old"
+          },
+          "B": {
+            "epoch": 3,
+            "migration_id": "paused-return",
+            "owner": "b"
+          },
+          "C": {
+            "epoch": 0,
+            "migration_id": null,
+            "owner": "c"
+          }
+        },
+        "phases": [
+          {
+            "deadline_round": 10000,
+            "label": "establish-real-durable-decision",
+            "start_round": 0
+          },
+          {
+            "deadline_round": 2017,
+            "label": "rebalance-paused-exchange",
+            "start_round": 17
+          },
+          {
+            "deadline_round": 10045,
+            "label": "stable-service",
+            "start_round": 45
+          },
+          {
+            "deadline_round": 2118,
+            "label": "rebalance-paused-combine",
+            "start_round": 118
+          },
+          {
+            "deadline_round": 10146,
+            "label": "recover-with-former-owner-down",
+            "start_round": 146
+          },
+          {
+            "deadline_round": 2285,
+            "label": "rebalance-paused-return",
+            "start_round": 285
+          },
+          {
+            "deadline_round": 10325,
+            "label": "stable-service",
+            "start_round": 325
+          }
+        ],
+        "rounds": 387,
+        "status": "PASS"
+      },
+      "status": "PASS",
+      "work_dir": "/work/scenarios/rebalance-unresolved-commit"
+    },
+    {
+      "classification": "CANDIDATE_FAIL",
+      "code": "CANDIDATE_CONTRACT",
+      "detail": "ScenarioFailure: public logical progress budget exhausted at round 10081",
+      "duration_seconds": 6.204954,
+      "name": "rebalance-live-local-read",
+      "status": "FAIL",
+      "trace": "Traceback (most recent call last):\n  File \"/tests/run_verifier.py\", line 187, in execute_case\n    result = self.run_case(name, ACCEPTED_ENGINE, CASE_WORK / name)\n  File \"/tests/trusted/scenarios.py\", line 512, in run_case\n    run_group(scenario, name)\n    ~~~~~~~~~^^^^^^^^^^^^^^^^\n  File \"/tests/trusted/group_scenarios.py\", line 248, in run_group\n    functions[name](s)\n    ~~~~~~~~~~~~~~~^^^\n  File \"/tests/trusted/group_scenarios.py\", line 144, in local_read\n    s.tick()\n    ~~~~~~^^\n  File \"/tests/trusted/scenarios.py\", line 94, in tick\n    require(self.cluster.round < end, f\"public logical progress budget exhausted at round {end}\")\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tests/trusted/scenarios.py\", line 44, in require\n    raise ScenarioFailure(explanation)\nscenarios.ScenarioFailure: public logical progress budget exhausted at round 10081\n",
+      "work_dir": "/work/scenarios/rebalance-live-local-read"
+    },
+    {
+      "classification": "PASS",
+      "duration_seconds": 4.809009,
+      "name": "rebalance-source-first-persist",
+      "result": {
+        "crash_counts": {
+          "a_old": 1,
+          "a_target": 0,
+          "b": 0,
+          "c": 0,
+          "coord": 0
+        },
+        "elapsed_seconds": "4.48663",
+        "history_result": {
+          "aborted_txn_ids": [],
+          "committed_txn_ids": [
+            "after-crash"
+          ],
+          "final_values": {
+            "a": 171,
+            "b": 27,
+            "c": 0
+          },
+          "serial_order": [
+            [
+              "txn",
+              "after-crash"
+            ],
+            [
+              "read",
+              "read-1"
+            ],
+            [
+              "read",
+              "read-2"
+            ]
+          ]
+        },
+        "owners": {
+          "A": {
+            "epoch": 2,
+            "migration_id": "crash-return",
+            "owner": "a_old"
+          },
+          "B": {
+            "epoch": 2,
+            "migration_id": "crash-return",
+            "owner": "b"
+          },
+          "C": {
+            "epoch": 0,
+            "migration_id": null,
+            "owner": "c"
+          }
+        },
+        "phases": [
+          {
+            "deadline_round": 10000,
+            "label": "real-action-crash-cut",
+            "start_round": 0
+          },
+          {
+            "deadline_round": 2015,
+            "label": "rebalance-crash-combine",
+            "start_round": 15
+          },
+          {
+            "deadline_round": 10146,
+            "label": "stable-service",
+            "start_round": 146
+          },
+          {
+            "deadline_round": 2232,
+            "label": "rebalance-crash-return",
+            "start_round": 232
+          },
+          {
+            "deadline_round": 10296,
+            "label": "stable-service",
+            "start_round": 296
+          }
+        ],
+        "rounds": 333,
+        "status": "PASS"
+      },
+      "status": "PASS",
+      "work_dir": "/work/scenarios/rebalance-source-first-persist"
+    },
+    {
+      "classification": "PASS",
+      "duration_seconds": 4.78065,
+      "name": "rebalance-target-first-persist",
+      "result": {
+        "crash_counts": {
+          "a_old": 0,
+          "a_target": 1,
+          "b": 0,
+          "c": 0,
+          "coord": 0
+        },
+        "elapsed_seconds": "4.434339",
+        "history_result": {
+          "aborted_txn_ids": [],
+          "committed_txn_ids": [
+            "after-crash"
+          ],
+          "final_values": {
+            "a": 171,
+            "b": 27,
+            "c": 0
+          },
+          "serial_order": [
+            [
+              "txn",
+              "after-crash"
+            ],
+            [
+              "read",
+              "read-1"
+            ],
+            [
+              "read",
+              "read-2"
+            ]
+          ]
+        },
+        "owners": {
+          "A": {
+            "epoch": 2,
+            "migration_id": "crash-return",
+            "owner": "a_old"
+          },
+          "B": {
+            "epoch": 2,
+            "migration_id": "crash-return",
+            "owner": "b"
+          },
+          "C": {
+            "epoch": 0,
+            "migration_id": null,
+            "owner": "c"
+          }
+        },
+        "phases": [
+          {
+            "deadline_round": 10000,
+            "label": "real-action-crash-cut",
+            "start_round": 0
+          },
+          {
+            "deadline_round": 2024,
+            "label": "rebalance-crash-combine",
+            "start_round": 24
+          },
+          {
+            "deadline_round": 10047,
+            "label": "stable-service",
+            "start_round": 47
+          },
+          {
+            "deadline_round": 2128,
+            "label": "rebalance-crash-return",
+            "start_round": 128
+          },
+          {
+            "deadline_round": 10178,
+            "label": "stable-service",
+            "start_round": 178
+          }
+        ],
+        "rounds": 238,
+        "status": "PASS"
+      },
+      "status": "PASS",
+      "work_dir": "/work/scenarios/rebalance-target-first-persist"
+    },
+    {
+      "classification": "PASS",
+      "duration_seconds": 4.310758,
+      "name": "rebalance-vector-cas-restart",
+      "result": {
+        "crash_counts": {
+          "a_old": 1,
+          "a_target": 0,
+          "b": 0,
+          "c": 0,
+          "coord": 0
+        },
+        "elapsed_seconds": "4.000538",
+        "history_result": {
+          "aborted_txn_ids": [],
+          "committed_txn_ids": [
+            "after-crash"
+          ],
+          "final_values": {
+            "a": 171,
+            "b": 27,
+            "c": 0
+          },
+          "serial_order": [
+            [
+              "txn",
+              "after-crash"
+            ],
+            [
+              "read",
+              "read-1"
+            ],
+            [
+              "read",
+              "read-2"
+            ]
+          ]
+        },
+        "owners": {
+          "A": {
+            "epoch": 2,
+            "migration_id": "crash-return",
+            "owner": "a_old"
+          },
+          "B": {
+            "epoch": 2,
+            "migration_id": "crash-return",
+            "owner": "b"
+          },
+          "C": {
+            "epoch": 0,
+            "migration_id": null,
+            "owner": "c"
+          }
+        },
+        "phases": [
+          {
+            "deadline_round": 10000,
+            "label": "real-action-crash-cut",
+            "start_round": 0
+          },
+          {
+            "deadline_round": 2034,
+            "label": "rebalance-crash-combine",
+            "start_round": 34
+          },
+          {
+            "deadline_round": 10165,
+            "label": "stable-service",
+            "start_round": 165
+          },
+          {
+            "deadline_round": 2222,
+            "label": "rebalance-crash-return",
+            "start_round": 222
+          },
+          {
+            "deadline_round": 10267,
+            "label": "stable-service",
+            "start_round": 267
+          }
+        ],
+        "rounds": 315,
+        "status": "PASS"
+      },
+      "status": "PASS",
+      "work_dir": "/work/scenarios/rebalance-vector-cas-restart"
+    },
+    {
+      "classification": "PASS",
+      "duration_seconds": 3.635389,
+      "name": "rebalance-retired-sources-offline",
+      "result": {
+        "crash_counts": {
+          "a_old": 1,
+          "a_target": 0,
+          "b": 1,
+          "c": 0,
+          "coord": 0
+        },
+        "elapsed_seconds": "3.381711",
+        "history_result": {
+          "aborted_txn_ids": [],
+          "committed_txn_ids": [
+            "old-local-a",
+            "old-local-b",
+            "fresh-target-cross",
+            "independent-c"
+          ],
+          "final_values": {
+            "a": 90,
+            "b": 114,
+            "c": 11
+          },
+          "serial_order": [
+            [
+              "txn",
+              "old-local-a"
+            ],
+            [
+              "txn",
+              "old-local-b"
+            ],
+            [
+              "txn",
+              "fresh-target-cross"
+            ],
+            [
+              "txn",
+              "independent-c"
+            ],
+            [
+              "read",
+              "read-1"
+            ],
+            [
+              "read",
+              "read-2"
+            ]
+          ]
+        },
+        "owners": {
+          "A": {
+            "epoch": 1,
+            "migration_id": "evacuate",
+            "owner": "a_target"
+          },
+          "B": {
+            "epoch": 1,
+            "migration_id": "evacuate",
+            "owner": "a_target"
+          },
+          "C": {
+            "epoch": 0,
+            "migration_id": null,
+            "owner": "c"
+          }
+        },
+        "phases": [
+          {
+            "deadline_round": 10000,
+            "label": "stable-service",
+            "start_round": 0
+          },
+          {
+            "deadline_round": 2051,
+            "label": "rebalance-evacuate",
+            "start_round": 51
+          },
+          {
+            "deadline_round": 10089,
+            "label": "both-retired-sources-offline",
+            "start_round": 89
+          }
+        ],
+        "rounds": 205,
+        "status": "PASS"
+      },
+      "status": "PASS",
+      "work_dir": "/work/scenarios/rebalance-retired-sources-offline"
+    },
+    {
+      "classification": "PASS",
+      "duration_seconds": 5.660372,
+      "name": "rebalance-target-restart-replay",
+      "result": {
+        "crash_counts": {
+          "a_old": 0,
+          "a_target": 1,
+          "b": 0,
+          "c": 0,
+          "coord": 0
+        },
+        "elapsed_seconds": "5.237074",
+        "history_result": {
+          "aborted_txn_ids": [],
+          "committed_txn_ids": [
+            "between-plans",
+            "after-combine"
+          ],
+          "final_values": {
+            "a": 92,
+            "b": 112,
+            "c": 0
+          },
+          "serial_order": [
+            [
+              "txn",
+              "between-plans"
+            ],
+            [
+              "txn",
+              "after-combine"
+            ],
+            [
+              "read",
+              "read-1"
+            ],
+            [
+              "read",
+              "read-2"
+            ],
+            [
+              "read",
+              "read-3"
+            ]
+          ]
+        },
+        "owners": {
+          "A": {
+            "epoch": 3,
+            "migration_id": "third-return",
+            "owner": "b"
+          },
+          "B": {
+            "epoch": 3,
+            "migration_id": "third-return",
+            "owner": "a_old"
+          },
+          "C": {
+            "epoch": 0,
+            "migration_id": null,
+            "owner": "c"
+          }
+        },
+        "phases": [
+          {
+            "deadline_round": 2000,
+            "label": "rebalance-first-exchange",
+            "start_round": 0
+          },
+          {
+            "deadline_round": 10030,
+            "label": "stable-service",
+            "start_round": 30
+          },
+          {
+            "deadline_round": 2057,
+            "label": "rebalance-then-combine",
+            "start_round": 57
+          },
+          {
+            "deadline_round": 10091,
+            "label": "stable-service",
+            "start_round": 91
+          },
+          {
+            "deadline_round": 10206,
+            "label": "target-restart-and-old-messages",
+            "start_round": 206
+          },
+          {
+            "deadline_round": 2294,
+            "label": "rebalance-third-return",
+            "start_round": 294
+          },
+          {
+            "deadline_round": 10335,
+            "label": "stable-service",
+            "start_round": 335
+          }
+        ],
+        "rounds": 381,
+        "status": "PASS"
+      },
+      "status": "PASS",
+      "work_dir": "/work/scenarios/rebalance-target-restart-replay"
+    },
+    {
+      "classification": "PASS",
+      "duration_seconds": 4.228653,
+      "name": "rebalance-after-legacy-migration",
+      "result": {
+        "crash_counts": {
+          "a_old": 0,
+          "a_target": 0,
+          "b": 0,
+          "c": 0,
+          "coord": 0
+        },
+        "elapsed_seconds": "3.893056",
+        "history_result": {
+          "aborted_txn_ids": [],
+          "committed_txn_ids": [
+            "before-legacy",
+            "after-legacy-cross"
+          ],
+          "final_values": {
+            "a": 94,
+            "b": 263,
+            "c": 0
+          },
+          "serial_order": [
+            [
+              "txn",
+              "before-legacy"
+            ],
+            [
+              "txn",
+              "after-legacy-cross"
+            ],
+            [
+              "read",
+              "read-1"
+            ]
+          ]
+        },
+        "owners": {
+          "A": {
+            "epoch": 3,
+            "migration_id": "legacy-return",
+            "owner": "a_old"
+          },
+          "B": {
+            "epoch": 2,
+            "migration_id": "legacy-return",
+            "owner": "b"
+          },
+          "C": {
+            "epoch": 0,
+            "migration_id": null,
+            "owner": "c"
+          }
+        },
+        "phases": [
+          {
+            "deadline_round": 10000,
+            "label": "stable-service",
+            "start_round": 0
+          },
+          {
+            "deadline_round": 2055,
+            "label": "rebalance-after-legacy",
+            "start_round": 55
+          },
+          {
+            "deadline_round": 10093,
+            "label": "stable-service",
+            "start_round": 93
+          },
+          {
+            "deadline_round": 2121,
+            "label": "rebalance-legacy-return",
+            "start_round": 121
+          },
+          {
+            "deadline_round": 10166,
+            "label": "stable-service",
+            "start_round": 166
+          }
+        ],
+        "rounds": 221,
+        "status": "PASS"
+      },
+      "status": "PASS",
+      "work_dir": "/work/scenarios/rebalance-after-legacy-migration"
+    }
+  ],
+  "ctrf": "/logs/verifier/ctrf.json",
+  "finished_unix_seconds": 1789331353.175429,
+  "framework_errors": [],
+  "manifest": [
+    {
+      "path": "__init__.py",
+      "sha256": "63b800abbf1b909111eb7bd75d9c117c981a068f28156699752ad5f896521e0f",
+      "size": 58
+    },
+    {
+      "path": "cheat.py",
+      "sha256": "0c918d87d63696737fc0955e74e5da746b1a4f43fae39780e6407229b96f7d66",
+      "size": 10449
+    },
+    {
+      "path": "migration.py",
+      "sha256": "e6f11dd1e0864c64b34235f9b88a05c8d946f4c1c45ad31ef1bfe674a167f0c8",
+      "size": 10623
+    },
+    {
+      "path": "node.py",
+      "sha256": "8032abe8299353a2ebe2348723d29383e2f4ca1c974046cfd561e37419c19037",
+      "size": 7470
+    },
+    {
+      "path": "participant.py",
+      "sha256": "b288b6ba9109013a028cdb6c36abf6503bdd6d5765f3492f12bc2d944e7ddedd",
+      "size": 10779
+    },
+    {
+      "path": "records.py",
+      "sha256": "92d32126bceb5964c8c92e8b6cd6c6aaec1825c15b63fbceb8bcd81ab6bd07eb",
+      "size": 3664
+    },
+    {
+      "path": "recovery.py",
+      "sha256": "ec008115beb71dc16b97b1d7a002998d5e3d8a2bfff6960879dac61e14e0c692",
+      "size": 613
+    },
+    {
+      "path": "transactions.py",
+      "sha256": "ea9c591b1c84484423577f08b216838725ad2d3858e53d28b8a2c7e8dfdf25f0",
+      "size": 10381
+    }
+  ],
+  "pytest_exit_code": 1,
+  "pytest_reports": [
+    {
+      "duration_seconds": 0.0003721999819390476,
+      "nodeid": "test_sharddb.py::test_artifact",
+      "outcome": "passed",
+      "phase": "setup"
+    },
+    {
+      "duration_seconds": 0.00019630001042969525,
+      "nodeid": "test_sharddb.py::test_artifact",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "duration_seconds": 0.00015259999781847,
+      "nodeid": "test_sharddb.py::test_artifact",
+      "outcome": "passed",
+      "phase": "teardown"
+    },
+    {
+      "duration_seconds": 0.0003853999951388687,
+      "nodeid": "test_sharddb.py::scenario::healthy",
+      "outcome": "passed",
+      "phase": "setup"
+    },
+    {
+      "duration_seconds": 4.068973590008682,
+      "nodeid": "test_sharddb.py::scenario::healthy",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "duration_seconds": 0.00019580000662244856,
+      "nodeid": "test_sharddb.py::scenario::healthy",
+      "outcome": "passed",
+      "phase": "teardown"
+    },
+    {
+      "duration_seconds": 0.00039999998989515007,
+      "nodeid": "test_sharddb.py::scenario::renamed-topology",
+      "outcome": "passed",
+      "phase": "setup"
+    },
+    {
+      "duration_seconds": 4.249355719017331,
+      "nodeid": "test_sharddb.py::scenario::renamed-topology",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "duration_seconds": 0.00018379997345618904,
+      "nodeid": "test_sharddb.py::scenario::renamed-topology",
+      "outcome": "passed",
+      "phase": "teardown"
+    },
+    {
+      "duration_seconds": 0.0003918000147677958,
+      "nodeid": "test_sharddb.py::scenario::overlapping-reads-and-writes",
+      "outcome": "passed",
+      "phase": "setup"
+    },
+    {
+      "duration_seconds": 3.8242031809932087,
+      "nodeid": "test_sharddb.py::scenario::overlapping-reads-and-writes",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "duration_seconds": 0.00021579998428933322,
+      "nodeid": "test_sharddb.py::scenario::overlapping-reads-and-writes",
+      "outcome": "passed",
+      "phase": "teardown"
+    },
+    {
+      "duration_seconds": 0.0004188000166323036,
+      "nodeid": "test_sharddb.py::scenario::read-live-during-migration",
+      "outcome": "passed",
+      "phase": "setup"
+    },
+    {
+      "duration_seconds": 6.715462161024334,
+      "nodeid": "test_sharddb.py::scenario::read-live-during-migration",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "duration_seconds": 0.00021800000104121864,
+      "nodeid": "test_sharddb.py::scenario::read-live-during-migration",
+      "outcome": "passed",
+      "phase": "teardown"
+    },
+    {
+      "duration_seconds": 0.00040210000588558614,
+      "nodeid": "test_sharddb.py::scenario::settled-result-coordinator-restart",
+      "outcome": "passed",
+      "phase": "setup"
+    },
+    {
+      "duration_seconds": 4.233700659009628,
+      "nodeid": "test_sharddb.py::scenario::settled-result-coordinator-restart",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "duration_seconds": 0.0001818000164348632,
+      "nodeid": "test_sharddb.py::scenario::settled-result-coordinator-restart",
+      "outcome": "passed",
+      "phase": "teardown"
+    },
+    {
+      "duration_seconds": 0.0003798999823629856,
+      "nodeid": "test_sharddb.py::scenario::durable-commit-coordinator-restart",
+      "outcome": "passed",
+      "phase": "setup"
+    },
+    {
+      "duration_seconds": 4.393021940981271,
+      "nodeid": "test_sharddb.py::scenario::durable-commit-coordinator-restart",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "duration_seconds": 0.0001799000019673258,
+      "nodeid": "test_sharddb.py::scenario::durable-commit-coordinator-restart",
+      "outcome": "passed",
+      "phase": "teardown"
+    },
+    {
+      "duration_seconds": 0.0005845999985467643,
+      "nodeid": "test_sharddb.py::scenario::source-first-persist-restart",
+      "outcome": "passed",
+      "phase": "setup"
+    },
+    {
+      "duration_seconds": 5.10451057300088,
+      "nodeid": "test_sharddb.py::scenario::source-first-persist-restart",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "duration_seconds": 0.0002730000123847276,
+      "nodeid": "test_sharddb.py::scenario::source-first-persist-restart",
+      "outcome": "passed",
+      "phase": "teardown"
+    },
+    {
+      "duration_seconds": 0.0003825000021606684,
+      "nodeid": "test_sharddb.py::scenario::target-first-persist-restart",
+      "outcome": "passed",
+      "phase": "setup"
+    },
+    {
+      "duration_seconds": 4.782903149025515,
+      "nodeid": "test_sharddb.py::scenario::target-first-persist-restart",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "duration_seconds": 0.0001818999880924821,
+      "nodeid": "test_sharddb.py::scenario::target-first-persist-restart",
+      "outcome": "passed",
+      "phase": "teardown"
+    },
+    {
+      "duration_seconds": 0.0003842000151053071,
+      "nodeid": "test_sharddb.py::scenario::owner-swap-source-restart",
+      "outcome": "passed",
+      "phase": "setup"
+    },
+    {
+      "duration_seconds": 5.255968924000626,
+      "nodeid": "test_sharddb.py::scenario::owner-swap-source-restart",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "duration_seconds": 0.00020740000763908029,
+      "nodeid": "test_sharddb.py::scenario::owner-swap-source-restart",
+      "outcome": "passed",
+      "phase": "teardown"
+    },
+    {
+      "duration_seconds": 0.0004206000012345612,
+      "nodeid": "test_sharddb.py::scenario::migration-reply-target-restart",
+      "outcome": "passed",
+      "phase": "setup"
+    },
+    {
+      "duration_seconds": 5.522367238998413,
+      "nodeid": "test_sharddb.py::scenario::migration-reply-target-restart",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "duration_seconds": 0.00029189998167566955,
+      "nodeid": "test_sharddb.py::scenario::migration-reply-target-restart",
+      "outcome": "passed",
+      "phase": "teardown"
+    },
+    {
+      "duration_seconds": 0.0004383999912533909,
+      "nodeid": "test_sharddb.py::scenario::target-reply-loss-restart",
+      "outcome": "passed",
+      "phase": "setup"
+    },
+    {
+      "duration_seconds": 5.218044921028195,
+      "nodeid": "test_sharddb.py::scenario::target-reply-loss-restart",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "duration_seconds": 0.000221800000872463,
+      "nodeid": "test_sharddb.py::scenario::target-reply-loss-restart",
+      "outcome": "passed",
+      "phase": "teardown"
+    },
+    {
+      "duration_seconds": 0.0004975999763701111,
+      "nodeid": "test_sharddb.py::scenario::retired-source-offline",
+      "outcome": "passed",
+      "phase": "setup"
+    },
+    {
+      "duration_seconds": 5.246492551988922,
+      "nodeid": "test_sharddb.py::scenario::retired-source-offline",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "duration_seconds": 0.00018080000882036984,
+      "nodeid": "test_sharddb.py::scenario::retired-source-offline",
+      "outcome": "passed",
+      "phase": "teardown"
+    },
+    {
+      "duration_seconds": 0.0004459999909158796,
+      "nodeid": "test_sharddb.py::scenario::compat-prepared",
+      "outcome": "passed",
+      "phase": "setup"
+    },
+    {
+      "duration_seconds": 3.9567532440123614,
+      "nodeid": "test_sharddb.py::scenario::compat-prepared",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "duration_seconds": 0.00017859999206848443,
+      "nodeid": "test_sharddb.py::scenario::compat-prepared",
+      "outcome": "passed",
+      "phase": "teardown"
+    },
+    {
+      "duration_seconds": 0.00047649999032728374,
+      "nodeid": "test_sharddb.py::scenario::compat-read-grant",
+      "outcome": "passed",
+      "phase": "setup"
+    },
+    {
+      "duration_seconds": 4.7692783559905365,
+      "nodeid": "test_sharddb.py::scenario::compat-read-grant",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "duration_seconds": 0.00020589999621734023,
+      "nodeid": "test_sharddb.py::scenario::compat-read-grant",
+      "outcome": "passed",
+      "phase": "teardown"
+    },
+    {
+      "duration_seconds": 0.00037799999699927866,
+      "nodeid": "test_sharddb.py::scenario::compat-single-commit",
+      "outcome": "passed",
+      "phase": "setup"
+    },
+    {
+      "duration_seconds": 3.8915135790011846,
+      "nodeid": "test_sharddb.py::scenario::compat-single-commit",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "duration_seconds": 0.00026929998421110213,
+      "nodeid": "test_sharddb.py::scenario::compat-single-commit",
+      "outcome": "passed",
+      "phase": "teardown"
+    },
+    {
+      "duration_seconds": 0.0006487999926321208,
+      "nodeid": "test_sharddb.py::scenario::compat-single-abort",
+      "outcome": "passed",
+      "phase": "setup"
+    },
+    {
+      "duration_seconds": 4.10597609000979,
+      "nodeid": "test_sharddb.py::scenario::compat-single-abort",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "duration_seconds": 0.00018530001398175955,
+      "nodeid": "test_sharddb.py::scenario::compat-single-abort",
+      "outcome": "passed",
+      "phase": "teardown"
+    },
+    {
+      "duration_seconds": 0.0003926999925170094,
+      "nodeid": "test_sharddb.py::scenario::compat-migration-draining",
+      "outcome": "passed",
+      "phase": "setup"
+    },
+    {
+      "duration_seconds": 4.206603322003502,
+      "nodeid": "test_sharddb.py::scenario::compat-migration-draining",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "duration_seconds": 0.00017670000670477748,
+      "nodeid": "test_sharddb.py::scenario::compat-migration-draining",
+      "outcome": "passed",
+      "phase": "teardown"
+    },
+    {
+      "duration_seconds": 0.00039679999463260174,
+      "nodeid": "test_sharddb.py::scenario::compat-migration-settled",
+      "outcome": "passed",
+      "phase": "setup"
+    },
+    {
+      "duration_seconds": 3.8771874170051888,
+      "nodeid": "test_sharddb.py::scenario::compat-migration-settled",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "duration_seconds": 0.0002482999989297241,
+      "nodeid": "test_sharddb.py::scenario::compat-migration-settled",
+      "outcome": "passed",
+      "phase": "teardown"
+    },
+    {
+      "duration_seconds": 0.000394499977119267,
+      "nodeid": "test_sharddb.py::scenario::compat-migration-complete-checkpoint",
+      "outcome": "passed",
+      "phase": "setup"
+    },
+    {
+      "duration_seconds": 2.9794441889971495,
+      "nodeid": "test_sharddb.py::scenario::compat-migration-complete-checkpoint",
+      "outcome": "failed",
+      "phase": "call",
+      "trace": "compat-migration-complete-checkpoint [CANDIDATE_FAIL / CANDIDATE_CONTRACT]: ProtocolError: owner CAS contains an unregistered state\nTrusted scenario artifacts: /work/scenarios/compat-migration-complete-checkpoint"
+    },
+    {
+      "duration_seconds": 0.00019950000569224358,
+      "nodeid": "test_sharddb.py::scenario::compat-migration-complete-checkpoint",
+      "outcome": "passed",
+      "phase": "teardown"
+    },
+    {
+      "duration_seconds": 0.0009150000114459544,
+      "nodeid": "test_sharddb.py::scenario::rebalance-exchange-cycle",
+      "outcome": "passed",
+      "phase": "setup"
+    },
+    {
+      "duration_seconds": 8.348246434994508,
+      "nodeid": "test_sharddb.py::scenario::rebalance-exchange-cycle",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "duration_seconds": 0.0001821999903768301,
+      "nodeid": "test_sharddb.py::scenario::rebalance-exchange-cycle",
+      "outcome": "passed",
+      "phase": "teardown"
+    },
+    {
+      "duration_seconds": 0.00043909999658353627,
+      "nodeid": "test_sharddb.py::scenario::rebalance-renamed-multikey",
+      "outcome": "passed",
+      "phase": "setup"
+    },
+    {
+      "duration_seconds": 6.906059169006767,
+      "nodeid": "test_sharddb.py::scenario::rebalance-renamed-multikey",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "duration_seconds": 0.00023599999258294702,
+      "nodeid": "test_sharddb.py::scenario::rebalance-renamed-multikey",
+      "outcome": "passed",
+      "phase": "teardown"
+    },
+    {
+      "duration_seconds": 0.00039530001231469214,
+      "nodeid": "test_sharddb.py::scenario::rebalance-colocation",
+      "outcome": "passed",
+      "phase": "setup"
+    },
+    {
+      "duration_seconds": 4.719899310002802,
+      "nodeid": "test_sharddb.py::scenario::rebalance-colocation",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "duration_seconds": 0.00017809998826123774,
+      "nodeid": "test_sharddb.py::scenario::rebalance-colocation",
+      "outcome": "passed",
+      "phase": "teardown"
+    },
+    {
+      "duration_seconds": 0.0005013000045437366,
+      "nodeid": "test_sharddb.py::scenario::rebalance-unresolved-commit",
+      "outcome": "passed",
+      "phase": "setup"
+    },
+    {
+      "duration_seconds": 5.492574328993214,
+      "nodeid": "test_sharddb.py::scenario::rebalance-unresolved-commit",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "duration_seconds": 0.00048650000826455653,
+      "nodeid": "test_sharddb.py::scenario::rebalance-unresolved-commit",
+      "outcome": "passed",
+      "phase": "teardown"
+    },
+    {
+      "duration_seconds": 0.0009385000157635659,
+      "nodeid": "test_sharddb.py::scenario::rebalance-live-local-read",
+      "outcome": "passed",
+      "phase": "setup"
+    },
+    {
+      "duration_seconds": 6.214366169006098,
+      "nodeid": "test_sharddb.py::scenario::rebalance-live-local-read",
+      "outcome": "failed",
+      "phase": "call",
+      "trace": "rebalance-live-local-read [CANDIDATE_FAIL / CANDIDATE_CONTRACT]: ScenarioFailure: public logical progress budget exhausted at round 10081\nTrusted scenario artifacts: /work/scenarios/rebalance-live-local-read"
+    },
+    {
+      "duration_seconds": 0.0002767000114545226,
+      "nodeid": "test_sharddb.py::scenario::rebalance-live-local-read",
+      "outcome": "passed",
+      "phase": "teardown"
+    },
+    {
+      "duration_seconds": 0.0003795999800786376,
+      "nodeid": "test_sharddb.py::scenario::rebalance-source-first-persist",
+      "outcome": "passed",
+      "phase": "setup"
+    },
+    {
+      "duration_seconds": 4.817645131988684,
+      "nodeid": "test_sharddb.py::scenario::rebalance-source-first-persist",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "duration_seconds": 0.00020440001389943063,
+      "nodeid": "test_sharddb.py::scenario::rebalance-source-first-persist",
+      "outcome": "passed",
+      "phase": "teardown"
+    },
+    {
+      "duration_seconds": 0.00038049998693168163,
+      "nodeid": "test_sharddb.py::scenario::rebalance-target-first-persist",
+      "outcome": "passed",
+      "phase": "setup"
+    },
+    {
+      "duration_seconds": 4.791003657999681,
+      "nodeid": "test_sharddb.py::scenario::rebalance-target-first-persist",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "duration_seconds": 0.00021359900711104274,
+      "nodeid": "test_sharddb.py::scenario::rebalance-target-first-persist",
+      "outcome": "passed",
+      "phase": "teardown"
+    },
+    {
+      "duration_seconds": 0.0006087000074330717,
+      "nodeid": "test_sharddb.py::scenario::rebalance-vector-cas-restart",
+      "outcome": "passed",
+      "phase": "setup"
+    },
+    {
+      "duration_seconds": 4.318844380002702,
+      "nodeid": "test_sharddb.py::scenario::rebalance-vector-cas-restart",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "duration_seconds": 0.00022459999308921397,
+      "nodeid": "test_sharddb.py::scenario::rebalance-vector-cas-restart",
+      "outcome": "passed",
+      "phase": "teardown"
+    },
+    {
+      "duration_seconds": 0.0003752000047825277,
+      "nodeid": "test_sharddb.py::scenario::rebalance-retired-sources-offline",
+      "outcome": "passed",
+      "phase": "setup"
+    },
+    {
+      "duration_seconds": 3.6439387110003736,
+      "nodeid": "test_sharddb.py::scenario::rebalance-retired-sources-offline",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "duration_seconds": 0.00017670000670477748,
+      "nodeid": "test_sharddb.py::scenario::rebalance-retired-sources-offline",
+      "outcome": "passed",
+      "phase": "teardown"
+    },
+    {
+      "duration_seconds": 0.0003792000061366707,
+      "nodeid": "test_sharddb.py::scenario::rebalance-target-restart-replay",
+      "outcome": "passed",
+      "phase": "setup"
+    },
+    {
+      "duration_seconds": 5.672029677982209,
+      "nodeid": "test_sharddb.py::scenario::rebalance-target-restart-replay",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "duration_seconds": 0.00029109997558407485,
+      "nodeid": "test_sharddb.py::scenario::rebalance-target-restart-replay",
+      "outcome": "passed",
+      "phase": "teardown"
+    },
+    {
+      "duration_seconds": 0.0004791000101249665,
+      "nodeid": "test_sharddb.py::scenario::rebalance-after-legacy-migration",
+      "outcome": "passed",
+      "phase": "setup"
+    },
+    {
+      "duration_seconds": 4.237022033979883,
+      "nodeid": "test_sharddb.py::scenario::rebalance-after-legacy-migration",
+      "outcome": "passed",
+      "phase": "call"
+    },
+    {
+      "duration_seconds": 0.000288198993075639,
+      "nodeid": "test_sharddb.py::scenario::rebalance-after-legacy-migration",
+      "outcome": "passed",
+      "phase": "teardown"
+    }
+  ],
+  "reward": 0,
+  "reward_policy": "Reward is written atomically only after complete valid reports",
+  "schema_version": 1,
+  "started_unix_seconds": 1789331207.052063,
+  "status": "CANDIDATE_FAIL",
+  "watchdog": {
+    "on_expiry": "RUN_ERROR; no normal reward",
+    "owner": "Harbor",
+    "seconds": 900
+  }
+}

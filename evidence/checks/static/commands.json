@@ -1,0 +1,544 @@
+[
+  {
+    "command": [
+      "docker",
+      "image",
+      "inspect",
+      "atomic-shard-rebalancing-agent:r1-i3"
+    ],
+    "duration_seconds": 0.5312,
+    "exit_code": 0,
+    "stderr": "image-inspect.stderr.log",
+    "stdout": "image-inspect.stdout.log"
+  },
+  {
+    "command": [
+      "docker",
+      "run",
+      "-d",
+      "--name",
+      "shard-static-41bdffc63d30",
+      "--entrypoint",
+      "sleep",
+      "sha256:b22ba8d469b37efbffa9035f5e8ae50e56a4198e93bf414f99b007bc2d45a11f",
+      "infinity"
+    ],
+    "duration_seconds": 2.5557,
+    "exit_code": 0,
+    "stderr": "container-create.stderr.log",
+    "stdout": "container-create.stdout.log"
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "shard-static-41bdffc63d30",
+      "mkdir",
+      "-p",
+      "/app/task-under-review/atomic-shard-rebalancing",
+      "/opt/terminal-bench-pinned"
+    ],
+    "duration_seconds": 1.2142,
+    "exit_code": 0,
+    "stderr": "container-directories.stderr.log",
+    "stdout": "container-directories.stdout.log"
+  },
+  {
+    "command": [
+      "docker",
+      "cp",
+      "<repository>/tasks/atomic-shard-rebalancing/.",
+      "shard-static-41bdffc63d30:/app/task-under-review/atomic-shard-rebalancing"
+    ],
+    "duration_seconds": 3.7753,
+    "exit_code": 0,
+    "stderr": "task-copy.stderr.log",
+    "stdout": "task-copy.stdout.log"
+  },
+  {
+    "command": [
+      "docker",
+      "cp",
+      "<terminal-bench-checkout>/.",
+      "shard-static-41bdffc63d30:/opt/terminal-bench-pinned"
+    ],
+    "duration_seconds": 15.8786,
+    "exit_code": 0,
+    "stderr": "upstream-copy.stderr.log",
+    "stdout": "upstream-copy.stdout.log"
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "-i",
+      "shard-static-41bdffc63d30",
+      "python3",
+      "-c",
+      "import hashlib,json,pathlib,shutil,sys; root=pathlib.Path(sys.argv[1]); manifest=json.load(sys.stdin); bad=[e['path'] for e in manifest['files'] if hashlib.sha256((root/e['path']).read_bytes()).hexdigest()!=e['sha256']]; required=['bash','python3','git','rg','grep','sed','awk','find','sort','xargs']; found={x:shutil.which(x) for x in required+['jq']}; missing=[x for x in required if not found[x]]; print(json.dumps({'mismatches':bad,'python':sys.version,'tools':found,'missing_required_tools':missing})); sys.exit(bool(bad or missing))",
+      "/app/task-under-review/atomic-shard-rebalancing"
+    ],
+    "duration_seconds": 1.2189,
+    "exit_code": 0,
+    "stderr": "snapshot-verification.stderr.log",
+    "stdout": "snapshot-verification.stdout.log"
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "-i",
+      "shard-static-41bdffc63d30",
+      "python3",
+      "-c",
+      "import hashlib,json,pathlib,shutil,sys; root=pathlib.Path(sys.argv[1]); manifest=json.load(sys.stdin); bad=[e['path'] for e in manifest['files'] if hashlib.sha256((root/e['path']).read_bytes()).hexdigest()!=e['sha256']]; required=['bash','python3','git','rg','grep','sed','awk','find','sort','xargs']; found={x:shutil.which(x) for x in required+['jq']}; missing=[x for x in required if not found[x]]; print(json.dumps({'mismatches':bad,'python':sys.version,'tools':found,'missing_required_tools':missing})); sys.exit(bool(bad or missing))",
+      "/opt/terminal-bench-pinned"
+    ],
+    "duration_seconds": 1.2041,
+    "exit_code": 0,
+    "stderr": "upstream-verification.stderr.log",
+    "stdout": "upstream-verification.stdout.log"
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "-w",
+      "/app/task-under-review",
+      "shard-static-41bdffc63d30",
+      "env",
+      "LC_ALL=C.UTF-8",
+      "LANG=C.UTF-8",
+      "bash",
+      "/opt/terminal-bench-pinned/scripts/checks/check-allow-internet.sh",
+      "/app/task-under-review/atomic-shard-rebalancing"
+    ],
+    "duration_seconds": 1.1701,
+    "exit_code": 0,
+    "stderr": "check-allow-internet.stderr.log",
+    "stdout": "check-allow-internet.stdout.log"
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "-w",
+      "/app/task-under-review",
+      "shard-static-41bdffc63d30",
+      "env",
+      "LC_ALL=C.UTF-8",
+      "LANG=C.UTF-8",
+      "bash",
+      "/opt/terminal-bench-pinned/scripts/checks/check-canary.sh",
+      "/app/task-under-review/atomic-shard-rebalancing"
+    ],
+    "duration_seconds": 2.0558,
+    "exit_code": 0,
+    "stderr": "check-canary.stderr.log",
+    "stdout": "check-canary.stdout.log"
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "-w",
+      "/app/task-under-review",
+      "shard-static-41bdffc63d30",
+      "env",
+      "LC_ALL=C.UTF-8",
+      "LANG=C.UTF-8",
+      "bash",
+      "/opt/terminal-bench-pinned/scripts/checks/check-compose-host-binds.sh",
+      "/app/task-under-review/atomic-shard-rebalancing"
+    ],
+    "duration_seconds": 1.0643,
+    "exit_code": 0,
+    "stderr": "check-compose-host-binds.stderr.log",
+    "stdout": "check-compose-host-binds.stdout.log"
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "-w",
+      "/app/task-under-review",
+      "shard-static-41bdffc63d30",
+      "env",
+      "LC_ALL=C.UTF-8",
+      "LANG=C.UTF-8",
+      "bash",
+      "/opt/terminal-bench-pinned/scripts/checks/check-dockerfile-platform.sh",
+      "/app/task-under-review/atomic-shard-rebalancing"
+    ],
+    "duration_seconds": 0.9409,
+    "exit_code": 0,
+    "stderr": "check-dockerfile-platform.stderr.log",
+    "stdout": "check-dockerfile-platform.stdout.log"
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "-w",
+      "/app/task-under-review",
+      "shard-static-41bdffc63d30",
+      "env",
+      "LC_ALL=C.UTF-8",
+      "LANG=C.UTF-8",
+      "bash",
+      "/opt/terminal-bench-pinned/scripts/checks/check-dockerfile-references.sh",
+      "/app/task-under-review/atomic-shard-rebalancing"
+    ],
+    "duration_seconds": 0.9875,
+    "exit_code": 0,
+    "stderr": "check-dockerfile-references.stderr.log",
+    "stdout": "check-dockerfile-references.stdout.log"
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "-w",
+      "/app/task-under-review",
+      "shard-static-41bdffc63d30",
+      "env",
+      "LC_ALL=C.UTF-8",
+      "LANG=C.UTF-8",
+      "bash",
+      "/opt/terminal-bench-pinned/scripts/checks/check-dockerfile-sanity.sh",
+      "/app/task-under-review/atomic-shard-rebalancing"
+    ],
+    "duration_seconds": 0.9236,
+    "exit_code": 0,
+    "stderr": "check-dockerfile-sanity.stderr.log",
+    "stdout": "check-dockerfile-sanity.stdout.log"
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "-w",
+      "/app/task-under-review",
+      "shard-static-41bdffc63d30",
+      "env",
+      "LC_ALL=C.UTF-8",
+      "LANG=C.UTF-8",
+      "bash",
+      "/opt/terminal-bench-pinned/scripts/checks/check-gpu-types.sh",
+      "/app/task-under-review/atomic-shard-rebalancing"
+    ],
+    "duration_seconds": 1.0855,
+    "exit_code": 0,
+    "stderr": "check-gpu-types.stderr.log",
+    "stdout": "check-gpu-types.stdout.log"
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "-w",
+      "/app/task-under-review",
+      "shard-static-41bdffc63d30",
+      "env",
+      "LC_ALL=C.UTF-8",
+      "LANG=C.UTF-8",
+      "bash",
+      "/opt/terminal-bench-pinned/scripts/checks/check-instruction-suffix.sh",
+      "/app/task-under-review/atomic-shard-rebalancing"
+    ],
+    "duration_seconds": 1.2795,
+    "exit_code": 0,
+    "stderr": "check-instruction-suffix.stderr.log",
+    "stdout": "check-instruction-suffix.stdout.log"
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "-w",
+      "/app/task-under-review",
+      "shard-static-41bdffc63d30",
+      "env",
+      "LC_ALL=C.UTF-8",
+      "LANG=C.UTF-8",
+      "bash",
+      "/opt/terminal-bench-pinned/scripts/checks/check-no-allow-internet-true.sh",
+      "/app/task-under-review/atomic-shard-rebalancing"
+    ],
+    "duration_seconds": 1.4479,
+    "exit_code": 0,
+    "stderr": "check-no-allow-internet-true.stderr.log",
+    "stdout": "check-no-allow-internet-true.stdout.log"
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "-w",
+      "/app/task-under-review",
+      "shard-static-41bdffc63d30",
+      "env",
+      "LC_ALL=C.UTF-8",
+      "LANG=C.UTF-8",
+      "bash",
+      "/opt/terminal-bench-pinned/scripts/checks/check-nproc.sh",
+      "/app/task-under-review/atomic-shard-rebalancing"
+    ],
+    "duration_seconds": 1.6127,
+    "exit_code": 0,
+    "stderr": "check-nproc.stderr.log",
+    "stdout": "check-nproc.stdout.log"
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "-w",
+      "/app/task-under-review",
+      "shard-static-41bdffc63d30",
+      "env",
+      "LC_ALL=C.UTF-8",
+      "LANG=C.UTF-8",
+      "bash",
+      "/opt/terminal-bench-pinned/scripts/checks/check-pip-pinning.sh",
+      "/app/task-under-review/atomic-shard-rebalancing"
+    ],
+    "duration_seconds": 1.2638,
+    "exit_code": 0,
+    "stderr": "check-pip-pinning.stderr.log",
+    "stdout": "check-pip-pinning.stdout.log"
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "-w",
+      "/app/task-under-review",
+      "shard-static-41bdffc63d30",
+      "env",
+      "LC_ALL=C.UTF-8",
+      "LANG=C.UTF-8",
+      "bash",
+      "/opt/terminal-bench-pinned/scripts/checks/check-pytest-version.sh",
+      "/app/task-under-review/atomic-shard-rebalancing"
+    ],
+    "duration_seconds": 1.4994,
+    "exit_code": 0,
+    "stderr": "check-pytest-version.stderr.log",
+    "stdout": "check-pytest-version.stdout.log"
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "-w",
+      "/app/task-under-review",
+      "shard-static-41bdffc63d30",
+      "env",
+      "LC_ALL=C.UTF-8",
+      "LANG=C.UTF-8",
+      "bash",
+      "/opt/terminal-bench-pinned/scripts/checks/check-separate-verifier.sh",
+      "/app/task-under-review/atomic-shard-rebalancing"
+    ],
+    "duration_seconds": 1.5273,
+    "exit_code": 0,
+    "stderr": "check-separate-verifier.stderr.log",
+    "stdout": "check-separate-verifier.stdout.log"
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "-w",
+      "/app/task-under-review",
+      "shard-static-41bdffc63d30",
+      "env",
+      "LC_ALL=C.UTF-8",
+      "LANG=C.UTF-8",
+      "bash",
+      "/opt/terminal-bench-pinned/scripts/checks/check-task-absolute-path.sh",
+      "/app/task-under-review/atomic-shard-rebalancing"
+    ],
+    "duration_seconds": 1.322,
+    "exit_code": 0,
+    "stderr": "check-task-absolute-path.stderr.log",
+    "stdout": "check-task-absolute-path.stdout.log"
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "-w",
+      "/app/task-under-review",
+      "shard-static-41bdffc63d30",
+      "env",
+      "LC_ALL=C.UTF-8",
+      "LANG=C.UTF-8",
+      "bash",
+      "/opt/terminal-bench-pinned/scripts/checks/check-task-fields.sh",
+      "/app/task-under-review/atomic-shard-rebalancing"
+    ],
+    "duration_seconds": 0.8832,
+    "exit_code": 0,
+    "stderr": "check-task-fields.stderr.log",
+    "stdout": "check-task-fields.stdout.log"
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "-w",
+      "/app/task-under-review",
+      "shard-static-41bdffc63d30",
+      "env",
+      "LC_ALL=C.UTF-8",
+      "LANG=C.UTF-8",
+      "bash",
+      "/opt/terminal-bench-pinned/scripts/checks/check-task-package-name.sh",
+      "/app/task-under-review/atomic-shard-rebalancing"
+    ],
+    "duration_seconds": 1.0911,
+    "exit_code": 0,
+    "stderr": "check-task-package-name.stderr.log",
+    "stdout": "check-task-package-name.stdout.log"
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "-w",
+      "/app/task-under-review",
+      "shard-static-41bdffc63d30",
+      "env",
+      "LC_ALL=C.UTF-8",
+      "LANG=C.UTF-8",
+      "bash",
+      "/opt/terminal-bench-pinned/scripts/checks/check-task-slug.sh",
+      "/app/task-under-review/atomic-shard-rebalancing"
+    ],
+    "duration_seconds": 2.5541,
+    "exit_code": 0,
+    "stderr": "check-task-slug.stderr.log",
+    "stdout": "check-task-slug.stdout.log"
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "-w",
+      "/app/task-under-review",
+      "shard-static-41bdffc63d30",
+      "env",
+      "LC_ALL=C.UTF-8",
+      "LANG=C.UTF-8",
+      "bash",
+      "/opt/terminal-bench-pinned/scripts/checks/check-task-timeout.sh",
+      "/app/task-under-review/atomic-shard-rebalancing"
+    ],
+    "duration_seconds": 1.3577,
+    "exit_code": 0,
+    "stderr": "check-task-timeout.stderr.log",
+    "stdout": "check-task-timeout.stdout.log"
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "-w",
+      "/app/task-under-review",
+      "shard-static-41bdffc63d30",
+      "env",
+      "LC_ALL=C.UTF-8",
+      "LANG=C.UTF-8",
+      "bash",
+      "/opt/terminal-bench-pinned/scripts/checks/check-test-file-references.sh",
+      "/app/task-under-review/atomic-shard-rebalancing"
+    ],
+    "duration_seconds": 1.0949,
+    "exit_code": 0,
+    "stderr": "check-test-file-references.stderr.log",
+    "stdout": "check-test-file-references.stdout.log"
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "-w",
+      "/app/task-under-review",
+      "shard-static-41bdffc63d30",
+      "env",
+      "LC_ALL=C.UTF-8",
+      "LANG=C.UTF-8",
+      "bash",
+      "/opt/terminal-bench-pinned/scripts/checks/check-test-sh-sanity.sh",
+      "/app/task-under-review/atomic-shard-rebalancing"
+    ],
+    "duration_seconds": 1.8037,
+    "exit_code": 0,
+    "stderr": "check-test-sh-sanity.stderr.log",
+    "stdout": "check-test-sh-sanity.stdout.log"
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "-w",
+      "/app/task-under-review",
+      "shard-static-41bdffc63d30",
+      "env",
+      "LC_ALL=C.UTF-8",
+      "LANG=C.UTF-8",
+      "bash",
+      "/opt/terminal-bench-pinned/scripts/checks/check-trial-network-fetch.sh",
+      "/app/task-under-review/atomic-shard-rebalancing"
+    ],
+    "duration_seconds": 1.5405,
+    "exit_code": 0,
+    "stderr": "check-trial-network-fetch.stderr.log",
+    "stdout": "check-trial-network-fetch.stdout.log"
+  },
+  {
+    "command": [
+      "docker",
+      "exec",
+      "-w",
+      "/app/task-under-review",
+      "shard-static-41bdffc63d30",
+      "env",
+      "LC_ALL=C.UTF-8",
+      "LANG=C.UTF-8",
+      "bash",
+      "/opt/terminal-bench-pinned/scripts/checks/check-verifier-tooling-baked.sh",
+      "/app/task-under-review/atomic-shard-rebalancing"
+    ],
+    "duration_seconds": 1.7607,
+    "exit_code": 0,
+    "stderr": "check-verifier-tooling-baked.stderr.log",
+    "stdout": "check-verifier-tooling-baked.stdout.log"
+  },
+  {
+    "command": [
+      "docker",
+      "inspect",
+      "shard-static-41bdffc63d30"
+    ],
+    "duration_seconds": 0.5117,
+    "exit_code": 0,
+    "stderr": "container-inspect.stderr.log",
+    "stdout": "container-inspect.stdout.log"
+  },
+  {
+    "command": [
+      "docker",
+      "stop",
+      "-t",
+      "1",
+      "shard-static-41bdffc63d30"
+    ],
+    "duration_seconds": 3.9014,
+    "exit_code": 0,
+    "stderr": "container-stop.stderr.log",
+    "stdout": "container-stop.stdout.log"
+  }
+]

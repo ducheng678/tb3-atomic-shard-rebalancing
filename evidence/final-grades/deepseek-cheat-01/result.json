@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "trial": "atomic-shard-rebalancing__xS9ktz6",
+  "evaluation_kind": "adversarial",
+  "agent": "terminus-2",
+  "provider": "tokenharbor",
+  "model": "deepseek-v4.1-flash:free",
+  "execution_valid": true,
+  "completion": "normal",
+  "reward": 0,
+  "artifact": "PASS",
+  "business_scenarios": {
+    "passed": 28,
+    "failed": 2,
+    "total": 30
+  },
+  "failed_cases": [
+    "compat-migration-complete-checkpoint",
+    "rebalance-live-local-read"
+  ],
+  "framework_errors": [],
+  "verifier_summary": "verifier-summary.json",
+  "verifier_ctrf": "verifier-ctrf.json",
+  "classification": "VALID_ADVERSARIAL_ZERO"
+}

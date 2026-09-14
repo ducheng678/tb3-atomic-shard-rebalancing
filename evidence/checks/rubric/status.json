@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "review_model": "openai/gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "criteria_total": 35,
+  "recorded_full_review": {
+    "pass": 33,
+    "fail": 1,
+    "not_applicable": 1,
+    "failed_criterion": "task_readme"
+  },
+  "current_failed_criterion_status": {
+    "criterion": "task_readme",
+    "author_review": "PASS"
+  },
+  "complete_current_model_review_run": false,
+  "claim": "The evidence is not reported as a current 35/35 model-rubric pass."
+}

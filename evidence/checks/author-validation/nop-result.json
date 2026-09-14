@@ -1,0 +1,9 @@
+{
+  "mode": "complete-verifier-development-validation",
+  "model_trial": false,
+  "image_id": "sha256:9828b62afa876e9a59535c4b7f59b7478eaa56879f15646a99a463f8bc04a410",
+  "container": "atomic-r1-i3-nop-01",
+  "exit_code": 1,
+  "status": "CANDIDATE_FAIL",
+  "reward": 0
+}

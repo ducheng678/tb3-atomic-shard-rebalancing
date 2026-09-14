@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "fixed_baseline": "shard-txn-recovery-r1",
+  "method": "one evidence-driven candidate at a time from the fixed baseline",
+  "baseline": {
+    "model": "openai/gpt-5.6-sol",
+    "reasoning_effort": "xhigh",
+    "business_scenarios": "19/19",
+    "result": "PASS",
+    "implication": "one-shard migration recovery was tractable for the target agent"
+  },
+  "iterations": [
+    {
+      "hypothesis": "H1",
+      "candidate": "transactional-shard-split",
+      "change": "atomic one-to-many shard split with live transactional and snapshot obligations",
+      "complete_student_result": "PASS",
+      "business_scenarios": "30/30",
+      "decision": "weaken and leave this direction"
+    },
+    {
+      "hypothesis": "H2",
+      "candidate": "guarded-shard-transactions",
+      "change": "atomic conditional transactions with read-only guard participants",
+      "complete_student_result": "PASS",
+      "business_scenarios": "28/28",
+      "decision": "weaken and change protocol dimension"
+    },
+    {
+      "hypothesis": "H3",
+      "candidate": "atomic-shard-rebalancing",
+      "change": "atomic multi-shard placement plans across reusable workers while prior obligations remain live",
+      "complete_student_results": [
+        "28/30",
+        "29/30",
+        "28/30"
+      ],
+      "decision": "retain as final task",
+      "shared_failure_pattern": "completed read responsibility survives ownership changes and incorrectly forces a later healthy transaction to abort"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "description": "Healthy cross-shard transaction, duplicate request, snapshot, independent C work and settled migration.",
+  "initial": {"a": 100, "b": 100, "c": 0},
+  "steps": [
+    {"op":"invoke","as":"transfer","request":{"op":"txn","txn_id":"healthy-transfer","delta_map":{"a":-7,"b":7}}},
+    {"op":"await","attempt":"transfer","status":"COMMITTED","max_rounds":2000},
+    {"op":"invoke","as":"retry","request":{"op":"txn","txn_id":"healthy-transfer","delta_map":{"a":-7,"b":7}}},
+    {"op":"await","attempt":"retry","status":"COMMITTED","max_rounds":1000},
+    {"op":"invoke","as":"snapshot","request":{"op":"snapshot","read_id":"healthy-before-move","keys":["a","b","c"]}},
+    {"op":"await","attempt":"snapshot","status":"OK","max_rounds":2000},
+    {"op":"invoke","as":"c-write","request":{"op":"txn","txn_id":"healthy-c","delta_map":{"c":13}}},
+    {"op":"await","attempt":"c-write","status":"COMMITTED","max_rounds":1000},
+    {"op":"invoke","as":"migration","request":{"op":"migrate","shard":"A","target":"a_target"}},
+    {"op":"await","attempt":"migration","status":"COMPLETE","max_rounds":2000},
+    {"op":"invoke","as":"final","request":{"op":"snapshot","read_id":"healthy-final","keys":["a","b","c"]}},
+    {"op":"await","attempt":"final","status":"OK","max_rounds":2000}
+  ]
+}
