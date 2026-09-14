@@ -29,5 +29,4 @@ All three GPT-5.6 Sol/xhigh solution runs were independent. Their exact, hash-ve
 - [`docs/failure-analysis.md`](docs/failure-analysis.md) gives short causal analyses for the three genuine GPT-5.6 Sol/xhigh failures and the DeepSeek adversarial result.
 - [`docs/commands-and-configurations.md`](docs/commands-and-configurations.md) provides reproducible command templates and recorded configurations.
 - [`docs/requirements-matrix.md`](docs/requirements-matrix.md) maps the hiring assignment to the evidence present here and the remaining gaps.
-- [`SUBMISSION-CHECKLIST.md`](SUBMISSION-CHECKLIST.md) lists the actions that still require the contributor or evaluator.
 - [`evidence`](evidence/) contains the selected machine-readable records, run configurations, final verifier reports, submitted engine trees, and iteration provenance used by the reports.

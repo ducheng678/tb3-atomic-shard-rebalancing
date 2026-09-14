@@ -56,9 +56,3 @@ All three counted standard results have:
 
 The repository contains no API key, OAuth token, provider secret, or credential
 file. A final secret scan should still be run immediately before the first push.
-
-## Remaining assignment-level actions
-
-The existing check records were collected in scoped stages rather than as one
-final all-in-one CI invocation over the packaged repository. That distinction is
-kept in [`SUBMISSION-CHECKLIST.md`](../SUBMISSION-CHECKLIST.md).
