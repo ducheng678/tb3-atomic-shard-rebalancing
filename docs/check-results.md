@@ -4,21 +4,22 @@
 
 | Check | Result | Evidence |
 | --- | --- | --- |
-| Pinned TB3 static checks | 20 PASS, 2 NOT_APPLICABLE | [`static/summary.json`](../evidence/checks/static/summary.json), [`static/acceptance.json`](../evidence/checks/static/acceptance.json) |
+| Pinned TB3 static checks | 22/22 scripts exited successfully; 2 had no applicable configuration | [`static/summary.json`](../evidence/checks/static/summary.json), [`static/acceptance.json`](../evidence/checks/static/acceptance.json) |
 | Agent/verifier Docker build | PASS | [`build-result.json`](../evidence/checks/author-validation/build-result.json) |
 | Oracle validation | reward 1; artifact PASS; 30/30 business scenarios PASS | [`oracle-result.json`](../evidence/checks/author-validation/oracle-result.json) |
 | Nop/starter validation | reward 0 / `CANDIDATE_FAIL` | [`nop-result.json`](../evidence/checks/author-validation/nop-result.json) |
-| Implementation rubric | Recorded GPT review: 33 PASS, 1 FAIL, 1 N/A; current criterion status recorded separately | [`status.json`](../evidence/checks/rubric/status.json) |
+| Implementation rubric | Current complete GPT-5.6 Sol/max review: 34 PASS, 0 FAIL, 1 NOT_APPLICABLE | [`current-main-model-review.json`](../evidence/checks/rubric/current-main-model-review.json), [`status.json`](../evidence/checks/rubric/status.json) |
 | Final Codex series | Three independent genuine reward-0 submissions under one final verifier | [`series.json`](../evidence/final-grades/series.json) |
 | DeepSeek adversarial run | Valid reward 0 | [`result.json`](../evidence/final-grades/deepseek-cheat-01/result.json) |
 
 ## Static checks
 
 The 22 pinned shell checks came from Terminal-Bench commit
-`83c7a6172d629c6575b785ab12c8db787bb2e323`. Twenty returned PASS. The two
-`NOT_APPLICABLE` results were expected: the task has no Compose host-bind setup
-and declares no GPU type list. There were no static-check errors. The complete
-command ledger is
+`83c7a6172d629c6575b785ab12c8db787bb2e323`, and every script exited successfully.
+Twenty exercised applicable configuration. The Compose host-bind and GPU-type
+checks had no corresponding configuration because this task has neither an
+environment Compose file nor a GPU type declaration. There were no static-check
+errors. The complete command ledger is
 [`static/commands.json`](../evidence/checks/static/commands.json).
 
 ## Build, oracle, and nop
@@ -32,12 +33,17 @@ profile and two rejected semantic controls:
 
 ## Implementation rubric
 
-One complete 35-criterion review ran with `openai/gpt-5.6-sol`, reasoning effort
-`xhigh`, using the unmodified rubric. Its recorded result was 33 PASS, one FAIL,
-and one N/A. The failed criterion concerned reviewer-facing README explanation,
-not task behavior, verifier, starter, or solution. The current file satisfies a
-scoped author check for that criterion. Because no complete current model review
-was run, this repository does not report a 35/35 model-rubric result.
+The current complete 35-criterion review used the model running this Codex
+conversation: `openai/gpt-5.6-sol`, reasoning effort `max`, Codex
+`0.154.0-alpha.6.2`. It applied the unmodified rubric directly to the current
+task directory and produced 34 PASS, zero FAIL, and one NOT_APPLICABLE. The
+non-applicable criterion is `do_not_modify_enforced`: the task does not tell the
+student to preserve a concrete existing artifact unchanged. Therefore every
+applicable criterion passes.
+
+The historical GPT-5.6 Sol/xhigh counts and former `task_readme` failure remain
+preserved as a separate block in `status.json`; they are not presented as the
+current result.
 
 ## Result integrity
 

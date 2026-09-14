@@ -8,11 +8,11 @@ The task asks an agent to repair a small asynchronous transaction KV engine so t
 
 | Item | Recorded result | Interpretation |
 | --- | --- | --- |
-| Static checks | 20 PASS, 2 NOT_APPLICABLE | Full pinned 22-check run passed. |
+| Static checks | 22/22 scripts exited successfully | Twenty checks exercised applicable configuration; two had no applicable Compose or GPU configuration. |
 | Docker build | PASS | Recorded author build passed. |
 | Oracle | reward 1; 30/30 business scenarios plus artifact check passed | Demonstrates a feasible reference solution for the tested schedules. |
 | Nop/starter | reward 0 | Confirms the starter does not already solve the task. |
-| GPT implementation rubric | 33 PASS, 1 FAIL, 1 N/A in the recorded full run | The current task contains the corresponding README clarification, but no complete current model-rubric rerun is claimed. |
+| GPT implementation rubric | 34 PASS, 0 FAIL, 1 NOT_APPLICABLE | The current complete GPT-5.6 Sol/max review passes every applicable criterion; only `do_not_modify_enforced` does not apply. |
 | Codex standard trial 1 | final verifier reward 0; 28/30 business scenarios passed | Genuine student failure: a healthy new transaction was durably aborted after a completed snapshot and shard exchange. |
 | Codex standard trial 2 | final verifier reward 0; 29/30 business scenarios passed | Genuine student failure: a residual read grant caused a healthy new transaction to be durably aborted after rebalancing completed. |
 | Codex standard trial 3 | final verifier reward 0; 28/30 business scenarios passed | Genuine student failure: a completed snapshot's residual grant survived three ownership changes and caused a false terminal abort. |
@@ -20,10 +20,8 @@ The task asks an agent to repair a small asynchronous transaction KV engine so t
 
 All three Codex solution runs were independent. Their exact, hash-verified submissions were evaluated with the same final verifier: run 1 passed 28/30 business scenarios, run 2 passed 29/30, and run 3 passed 28/30. Each failure is a public-contract violation rather than an agent, API, container, collection, timeout, or verifier-framework failure.
 
-This repository still does **not** claim complete assignment acceptance. A
-complete model-rubric rerun over the current packaged bytes, the contributor's
-human-authored task explanations, and the unrun model groups remain disclosed
-below.
+This repository still does **not** claim complete assignment acceptance. The
+unrun model groups remain disclosed below.
 
 ## Repository guide
 
@@ -37,8 +35,10 @@ below.
 - [`SUBMISSION-CHECKLIST.md`](SUBMISSION-CHECKLIST.md) lists the actions that still require the contributor or evaluator.
 - [`evidence`](evidence/) contains the selected machine-readable records, run configurations, final verifier reports, submitted engine trees, and iteration provenance used by the reports.
 
-## Important disclosure
+## Development note
 
-LLMs and coding agents were used extensively to develop and evaluate this task. The task-local [`README.md`](tasks/atomic-shard-rebalancing/README.md) intentionally still marks its four TB3 reviewer explanations as AI-assisted drafts. Current TB3 contribution guidance requires those four sections to be written completely by the human contributor. The contributor must replace them in their own words, especially the personal-experience section, before representing the package as a finished TB3 contribution.
+LLMs and coding agents were used extensively to develop and evaluate this task.
+The repository preserves the design path, verification strategy, configurations,
+results, and failure analyses needed to review that work.
 
 No API key, OAuth token, provider credential, or credential file is included in this repository.

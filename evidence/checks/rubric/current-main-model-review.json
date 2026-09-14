@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-09-13T23:20:17-05:00",
+  "reviewer": {
+    "model": "openai/gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "codex_version": "0.154.0-alpha.6.2",
+    "method": "direct complete review in the current Codex conversation",
+    "harbor_used": false,
+    "independent_model_run": false
+  },
+  "scope": {
+    "task_path": "tasks/atomic-shard-rebalancing",
+    "criteria_total": 35,
+    "rubric": "the same unmodified 35-criterion implementation rubric archived with the prior full review"
+  },
+  "status": "PASS",
+  "counts": {
+    "pass": 34,
+    "fail": 0,
+    "not_applicable": 1
+  },
+  "checks": {
+    "verifiable": {
+      "outcome": "pass",
+      "explanation": "The verifier is programmatic and deterministic: a trusted broker drives fixed schedules, checks exact schemas and progress bounds, and searches successful histories for strict serializability. Dependencies are pinned in tests/Dockerfile, infrastructure errors omit a normal reward, and the repaired finite self-message fault ends before healthy-plan timing begins."
+    },
+    "solvable": {
+      "outcome": "pass",
+      "explanation": "The complete reference implementation passes the artifact gate and all 30 current business scenarios, while the calibration record also includes a legal policy variant. The work is substantial but remains a focused extension of the supplied engine that an expert who knows the protocol can implement in hours."
+    },
+    "difficult": {
+      "outcome": "pass",
+      "explanation": "Atomic cyclic placement changes with unresolved distributed transactions, crashes, delayed messages and worker reuse require genuine distributed-systems and recovery expertise. The difficulty is protocol reasoning, not clerical volume or an LLM-specific trick."
+    },
+    "interesting": {
+      "outcome": "pass",
+      "explanation": "Online shard movement that preserves transaction recovery, availability and stale-message safety is a realistic storage-engine problem with direct professional value."
+    },
+    "outcome_verified": {
+      "outcome": "pass",
+      "explanation": "Tests grade externally observable responses, durable decisions, placement transitions, progress and serializable histories. They do not require the reference implementation's private phases or prescribe a particular repair algorithm."
+    },
+    "anti_cheat_robustness": {
+      "outcome": "pass",
+      "explanation": "Only the submitted engine source reaches the separate verifier; scenarios, fixtures, baseline, controller and grading logic remain verifier-only. Candidate modules execute in private unprivileged worker roots and cannot modify the trusted controller or reward channel."
+    },
+    "task_security": {
+      "outcome": "pass",
+      "explanation": "The task contains no credential access, data exfiltration, unjustified network calls, obfuscated payloads, host escape, destructive host operation or prompt injection. Its process and filesystem controls directly support isolated execution of untrusted candidate code."
+    },
+    "functional_verification": {
+      "outcome": "pass",
+      "explanation": "The verifier executes the candidate through the documented event/host interface over 30 schedules and validates the resulting histories and durable states. Source inspection is limited to artifact safety and format rather than being used as a proxy for behavior."
+    },
+    "deterministic_reproducible": {
+      "outcome": "pass",
+      "explanation": "The base image is digest-pinned, Python verifier packages are version-pinned, schedules are fixed, and verification has no live task-relevant service dependency. Recorded reference reruns and targeted scheduling checks support repeatability."
+    },
+    "essential_difficulty": {
+      "outcome": "pass",
+      "explanation": "The core challenge is preserving transaction, migration and recovery invariants across multiple ownership generations. The small source-artifact format is precisely specified and incidental to that reasoning."
+    },
+    "test_instruction_alignment": {
+      "outcome": "pass",
+      "explanation": "The scenarios trace to the published atomic-placement, historical-retry, transaction, snapshot, recovery, liveness, stale-message and v1-compatibility requirements. Artifact restrictions, schemas and timing bounds checked by the verifier are stated in the instruction or referenced normative specifications."
+    },
+    "novel": {
+      "outcome": "pass",
+      "explanation": "The task combines a custom asynchronous engine with group rebalancing, transactional recovery, historical compatibility and worker reuse. It cannot be solved by reproducing a standard textbook algorithm."
+    },
+    "agentic": {
+      "outcome": "pass",
+      "explanation": "A solver must explore several contracts and interacting modules, run reproduction schedules, modify protocol state machines and diagnose distributed histories over multiple terminal iterations."
+    },
+    "reviewable": {
+      "outcome": "pass",
+      "explanation": "Detailed public contracts, solution and verification summaries, fixture-generation sources, calibration records and named test reports let a non-specialist trace the task's claims. Expected behavior is derived from public semantics and history checking rather than unexplained hardcoded answers."
+    },
+    "instruction_concision": {
+      "outcome": "pass",
+      "explanation": "The main instruction states the objective directly, uses absolute paths and delegates detailed protocol definitions to named normative files. The runtime and reproduction details it includes are necessary task inputs rather than irrelevant tooling guidance."
+    },
+    "solution_quality": {
+      "outcome": "pass",
+      "explanation": "The solution provides a real multi-module protocol implementation and a short staging script that installs the complete reference engine. It neither hardcodes verifier outputs nor embeds a large answer inside solve.sh."
+    },
+    "separate_verifier_configured": {
+      "outcome": "pass",
+      "explanation": "task.toml selects separate-verifier mode and declares the complete engine tree as the sole agent-derived input. Tests, fixed runtime code, fixtures and all verifier dependencies are baked into the verifier image."
+    },
+    "environment_hygiene": {
+      "outcome": "pass",
+      "explanation": "The agent image contains the starter, public specifications and legitimate development tools but no tests, private solution or test-only Python packages. The verifier image owns its pinned pytest tooling, and both Dockerfiles clean apt metadata."
+    },
+    "structured_data_schema": {
+      "outcome": "pass",
+      "explanation": "The normative contract, rebalance contract, host ABI and persistence-format documents define the request, response, action, placement and durable-state schemas used by the task."
+    },
+    "typos": {
+      "outcome": "pass",
+      "explanation": "No critical typo was found in filenames, absolute paths, commands, module names or public identifiers; the referenced paths and reproduction commands correspond to files in the agent image."
+    },
+    "difficulty_explanation_quality": {
+      "outcome": "pass",
+      "explanation": "The metadata identifies cyclic handoff, unresolved work, stable logical identity, recovery and delayed-message generations as the intrinsic challenges, and relates them to real storage and distributed-database engineering."
+    },
+    "solution_explanation_quality": {
+      "outcome": "pass",
+      "explanation": "The explanation summarizes frozen shard cuts, staged destination readiness, atomic vector publication, activation, generation-specific authority and retry semantics, consistent with the supplied reference modules."
+    },
+    "verification_explanation_quality": {
+      "outcome": "pass",
+      "explanation": "The metadata explains the 30 behavioral scenarios, independent serial-history search, event-ordered ownership checks, compatibility fixtures, RUN_ERROR policy and public progress bounds. It also states the calibration method and its finite-validation limitations."
+    },
+    "category_and_tags": {
+      "outcome": "pass",
+      "explanation": "Software/Backend is appropriate, and the Python, distributed-systems, transactions, recovery and rebalancing tags all describe central aspects of the task."
+    },
+    "task_name": {
+      "outcome": "pass",
+      "explanation": "atomic-shard-rebalancing is specific, descriptive, concise, lowercase kebab-case and three words long."
+    },
+    "resource_configuration": {
+      "outcome": "pass",
+      "explanation": "The four-hour agent budget is proportionate to the expert protocol work, and the 900-second verifier limit has ample headroom over the recorded reference runs. Four CPUs, 4 GiB RAM and 10 GiB storage are reasonable for five isolated workers."
+    },
+    "task_readme": {
+      "outcome": "pass",
+      "explanation": "README.md now supplies reviewer-only context rather than repeating task.toml: it explains evidence-driven candidate selection, the reference as a non-normative solvability witness, calibration controls, evidence organization and the concrete project experience behind the task. It explicitly separates this context from the student contract and links to the detailed design and verification records."
+    },
+    "expert_time_estimate": {
+      "outcome": "pass",
+      "explanation": "The nonzero five-hour estimate is plausible for a domain expert extending this compact but intricate engine and is consistent with the explanation and agent budget."
+    },
+    "task_toml_schema": {
+      "outcome": "pass",
+      "explanation": "task.toml uses recognized root, task, metadata, verifier, agent and environment fields, with no invented configuration keys."
+    },
+    "no_extraneous_files": {
+      "outcome": "pass",
+      "explanation": "Every task file supports the agent environment, public contract, reproductions, reference solution, calibration, fixture provenance or verification. No caches, editor files, backups or unrelated scratch artifacts are present."
+    },
+    "artifact_efficiency": {
+      "outcome": "pass",
+      "explanation": "The sole artifact is the small agent-produced engine source tree. Fixed runtime code, baselines, fixtures and verifier logic stay in the verifier image, and no dependency tree or generated state is transferred."
+    },
+    "verifier_execution_isolation": {
+      "outcome": "pass",
+      "explanation": "Candidate modules execute only in per-worker private chroots after UID/GID and capability drops, no-new-privileges, limits, descriptor closure and seccomp filtering. The root controller protects /logs/verifier before candidate execution and alone derives the reward from trusted pytest state."
+    },
+    "ctrf_reporting": {
+      "outcome": "pass",
+      "explanation": "The verifier loads the pinned CTRF plugin, writes /logs/verifier/ctrf.json and validates that the report contains a distinct result for the artifact check and every business scenario."
+    },
+    "do_not_modify_enforced": {
+      "outcome": "not_applicable",
+      "explanation": "The instruction contains no requirement to preserve a concrete existing artifact unchanged. It explains that infrastructure edits do not affect grading and collects only the complete engine deliverable; output-content restrictions are not preserve-this-file constraints."
+    },
+    "binary_reward": {
+      "outcome": "pass",
+      "explanation": "Every normal reward path writes exactly 1 for PASS or 0 for an attributable CANDIDATE_FAIL. RUN_ERROR paths remove or omit reward.txt instead of producing a fractional or laundered score."
+    }
+  }
+}

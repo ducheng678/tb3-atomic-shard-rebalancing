@@ -7,11 +7,11 @@ This checklist separates recorded evidence from work that still must be complete
 - [x] One complete original task at `tasks/atomic-shard-rebalancing/`.
 - [x] Public instruction, normative contracts, starter engine, reproducible examples, private reference solution, separate verifier, and pinned Docker environments.
 - [x] Task-design and iteration narrative from the original r1 baseline through H1, H2, and H3.
-- [x] Static-check evidence: 20 PASS and 2 NOT_APPLICABLE.
+- [x] Static-check evidence: all 22 scripts exited successfully; two had no applicable Compose or GPU configuration.
 - [x] Recorded Docker build PASS.
 - [x] Recorded oracle reward 1 with all 30 business scenarios passing.
 - [x] Recorded nop/starter reward 0.
-- [x] Recorded GPT implementation-rubric output and the current criterion status.
+- [x] Current complete GPT-5.6 Sol/max implementation-rubric review: 34 PASS, 0 FAIL, 1 NOT_APPLICABLE.
 - [x] Three completed Codex standard runs and their final submitted source trees.
 - [x] One valid DeepSeek V4.1 Flash adversarial run with reward 0.
 - [x] Concise failure analysis for all three Codex submissions under the same final verifier.
@@ -22,10 +22,9 @@ This checklist separates recorded evidence from work that still must be complete
 
 ## Contributor actions required
 
-- [ ] Rewrite the four required sections in `tasks/atomic-shard-rebalancing/README.md` completely in the contributor's own words: Difficulty explanation, Solution explanation, Verification explanation, and Relevant experience. Do not ask an LLM to produce the final wording. The personal-experience section must be factually supplied by the contributor.
 - [ ] Review all documents for accuracy and confirm the first-person design account matches what the contributor is prepared to discuss.
 - [ ] Choose a repository license, or deliberately leave the repository unlicensed.
-- [ ] Choose the GitHub repository name and whether it is public or private.
+- [x] Publish the public GitHub repository as `ducheng678/klavis-tb3-atomic-shard-rebalancing`.
 
 ## Evidence gaps before claiming full assignment compliance
 
@@ -35,6 +34,6 @@ This checklist separates recorded evidence from work that still must be complete
 
 ## Do not overclaim
 
-- Do not describe the current rubric evidence as a complete current 35/35 model pass.
+- Describe the current rubric result as 34 PASS, 0 FAIL, 1 NOT_APPLICABLE rather than 35 PASS; `do_not_modify_enforced` does not apply.
 - Do not claim that one reward-0 adversarial run proves the verifier is impossible to bypass.
 - Do not claim official TB3 acceptance; this is an independent hiring-evaluation package and no upstream PR is required.

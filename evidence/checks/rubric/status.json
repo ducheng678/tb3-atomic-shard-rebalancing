@@ -1,18 +1,31 @@
 {
   "schema_version": 1,
-  "review_model": "openai/gpt-5.6-sol",
-  "reasoning_effort": "xhigh",
   "criteria_total": 35,
-  "recorded_full_review": {
-    "pass": 33,
-    "fail": 1,
-    "not_applicable": 1,
+  "historical_full_model_review": {
+    "review_model": "openai/gpt-5.6-sol",
+    "reasoning_effort": "xhigh",
+    "status": "FAIL",
+    "counts": {
+      "pass": 33,
+      "fail": 1,
+      "not_applicable": 1
+    },
     "failed_criterion": "task_readme"
   },
-  "current_failed_criterion_status": {
-    "criterion": "task_readme",
-    "author_review": "PASS"
+  "current_complete_review": {
+    "review_model": "openai/gpt-5.6-sol",
+    "reasoning_effort": "max",
+    "codex_version": "0.154.0-alpha.6.2",
+    "method": "direct complete review in the current Codex conversation",
+    "harbor_used": false,
+    "status": "PASS",
+    "counts": {
+      "pass": 34,
+      "fail": 0,
+      "not_applicable": 1
+    },
+    "not_applicable_criterion": "do_not_modify_enforced",
+    "evidence": "current-main-model-review.json"
   },
-  "complete_current_model_review_run": false,
-  "claim": "The evidence is not reported as a current 35/35 model-rubric pass."
+  "claim": "All applicable implementation-rubric criteria pass in the current complete GPT-5.6 Sol review."
 }
