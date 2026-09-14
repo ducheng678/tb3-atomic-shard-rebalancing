@@ -34,6 +34,7 @@ model failure and an infrastructure or verifier failure.
 
 For this project, the author iterated from a transaction-recovery baseline,
 constructed deterministic process-isolated verification, analyzed three
-independent Codex submissions, and validated an adversarial DeepSeek trial. The
-corresponding design decisions and observed failures are documented in this
-repository rather than supported by unrecorded employment or education claims.
+independent GPT-5.6 Sol/xhigh submissions, and validated an adversarial
+DeepSeek V4.1 Flash trial. The corresponding design decisions and observed
+failures are documented in this repository rather than supported by unrecorded
+employment or education claims.

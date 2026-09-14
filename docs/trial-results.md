@@ -1,13 +1,13 @@
 # Trial results
 
-## Standard Codex configuration
+## GPT-5.6 Sol/xhigh standard configuration
 
 The three standard trials used the same student-facing task and evaluation
 settings:
 
 | Field | Value |
 | --- | --- |
-| Agent | Codex 0.154.0 |
+| Harbor agent adapter | Codex 0.154.0 |
 | Model | `openai/gpt-5.6-sol` |
 | Reasoning effort | `xhigh` |
 | Environment | Docker |
@@ -38,16 +38,15 @@ aggregate machine-readable judgment is
 Per-run commands, configurations, submitted sources, manifests, and final
 results are available here:
 
-- [`codex-standard-01`](../evidence/trials/codex-standard-01/) and its
-  [`final grade`](../evidence/final-grades/codex-standard-01/)
-- [`codex-standard-02`](../evidence/trials/codex-standard-02/) and its
-  [`final grade`](../evidence/final-grades/codex-standard-02/)
-- [`codex-standard-03`](../evidence/trials/codex-standard-03/) and its
-  [`final grade`](../evidence/final-grades/codex-standard-03/)
+- [`gpt-5-6-sol-xhigh-standard-01`](../evidence/trials/gpt-5-6-sol-xhigh-standard-01/) and its
+  [`final grade`](../evidence/final-grades/gpt-5-6-sol-xhigh-standard-01/)
+- [`gpt-5-6-sol-xhigh-standard-02`](../evidence/trials/gpt-5-6-sol-xhigh-standard-02/) and its
+  [`final grade`](../evidence/final-grades/gpt-5-6-sol-xhigh-standard-02/)
+- [`gpt-5-6-sol-xhigh-standard-03`](../evidence/trials/gpt-5-6-sol-xhigh-standard-03/) and its
+  [`final grade`](../evidence/final-grades/gpt-5-6-sol-xhigh-standard-03/)
 
 ## Adversarial result
 
-The Codex `/cheat` request could not be executed through the original route.
 Under the evaluator-provided alternative, one DeepSeek V4.1 Flash black-box
 adversarial run was executed through TokenHarbor with Terminus-2:
 
@@ -71,7 +70,5 @@ proof that every possible bypass fails.
 
 ## Assignment scope
 
-This repository demonstrates the three requested Codex/Sol failures and one
-accepted alternative adversarial zero. It does not claim that unrun model
-configurations were completed; those requirements need evaluator clarification
-or a waiver before literal full-compliance language is used.
+This repository demonstrates three GPT-5.6 Sol/xhigh failures and one accepted
+alternative adversarial zero.

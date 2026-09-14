@@ -21,7 +21,7 @@ storage_mb = 10240
 gpus = 0
 ```
 
-## Standard Codex runs
+## GPT-5.6 Sol/xhigh standard runs
 
 The human-readable direct CLI form of the standard configuration is:
 
@@ -45,9 +45,9 @@ Each config set `n_attempts=1`, `n_concurrent_trials=1`, and
 `retry.max_retries=0`. The material, credential-free configurations are
 retained for each run:
 
-- [`run 1 config`](../evidence/trials/codex-standard-01/run-config.json)
-- [`run 2 config`](../evidence/trials/codex-standard-02/run-config.json)
-- [`run 3 config`](../evidence/trials/codex-standard-03/run-config.json)
+- [`run 1 config`](../evidence/trials/gpt-5-6-sol-xhigh-standard-01/run-config.json)
+- [`run 2 config`](../evidence/trials/gpt-5-6-sol-xhigh-standard-02/run-config.json)
+- [`run 3 config`](../evidence/trials/gpt-5-6-sol-xhigh-standard-03/run-config.json)
 
 Credentials are not part of the command templates or repository. Authentication
 was supplied to the host process.

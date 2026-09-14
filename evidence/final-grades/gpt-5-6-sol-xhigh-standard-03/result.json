@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "trial": "atomic-shard-rebalancing__TkEximK",
-  "student_run": 1,
+  "trial": "atomic-shard-rebalancing__dL6Z5XX",
+  "student_run": 3,
   "agent": "codex",
   "model": "openai/gpt-5.6-sol",
   "reasoning_effort": "xhigh",
-  "agent_execution_seconds": 2146.651798,
+  "agent_execution_seconds": 1911.23811,
   "independent_run": true,
   "execution_valid": true,
   "final_verifier": {
@@ -23,10 +23,10 @@
     "rebalance-exchange-cycle",
     "rebalance-renamed-multikey"
   ],
-  "failure_kind": "WRONG_TERMINAL_ABORT_FOR_HEALTHY_TRANSACTION",
+  "failure_kind": "WRONG_TERMINAL_ABORT_FOR_HEALTHY_TRANSACTION_AFTER_OWNER_REUSE",
   "genuine_student_failure": true,
   "framework_errors": [],
-  "submitted_source_manifest": "../../trials/codex-standard-01/submitted-source-manifest.json",
+  "submitted_source_manifest": "../../trials/gpt-5-6-sol-xhigh-standard-03/submitted-source-manifest.json",
   "verifier_summary": "verifier-summary.json",
   "verifier_ctrf": "verifier-ctrf.json"
 }

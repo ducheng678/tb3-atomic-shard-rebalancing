@@ -91,8 +91,8 @@ results are in
 
 ## Uniform final grading
 
-The three independent Codex submissions were all evaluated by the same final
-verifier. Its recorded image ID is
+The three independent GPT-5.6 Sol/xhigh submissions were all evaluated by the
+same final verifier. Its recorded image ID is
 `sha256:cb3576d16948f114abe0ddf40bd549bb77f88d19bfbe340b12b910614dbd957b`,
 and the trusted group-scenario source fingerprint is
 `fcd4228d8b9295be0e6743cb2cd84b59d2384d913fd833782b387a9bb3016b3a`.

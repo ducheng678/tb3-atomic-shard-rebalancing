@@ -37,7 +37,7 @@ This led to a teacher-guided loop:
 ## Fixed baseline
 
 All candidates began from the frozen `shard-txn-recovery r1` task, not from a
-previous student's patch. Its first complete Codex/Sol run passed all 19
+previous student's patch. Its first complete GPT-5.6 Sol/xhigh run passed all 19
 business scenarios. That success established two important facts: the supplied
 engine was tractable for the target agent, and ordinary one-shard migration was
 not sufficiently difficult. The baseline and iteration outcomes are summarized
@@ -129,7 +129,7 @@ readiness, recover transactions, or decide when a plan is safe to complete.
 Those remain the student's work.
 
 The resulting candidate was feasible for the private reference and detected
-two purpose-built incorrect implementations. Three fresh Codex/Sol submissions
+two purpose-built incorrect implementations. Three fresh GPT-5.6 Sol/xhigh submissions
 then independently failed the same final verifier. The failures narrowed H3:
 the observed weakness was not generic atomic placement corruption, but the
 lifecycle of a completed snapshot's read responsibility across ownership

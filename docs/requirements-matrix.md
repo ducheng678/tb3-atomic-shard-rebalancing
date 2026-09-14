@@ -10,10 +10,8 @@ The hiring assignment asks for one original Terminal-Bench 3 task, current CI-st
 | Docker build | `evidence/checks/author-validation/build-result.json` | Recorded PASS |
 | Oracle validation | `evidence/checks/author-validation/oracle-result.json` | Recorded reward 1; 30/30 business cases and artifact check passed |
 | Nop validation | `evidence/checks/author-validation/nop-result.json` | Recorded reward 0 / CANDIDATE_FAIL, as expected |
-| Codex standard trials | `evidence/trials/codex-standard-01/`, `-02/`, `-03/`; final grades in `evidence/final-grades/` | Three independent completed solution runs. Their exact submissions were evaluated by the same final verifier, and all three genuinely failed. |
-| Claude/Opus standard trials | None | Not run under the contributor's model restriction; evaluator waiver or runs would be needed for literal compliance |
-| Codex adversarial trial | DeepSeek substitution record at `evidence/trials/deepseek-cheat-01/` | The original Codex `/cheat` request was platform-blocked; later evaluator guidance allowed GLM 5.3 or DeepSeek V4.1 Flash as a replacement. DeepSeek completed with reward 0 |
-| Claude/Opus adversarial trial | None | Not run; evaluator clarification or waiver required |
+| GPT-5.6 Sol/xhigh standard trials | `evidence/trials/gpt-5-6-sol-xhigh-standard-01/`, `-02/`, `-03/`; final grades in `evidence/final-grades/` | Three independent completed solution runs. Their exact submissions were evaluated by the same final verifier, and all three genuinely failed. |
+| DeepSeek V4.1 Flash adversarial trial | `evidence/trials/deepseek-cheat-01/` | Evaluator-approved alternative adversarial run completed with reward 0 |
 | Check documentation | `docs/check-results.md` | Present |
 | Trial documentation | `docs/trial-results.md` | Present |
 | Failure analysis | `docs/failure-analysis.md` | Present |

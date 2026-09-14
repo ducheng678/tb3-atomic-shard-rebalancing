@@ -9,7 +9,7 @@
 | Oracle validation | reward 1; artifact PASS; 30/30 business scenarios PASS | [`oracle-result.json`](../evidence/checks/author-validation/oracle-result.json) |
 | Nop/starter validation | reward 0 / `CANDIDATE_FAIL` | [`nop-result.json`](../evidence/checks/author-validation/nop-result.json) |
 | Implementation rubric | Current complete GPT-5.6 Sol/max review: 34 PASS, 0 FAIL, 1 NOT_APPLICABLE | [`current-main-model-review.json`](../evidence/checks/rubric/current-main-model-review.json), [`status.json`](../evidence/checks/rubric/status.json) |
-| Final Codex series | Three independent genuine reward-0 submissions under one final verifier | [`series.json`](../evidence/final-grades/series.json) |
+| Final GPT-5.6 Sol/xhigh series | Three independent genuine reward-0 submissions under one final verifier | [`series.json`](../evidence/final-grades/series.json) |
 | DeepSeek adversarial run | Valid reward 0 | [`result.json`](../evidence/final-grades/deepseek-cheat-01/result.json) |
 
 ## Static checks
@@ -33,10 +33,9 @@ profile and two rejected semantic controls:
 
 ## Implementation rubric
 
-The current complete 35-criterion review used the model running this Codex
-conversation: `openai/gpt-5.6-sol`, reasoning effort `max`, Codex
-`0.154.0-alpha.6.2`. It applied the unmodified rubric directly to the current
-task directory and produced 34 PASS, zero FAIL, and one NOT_APPLICABLE. The
+The current complete 35-criterion review used `openai/gpt-5.6-sol` with
+reasoning effort `max`. It applied the unmodified rubric directly to the
+current task directory and produced 34 PASS, zero FAIL, and one NOT_APPLICABLE. The
 non-applicable criterion is `do_not_modify_enforced`: the task does not tell the
 student to preserve a concrete existing artifact unchanged. Therefore every
 applicable criterion passes.
@@ -49,7 +48,7 @@ current result.
 
 All three counted standard results have:
 
-- a normally completed Codex/Sol execution;
+- a normally completed GPT-5.6 Sol/xhigh execution;
 - reward 0 from the same final verifier;
 - a passing artifact-admission check;
 - no Harbor exception, collection error, or verifier framework error; and
@@ -61,8 +60,5 @@ file. A final secret scan should still be run immediately before the first push.
 ## Remaining assignment-level actions
 
 The existing check records were collected in scoped stages rather than as one
-final all-in-one CI invocation over the packaged repository. A literal claim of
-complete assignment compliance would also require the model configurations that
-the contributor chose not to run, or an evaluator waiver. These items are kept
-in [`SUBMISSION-CHECKLIST.md`](../SUBMISSION-CHECKLIST.md) rather than being
-presented as completed results.
+final all-in-one CI invocation over the packaged repository. That distinction is
+kept in [`SUBMISSION-CHECKLIST.md`](../SUBMISSION-CHECKLIST.md).

@@ -23,7 +23,7 @@
       "business_passed": 28,
       "business_failed": 2,
       "genuine_student_failure": true,
-      "record": "codex-standard-01/result.json"
+      "record": "gpt-5-6-sol-xhigh-standard-01/result.json"
     },
     {
       "run": 2,
@@ -32,7 +32,7 @@
       "business_passed": 29,
       "business_failed": 1,
       "genuine_student_failure": true,
-      "record": "codex-standard-02/result.json"
+      "record": "gpt-5-6-sol-xhigh-standard-02/result.json"
     },
     {
       "run": 3,
@@ -41,7 +41,7 @@
       "business_passed": 28,
       "business_failed": 2,
       "genuine_student_failure": true,
-      "record": "codex-standard-03/result.json"
+      "record": "gpt-5-6-sol-xhigh-standard-03/result.json"
     }
   ],
   "all_three_genuinely_failed": true,

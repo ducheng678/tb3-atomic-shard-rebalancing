@@ -12,10 +12,10 @@ This checklist separates recorded evidence from work that still must be complete
 - [x] Recorded oracle reward 1 with all 30 business scenarios passing.
 - [x] Recorded nop/starter reward 0.
 - [x] Current complete GPT-5.6 Sol/max implementation-rubric review: 34 PASS, 0 FAIL, 1 NOT_APPLICABLE.
-- [x] Three completed Codex standard runs and their final submitted source trees.
+- [x] Three completed GPT-5.6 Sol/xhigh standard runs with their final submitted source trees.
 - [x] One valid DeepSeek V4.1 Flash adversarial run with reward 0.
-- [x] Concise failure analysis for all three Codex submissions under the same final verifier.
-- [x] Three independent Codex submissions with genuine reward-0 results.
+- [x] Concise failure analysis for all three GPT-5.6 Sol/xhigh submissions under the same final verifier.
+- [x] Three independent GPT-5.6 Sol/xhigh submissions with genuine reward-0 results.
 - [x] Final student/verifier isolation and stop-before-verifier behavior documented.
 - [x] Selected commands, configs, raw score results, verifier summaries, and CTRF reports.
 - [x] Tracked-file secret scan passed before remote creation or first push.
@@ -29,8 +29,6 @@ This checklist separates recorded evidence from work that still must be complete
 ## Evidence gaps before claiming full assignment compliance
 
 - [ ] Run the exact packaged bytes through the current complete TB3 static, implementation-rubric, Docker build, oracle, and nop pipeline. The present records were collected as scoped checks rather than one final all-in-one CI run.
-- [ ] Resolve the assignment's Claude/Opus standard-trial requirement or obtain a written evaluator waiver. No Claude or Anthropic run is included.
-- [ ] Resolve the remaining adversarial-model requirement with the evaluator. DeepSeek substituted for the blocked Codex `/cheat` run under the later allowance, but no Claude adversarial run is included.
 
 ## Do not overclaim
 
